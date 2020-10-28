@@ -10,7 +10,6 @@ public class BandeirasLikeTodos extends Filtros {
 	@Test
 	public void Testbandeiratodos() {
 		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
 		driver.get("https://192.168.80.18:8081/mir.console/pages/view/viewbtbrand.jsf");
 		// driver.get("https://10.59.184.60/mir.console/pages/view/viewbtbrand.jsf");
 		/// Erro de Privacidade
