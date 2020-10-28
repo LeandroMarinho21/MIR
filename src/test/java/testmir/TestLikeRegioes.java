@@ -11,7 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class TestLikeRegiões {
+public class TestLikeRegioes {
 	/// TesteFiltros
 			@Test
 			public void TestFiltrosLike() {
@@ -42,7 +42,7 @@ public class TestLikeRegiões {
 				}
 				/// Menu Private Label
 				{
-					driver.findElement(By.linkText("Visão - Regiões")).click();
+					driver.findElement(By.linkText("Visï¿½o - Regiï¿½es")).click();
 				}
 				{
 					WebDriverWait wait = new WebDriverWait(driver, 30);
