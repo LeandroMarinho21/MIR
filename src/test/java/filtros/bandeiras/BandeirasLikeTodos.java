@@ -13,8 +13,8 @@ public class BandeirasLikeTodos extends Filtros {
 		driver.get("https://192.168.80.18:8081/mir.console/pages/view/viewbtbrand.jsf");
 		// driver.get("https://10.59.184.60/mir.console/pages/view/viewbtbrand.jsf");
 		/// Erro de Privacidade
-		//click(driver, "details-button");
-		//click(driver, "proceed-link");
+		click(driver, "details-button");
+		click(driver, "proceed-link");
 		waitingtoclick(driver, "formLogin:txtUsuario");
 		/// Login
 		click(driver, "formLogin:txtUsuario");
@@ -44,12 +44,12 @@ public class BandeirasLikeTodos extends Filtros {
 		// Consultar
 		click(driver, "btnSearch1");
 		waitingtoclickx(driver,
-				"/html/body/center/div[3]/form[1]/div[3]/div[2]/div[2]/table/tbody/tr/td[1]/div/div[2]/div[2]/table/tbody/tr/td");
+				"//*[@id=\"treeViewBTBrandDTO_data\"]");
 		// Verificar se possui dados
 		notequals(driver,
-				"/html/body/center/div[3]/form[1]/div[3]/div[2]/div[2]/table/tbody/tr/td[1]/div/div[2]/div[2]/table/tbody/tr/td");
+				"//*[@id=\"treeViewBTBrandDTO_data\"]");
 		// Verificar se ocorre erro
-		erro(driver, "/html/body/div[8]/div/div/div[2]/span");
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		driver.quit();
 	}
 }
