@@ -14,7 +14,7 @@ public class BandeirasLikeTodos extends Filtros {
 		// driver.get("https://10.59.184.60/mir.console/pages/view/viewbtbrand.jsf");
 		/// Erro de Privacidade
 		//click(driver, "details-button");
-		click(driver, "proceed-link");
+		//click(driver, "proceed-link");
 		waitingtoclick(driver, "formLogin:txtUsuario");
 		/// Login
 		click(driver, "formLogin:txtUsuario");
