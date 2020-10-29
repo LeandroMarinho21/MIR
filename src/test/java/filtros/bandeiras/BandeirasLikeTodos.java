@@ -8,10 +8,8 @@ import filtros.metodos.Filtros;
 
 public class BandeirasLikeTodos extends Filtros {
 
-	/// Objetivo: preencher todos os novos campos Pan Web,Cvv,Descriptor,Portador
-	/// com parte do nome.
-	/// Resultado Esperado: Verificar se está retornando dados e não ocorreu nenhum
-	/// erro administrativo.
+	/// Objetivo: preencher todos os novos campos Pan Web,Cvv,Descriptor,Portador com parte do nome.
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreunenhum erro administrativo.
 	@Test
 	public void Testbandeiratodos() {
 		WebDriver driver = new ChromeDriver();
@@ -56,13 +54,11 @@ public class BandeirasLikeTodos extends Filtros {
 		driver.quit();
 	}
 
-	/// Objetivo: preencher o text área Pan Web com parte do nome.
-	/// Resultado Esperado: Verificar se está retornando dados e não ocorreu nenhum
-	/// erro administrativo.
+	/// Objetivo: preencher o text area Pan Web com parte do nome.
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
 	public void Testbandeirapan() {
 		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
 		driver.get("https://192.168.80.18:8081/mir.console/pages/view/viewbtbrand.jsf");
 		// driver.get("https://10.59.184.60/mir.console/pages/view/viewbtbrand.jsf");
 		/// Erro de Privacidade
@@ -98,13 +94,11 @@ public class BandeirasLikeTodos extends Filtros {
 		driver.quit();
 	}
 
-	/// Objetivo: preencher o text área CVV com parte do nome.
-	/// Resultado Esperado: Verificar se está retornando dados e não ocorreu nenhum
-	/// erro administrativo.
+	/// Objetivo: preencher o text area CVV com parte do nome.
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
 	public void Testbandeiracvv() {
 		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
 		driver.get("https://192.168.80.18:8081/mir.console/pages/view/viewbtbrand.jsf");
 		// driver.get("https://10.59.184.60/mir.console/pages/view/viewbtbrand.jsf");
 		/// Erro de Privacidade
@@ -140,13 +134,11 @@ public class BandeirasLikeTodos extends Filtros {
 		driver.quit();
 	}
 
-	/// Objetivo: preencher o text área Descriptor com parte do nome.
-	/// Resultado Esperado: Verificar se está retornando dados e não ocorreu nenhum
-	/// erro administrativo.
+	/// Objetivo: preencher o text area Descriptor com parte do nome.
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
 	public void TestbandeiraDescriptor() {
 		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
 		driver.get("https://192.168.80.18:8081/mir.console/pages/view/viewbtbrand.jsf");
 		// driver.get("https://10.59.184.60/mir.console/pages/view/viewbtbrand.jsf");
 		/// Erro de Privacidade
@@ -182,13 +174,11 @@ public class BandeirasLikeTodos extends Filtros {
 		driver.quit();
 	}
 
-	/// Objetivo: preencher o text área Portador com parte do nome.
-	/// Resultado Esperado: Verificar se está retornando dados e não ocorreu nenhum
-	/// erro administrativo.
+	/// Objetivo: preencher o text area Portador com parte do nome.
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
 	public void TestbandeiraPortador() {
 		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
 		driver.get("https://192.168.80.18:8081/mir.console/pages/view/viewbtbrand.jsf");
 		// driver.get("https://10.59.184.60/mir.console/pages/view/viewbtbrand.jsf");
 		/// Erro de Privacidade
