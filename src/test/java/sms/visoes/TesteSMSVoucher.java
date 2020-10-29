@@ -30,7 +30,7 @@ public class TesteSMSVoucher extends SmsMetodos {
 			waiting(driver, "dialogLoadbar");
 		click(driver, "listViewBTSubProductDTO:0:viewProdDesc");
 			waiting(driver, "dialogLoadbar");
-		// Selecionando o botão de SMS
+		// Selecionando o botao de SMS
 		click(driver, "listAlarmesDTO1:0:j_idt329:btnSendSMS");
 			waiting(driver, "dialogLoadbar");
 		// Mudando de pagina

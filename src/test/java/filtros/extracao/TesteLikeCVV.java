@@ -20,7 +20,7 @@ public class TesteLikeCVV extends ExtracaoMetodos {
 		click(driver, "formLogin:txtUsuario");
 		escreverlogin(driver, "formLogin:txtUsuario");
 		escreversenhaenter(driver, "formLogin:txtPassword");
-		///Preencher Período
+		///Preencher PerÃ­odo
 		waitingtoclick(driver, "date_start_input");
 		escreverperiodo1(driver, "date_start_input");
 		click(driver, "date_end_input");

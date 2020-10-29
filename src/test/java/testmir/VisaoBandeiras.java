@@ -46,7 +46,7 @@ public class VisaoBandeiras {
 		}
 		/// Menu Visão Bandeiras
 		{
-			driver.findElement(By.linkText("Vis�o - Bandeiras")).click();
+			driver.findElement(By.linkText("Visão - Bandeiras")).click();
 		}
 		{
 			WebElement element = driver.findElement(By.id("btnPause"));

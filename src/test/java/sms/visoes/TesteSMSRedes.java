@@ -29,7 +29,7 @@ public class TesteSMSRedes extends SmsMetodos {
 			waiting(driver, "dialogLoadbar");
 		clickx(driver, "//*[@id=\"listViewBTNetDTO_data\"]/tr[1]");
 			waiting(driver, "dialogLoadbar");
-		// Selecionando o bot„o de SMS
+		// Selecionando o bot√£o de SMS
 		click(driver, "listAlarmesDTO1:0:j_idt366:btnSendSMS");
 			waiting(driver, "dialogLoadbar");
 		// Mudando de pagina

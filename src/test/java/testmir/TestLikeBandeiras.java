@@ -41,9 +41,9 @@ public class TestLikeBandeiras {
 				Actions builder = new Actions(driver);
 				builder.moveToElement(element).perform();
 			}
-			/// Menu Vis„o Bandeiras
+			/// Menu Vis√£o Bandeiras
 			{
-				driver.findElement(By.linkText("Vis„o - Bandeiras")).click();
+				driver.findElement(By.linkText("Vis√£o - Bandeiras")).click();
 			}
 			{
 				WebDriverWait wait = new WebDriverWait(driver, 30);

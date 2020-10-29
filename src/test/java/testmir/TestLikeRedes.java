@@ -40,9 +40,9 @@ public class TestLikeRedes {
 			Actions builder = new Actions(driver);
 			builder.moveToElement(element).perform();
 		}
-		/// Menu Vis„o Voucher
+		/// Menu Vis√£o Voucher
 		{
-			driver.findElement(By.linkText("Vis„o - Redes")).click();
+			driver.findElement(By.linkText("Vis√£o - Redes")).click();
 		}
 		{
 			WebDriverWait wait = new WebDriverWait(driver, 30);

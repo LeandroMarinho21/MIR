@@ -40,9 +40,9 @@ public class TestLikeEmissor {
 					Actions builder = new Actions(driver);
 					builder.moveToElement(element).perform();
 				}
-				/// Menu Vis„o Emissor
+				/// Menu Vis√£o Emissor
 				{
-					driver.findElement(By.linkText("Vis„o - Emissor")).click();
+					driver.findElement(By.linkText("Vis√£o - Emissor")).click();
 				}
 				{
 					WebDriverWait wait = new WebDriverWait(driver, 30);

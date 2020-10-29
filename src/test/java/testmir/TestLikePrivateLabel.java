@@ -42,7 +42,7 @@ public class TestLikePrivateLabel {
 			}
 			/// Menu Private Label
 			{
-				driver.findElement(By.linkText("Vis„o - Private Label")).click();
+				driver.findElement(By.linkText("Vis√£o - Private Label")).click();
 			}
 			{
 				WebDriverWait wait = new WebDriverWait(driver, 30);

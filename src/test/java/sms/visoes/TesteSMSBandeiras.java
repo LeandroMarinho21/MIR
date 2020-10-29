@@ -30,7 +30,7 @@ public class TesteSMSBandeiras extends SmsMetodos{
 			waiting(driver, "dialogLoadbar");
 		click(driver, "listViewBTBrandDTO:1:alarmDesc");
 			waiting(driver, "dialogLoadbar");
-		// Selecionando o bot„o de SMS
+		// Selecionando o bot√£o de SMS
 		click(driver, "listAlarmesDTO1:0:j_idt330:btnSendSMS");
 			waiting(driver, "dialogLoadbar");
 		// Mudando de pagina
@@ -42,7 +42,7 @@ public class TesteSMSBandeiras extends SmsMetodos{
 		clickx(driver, "/html/body/div[3]/div[2]/ul/li[12]/div/div[2]");
 		click(driver, "frmCadastroSmsMessage:btnSendSMS");
 			waiting2(driver, "dialogLoadbar2");
-		// Verifica se SMS j· foi enviado e envia novamente
+		// Verifica se SMS j√° foi enviado e envia novamente
 		if (driver.findElement(By.xpath("//*[@id=\"frmCadastroSmsMessage:j_idt23\"]/div[1]")).isDisplayed()) {
 			driver.findElement(By.cssSelector("#frmCadastroSmsMessage\\:confirm")).click();
 			waiting2(driver, "dialogLoadbar2");

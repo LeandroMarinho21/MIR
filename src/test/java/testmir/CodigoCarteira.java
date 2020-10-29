@@ -150,7 +150,7 @@ public class CodigoCarteira {
 				}
 				{
 					assertThat(driver.findElement(By.id("growl_container"))
-							.getText(), is("Código Carteira cadastrado com sucesso"));
+							.getText(), is("CÃ£digo Carteira cadastrado com sucesso"));
 				}
 				{
 					WebDriverWait wait = new WebDriverWait(driver, 30);
@@ -270,7 +270,7 @@ public class CodigoCarteira {
 				}
 				{
 					assertThat(driver.findElement(By.id("growl_container"))
-							.getText(), is("Código Carteira excluído com sucesso"));
+							.getText(), is("CÃ³digo Carteira excluÃ­do com sucesso"));
 				}
 				driver.quit();
              }
@@ -356,7 +356,7 @@ public class CodigoCarteira {
 				}
 				{
 					assertThat(driver.findElement(By.id("growl_container"))
-							.getText(), is("Código Carteira excluído com sucesso"));
+							.getText(), is("CÃ³digo Carteira excluÃ­do com sucesso"));
 				}
 				driver.quit();
 		}
@@ -527,7 +527,7 @@ public class CodigoCarteira {
 				}
 				{
 					assertThat(driver.findElement(By.id("growl_container"))
-							.getText(), is("Código Carteira alterado com sucesso"));
+							.getText(), is("CÃ³digo Carteira alterado com sucesso"));
 				}
 				{
 				driver.findElement(By.id("searchForm:inputEntityDescription_input")).click();

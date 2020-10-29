@@ -42,7 +42,7 @@ public class TestLikeRegioes {
 				}
 				/// Menu Private Label
 				{
-					driver.findElement(By.linkText("Vis�o - Regi�es")).click();
+					driver.findElement(By.linkText("Visão - Regiões")).click();
 				}
 				{
 					WebDriverWait wait = new WebDriverWait(driver, 30);

@@ -42,7 +42,7 @@ public class TestLikeVolumHoraHora {
 		}
 		/// Menu Private Label
 		{
-			driver.findElement(By.linkText("Vis„o - Volume hora/hora")).click();
+			driver.findElement(By.linkText("Vis√£o - Volume hora/hora")).click();
 		}
 		{
 			WebDriverWait wait = new WebDriverWait(driver, 30);
