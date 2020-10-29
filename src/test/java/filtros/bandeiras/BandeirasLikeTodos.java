@@ -16,8 +16,8 @@ public class BandeirasLikeTodos extends Filtros {
 		driver.get("https://192.168.80.18:8081/mir.console/pages/view/viewbtbrand.jsf");
 		// driver.get("https://10.59.184.60/mir.console/pages/view/viewbtbrand.jsf");
 		// Erro de Privacidade
-		// click(driver, "details-button");
-		// click(driver, "proceed-link");
+		click(driver, "details-button");
+		click(driver, "proceed-link");
 		waitingtoclick(driver, "formLogin:txtUsuario");
 		// Login
 		click(driver, "formLogin:txtUsuario");
@@ -48,7 +48,7 @@ public class BandeirasLikeTodos extends Filtros {
 		click(driver, "btnSearch1");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
-		notequals(driver, "//*[@id=\"treeViewBTBrandDTO_data\"]");
+		notequalsid(driver, "treeViewBTBrandDTO_data");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		driver.quit();
@@ -88,7 +88,7 @@ public class BandeirasLikeTodos extends Filtros {
 		click(driver, "btnSearch1");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
-		notequals(driver, "//*[@id=\"treeViewBTBrandDTO_data\"]");
+		notequalsid(driver, "treeViewBTBrandDTO_data");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		driver.quit();
@@ -128,7 +128,7 @@ public class BandeirasLikeTodos extends Filtros {
 		click(driver, "btnSearch1");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
-		notequals(driver, "//*[@id=\"treeViewBTBrandDTO_data\"]");
+		notequalsid(driver, "treeViewBTBrandDTO_data");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		driver.quit();
@@ -168,7 +168,7 @@ public class BandeirasLikeTodos extends Filtros {
 		click(driver, "btnSearch1");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
-		notequals(driver, "//*[@id=\"treeViewBTBrandDTO_data\"]");
+		notequalsid(driver, "treeViewBTBrandDTO_data");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		driver.quit();
@@ -208,7 +208,7 @@ public class BandeirasLikeTodos extends Filtros {
 		click(driver, "btnSearch1");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
-		notequals(driver, "//*[@id=\"treeViewBTBrandDTO_data\"]");
+		notequalsid(driver, "treeViewBTBrandDTO_data");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		driver.quit();

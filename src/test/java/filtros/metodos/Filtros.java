@@ -115,7 +115,7 @@ public class Filtros {
 	}
 	
 	public void notequalsid(WebDriver driver, String notrue) {
-		String textoElement = driver.findElement(By.xpath(notrue)).getText();
+		String textoElement = driver.findElement(By.id(notrue)).getText();
 		assertNotEquals("Nenhum registro encontrado.", textoElement);
 	}
 	public void notequalserro(WebDriver driver, String notrue) {
