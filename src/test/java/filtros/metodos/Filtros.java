@@ -80,11 +80,11 @@ public class Filtros {
 
 	//// Referentes a tela
 	public void writeperiod1x(WebDriver driver, String escreverix) {
-		driver.findElement(By.xpath(escreverix)).sendKeys("08/09/2020 10:20:00");
+		driver.findElement(By.xpath(escreverix)).sendKeys("08092020 102000");
 	}
 
 	public void writeperiod2x(WebDriver driver, String escreverex) {
-		driver.findElement(By.xpath(escreverex)).sendKeys("08/09/2020 10:30:00");
+		driver.findElement(By.xpath(escreverex)).sendKeys("08092020 103000");
 	}
 
 	public void writepanx(WebDriver driver, String escreverpanx) {
