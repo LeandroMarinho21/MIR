@@ -11,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Teste1 extends Filtros {
 
 	/// Objetivo: preencher todos os novos campos Pan Web,Cvv,Descriptor,Portador com parte do nome.
-		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreunenhum erro administrativo.
+		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorrer nenhum erro administrativo.
 
 	@Test
 	public void Test(){
