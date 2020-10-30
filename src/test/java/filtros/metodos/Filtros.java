@@ -4,7 +4,9 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
 import java.util.ArrayList;
+import java.util.List;
 
+import filtros.todos.ViewBTDTO;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -21,6 +23,42 @@ public class Filtros {
 		Actions builder = new Actions(driver);
 		builder.moveToElement(element).perform();
 	}
+
+	public void login(WebDriver driver, String link){
+		driver.get(link);
+		click(driver, "details-button");
+		click(driver, "proceed-link");
+		waitingtoclick(driver, "formLogin:txtUsuario");
+		click(driver, "formLogin:txtUsuario");
+		escreverlogin(driver, "formLogin:txtUsuario");
+		escreversenhaenter(driver, "formLogin:txtPassword");
+	}
+
+	public List<ViewBTDTO> getViews(){
+		List<ViewBTDTO> test = new ArrayList<>();
+		ViewBTDTO bt = new ViewBTDTO();
+		bt.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewbtbrand.jsf");
+		bt.setTable("treeViewBTBrandDTO_data");
+		test.add(bt);
+		ViewBTDTO bt2 = new ViewBTDTO();
+		bt2.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewissuer.jsf");
+		bt2.setTable("listViewBTIssuerDTO_data");
+		test.add(bt2);
+		ViewBTDTO bt3 = new ViewBTDTO();
+		bt3.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewproduct.jsf");
+		bt3.setTable("treeViewBTSubProductDTO_data");
+		test.add(bt3);
+		ViewBTDTO bt4 = new ViewBTDTO();
+		bt4.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewprivatelabel.jsf");
+		bt4.setTable("listViewBTSubProductDTO_data");
+		test.add(bt4);
+		ViewBTDTO bt5 = new ViewBTDTO();
+		bt5.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewnet.jsf");
+		bt5.setTable("listViewBTNetDTO_data");
+		test.add(bt5);
+		return test;
+	}
+
 	public void click(WebDriver driver, String clicar) {
 		driver.findElement(By.id(clicar)).click();
 	}

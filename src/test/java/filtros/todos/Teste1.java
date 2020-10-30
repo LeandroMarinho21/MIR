@@ -2,7 +2,12 @@ package filtros.todos;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.NoSuchElementException;
+
+import com.google.common.annotations.VisibleForTesting;
 import org.junit.Test;
+import org.junit.internal.runners.statements.Fail;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 import filtros.metodos.Filtros;
@@ -13,62 +18,37 @@ public class Teste1 extends Filtros {
 	/// Objetivo: preencher todos os novos campos Pan Web,Cvv,Descriptor,Portador com parte do nome.
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorrer nenhum erro administrativo.
 
+	String view = "";
 	@Test
-	public void Test(){
-		Teste1 t = new Teste1();
+	public void Test() throws Exception {
+		boolean erro = false;
 		String btnFilter = "/html/body/center/div[3]/form[1]/div[3]/div[1]/div/button[4]";
 		String btnApply = "/html/body/center/div[3]/form[1]/div[3]/div[2]/div[1]/div/div[1]/div/button[2]";
 		System.setProperty("webdriver.chrome.driver", "src\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		List<ViewBTDTO> links = t.getViews();
-		t.login(driver, links.get(0).getUrl());
+		List<ViewBTDTO> links = getViews();
+		login(driver, links.get(0).getUrl());
 		for(ViewBTDTO obj : links){
 			try{
-				t.TestDiego(driver, obj.getUrl(), obj.getTable(), btnFilter, btnApply);
+				TestDiego(driver, obj.getUrl(), obj.getTable(), btnFilter, btnApply);
 			} catch (Exception | AssertionError e){
-				System.out.println(e);
+				erro = true;
+				System.err.println("Erro na tela: "+view);
+				e.printStackTrace();
 			}
 		}
-	}
-
-	public List<ViewBTDTO> getViews(){
-		List<ViewBTDTO> test = new ArrayList<>();
-		ViewBTDTO bt = new ViewBTDTO();
-		bt.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewbtbrand.jsf");
-		bt.setTable("treeViewBTBrandDTO_data");
-		test.add(bt);
-		ViewBTDTO bt2 = new ViewBTDTO();
-		bt2.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewissuer.jsf");
-		bt2.setTable("listViewBTIssuerDTO_data");
-		test.add(bt2);
-		ViewBTDTO bt3 = new ViewBTDTO();
-		bt3.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewproduct.jsf");
-		bt3.setTable("treeViewBTSubProductDTO_data");
-		test.add(bt3);
-		ViewBTDTO bt4 = new ViewBTDTO();
-		bt4.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewprivatelabel.jsf");
-		bt4.setTable("listViewBTSubProductDTO_data");
-		test.add(bt4);
-		ViewBTDTO bt5 = new ViewBTDTO();
-		bt5.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewnet.jsf");
-		bt5.setTable("listViewBTNetDTO_data");
-		test.add(bt5);
-		return test;
-	}
-
-	public void login(WebDriver driver, String link){
-		driver.get(link);
-		click(driver, "details-button");
-		click(driver, "proceed-link");
-		waitingtoclick(driver, "formLogin:txtUsuario");
-		click(driver, "formLogin:txtUsuario");
-		escreverlogin(driver, "formLogin:txtUsuario");
-		escreversenhaenter(driver, "formLogin:txtPassword");
+		if(erro)
+			throw new Exception();
 	}
 
 	public void TestDiego(WebDriver driver, String link, String table, String btnFilter, String btnApply){
 		if(driver.getCurrentUrl()!=link)
 			driver.get(link);
+		try {
+			view = driver.findElement(By.xpath("/html/body/center/div[3]/form[1]/div[3]/div[1]/span")).getText();
+		} catch (NoSuchElementException e){
+			view = driver.findElement(By.xpath("/html/body/center/div[3]/form[1]/div[3]/div[2]/div[2]/table/tbody/tr/td[1]/div/div[1]/span")).getText();
+		}
 		// Filtro
 		waitingtoclickx(driver, "/html/body/center/div[3]/form[1]/div[3]/div[1]/div/button[1]");
 			clickx(driver, btnFilter);
