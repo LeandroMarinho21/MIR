@@ -18,8 +18,8 @@ public class BandeirasLikeTodos extends Filtros {
 		// Erro de Privacidade
 		//click(driver, "details-button");
 		//click(driver, "proceed-link");
-		waitingtoclick(driver, "formLogin:txtUsuario");
 		// Login
+		waitingtoclick(driver, "formLogin:txtUsuario");
 		click(driver, "formLogin:txtUsuario");
 		escreverlogin(driver, "formLogin:txtUsuario");
 		escreversenhaenter(driver, "formLogin:txtPassword");
@@ -64,8 +64,8 @@ public class BandeirasLikeTodos extends Filtros {
 		/// Erro de Privacidade
 		// click(driver, "details-button");
 		// click(driver, "proceed-link");
-		waitingtoclick(driver, "formLogin:txtUsuario");
 		/// Login
+		waitingtoclick(driver, "formLogin:txtUsuario");
 		click(driver, "formLogin:txtUsuario");
 		escreverlogin(driver, "formLogin:txtUsuario");
 		escreversenhaenter(driver, "formLogin:txtPassword");
@@ -104,8 +104,8 @@ public class BandeirasLikeTodos extends Filtros {
 		/// Erro de Privacidade
 		// click(driver, "details-button");
 		// click(driver, "proceed-link");
-		waitingtoclick(driver, "formLogin:txtUsuario");
 		/// Login
+		waitingtoclick(driver, "formLogin:txtUsuario");
 		click(driver, "formLogin:txtUsuario");
 		escreverlogin(driver, "formLogin:txtUsuario");
 		escreversenhaenter(driver, "formLogin:txtPassword");
@@ -144,8 +144,8 @@ public class BandeirasLikeTodos extends Filtros {
 		/// Erro de Privacidade
 		// click(driver, "details-button");
 		// click(driver, "proceed-link");
-		waitingtoclick(driver, "formLogin:txtUsuario");
 		/// Login
+		waitingtoclick(driver, "formLogin:txtUsuario");
 		click(driver, "formLogin:txtUsuario");
 		escreverlogin(driver, "formLogin:txtUsuario");
 		escreversenhaenter(driver, "formLogin:txtPassword");
@@ -184,8 +184,8 @@ public class BandeirasLikeTodos extends Filtros {
 		/// Erro de Privacidade
 		// click(driver, "details-button");
 		// click(driver, "proceed-link");
-		waitingtoclick(driver, "formLogin:txtUsuario");
 		/// Login
+		waitingtoclick(driver, "formLogin:txtUsuario");
 		click(driver, "formLogin:txtUsuario");
 		escreverlogin(driver, "formLogin:txtUsuario");
 		escreversenhaenter(driver, "formLogin:txtPassword");
