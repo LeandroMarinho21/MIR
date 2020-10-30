@@ -19,16 +19,28 @@ public class Teste1 extends Filtros {
 			ViewBTDTO bt = new ViewBTDTO();
 			ViewBTDTO bt2 = new ViewBTDTO();
 			ViewBTDTO bt3 = new ViewBTDTO();
+			ViewBTDTO bt4 = new ViewBTDTO();
+			ViewBTDTO bt5 = new ViewBTDTO();
+			ViewBTDTO bt6 = new ViewBTDTO();
 			bt.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewbtbrand.jsf");
 			bt.setTable("treeViewBTBrandDTO_data");
 			bt2.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewissuer.jsf");
 			bt2.setTable("listViewBTIssuerDTO_data");
 			bt3.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewproduct.jsf");
 			bt3.setTable("treeViewBTSubProductDTO_data");
+			bt4.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewprivatelabel.jsf");
+			bt4.setTable("listViewBTSubProductDTO_data");
+			bt5.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewnet.jsf");
+			bt5.setTable("listViewBTNetDTO_data");
+			bt6.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewgraphic.jsf");
+			bt6.setTable("tblTransactionsDay_data");
 			test.add(bt);
 			test.add(bt2);
 			test.add(bt3);
-
+			test.add(bt4);
+			test.add(bt5);
+			test.add(bt6);
+			
 			for ( ViewBTDTO obj : test){
 				WebDriver driver = new ChromeDriver();
 				driver.get(test.get(0).getUrl());
@@ -43,10 +55,13 @@ public class Teste1 extends Filtros {
 				escreversenhaenter(driver, "formLogin:txtPassword");
 				// Filtro
 				waitingtoclick(driver, "bntSearch");
-				if(test.get(0).getUrl()=="https://192.168.80.18:8081/mir.console/pages/view/viewproduct.jsf"){
+				if(test.get(0).getUrl()=="https://192.168.80.18:8081/mir.console/pages/view/viewproduct.jsf"||
+			       test.get(0).getUrl()=="https://192.168.80.18:8081/mir.console/pages/view/viewgraphic.jsf"){
 					clickx(driver, "bntSearch1");
 				} else if((test.get(0).getUrl()=="https://192.168.80.18:8081/mir.console/pages/view/viewissuer.jsf")) { 
 					click(driver, "bntFilter1");
+				} else if((test.get(0).getUrl()=="https://192.168.80.18:8081/mir.console/pages/view/viewprivatelabel.jsf")) { 
+					click(driver, "btnFilter1");
 				}else
 					click(driver, "bntSearch");
 				// Preencher Periodo
@@ -72,7 +87,8 @@ public class Teste1 extends Filtros {
 				writeportx(driver,
 						"/html/body/center/div[3]/form[1]/div[3]/div[2]/div[1]/div/div[2]/div/div[5]/div[4]/div/input");
 				// Consultar
-				if(test.get(0).getUrl()=="https://192.168.80.18:8081/mir.console/pages/view/viewproduct.jsf"){
+				if(test.get(0).getUrl()=="https://192.168.80.18:8081/mir.console/pages/view/viewproduct.jsf"||
+				   test.get(0).getUrl()=="https://192.168.80.18:8081/mir.console/pages/view/viewgraphic.jsf"){
 					clickx(driver, "btnSearch2");
 				} else if((test.get(0).getUrl()=="https://192.168.80.18:8081/mir.console/pages/view/viewissuer.jsf")) { 
 					click(driver, "btnFilter2");
