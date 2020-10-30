@@ -15,22 +15,22 @@ public class Teste1 extends Filtros {
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreunenhum erro administrativo.
 		@Test
 		public void Test() {
-			WebDriver driver = new ChromeDriver();
 			List<ViewBTDTO> test = new ArrayList<ViewBTDTO>(); 
 			ViewBTDTO bt = new ViewBTDTO();
 			ViewBTDTO bt2 = new ViewBTDTO();
 			ViewBTDTO bt3 = new ViewBTDTO();
 			bt.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewbtbrand.jsf");
 			bt.setTable("treeViewBTBrandDTO_data");
-			bt.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewissuer.jsf");
-			bt.setTable("listViewBTIssuerDTO_data");
-			bt.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewproduct.jsf");
-			bt.setTable("treeViewBTSubProductDTO_data");
+			bt2.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewissuer.jsf");
+			bt2.setTable("listViewBTIssuerDTO_data");
+			bt3.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewproduct.jsf");
+			bt3.setTable("treeViewBTSubProductDTO_data");
 			test.add(bt);
 			test.add(bt2);
 			test.add(bt3);
 
 			for ( ViewBTDTO obj : test){
+				WebDriver driver = new ChromeDriver();
 				driver.get(test.get(0).getUrl());
 				// driver.get("https://10.59.184.60/mir.console/pages/view/viewbtbrand.jsf");
 				// Erro de Privacidade
@@ -43,7 +43,12 @@ public class Teste1 extends Filtros {
 				escreversenhaenter(driver, "formLogin:txtPassword");
 				// Filtro
 				waitingtoclick(driver, "bntSearch");
-				click(driver, "bntSearch");
+				if(test.get(0).getUrl()=="https://192.168.80.18:8081/mir.console/pages/view/viewproduct.jsf"){
+					clickx(driver, "bntSearch1");
+				} else if((test.get(0).getUrl()=="https://192.168.80.18:8081/mir.console/pages/view/viewissuer.jsf")) { 
+					click(driver, "bntFilter1");
+				}else
+					click(driver, "bntSearch");
 				// Preencher Periodo
 				waitingtoclickx(driver,
 						"/html/body/center/div[3]/form[1]/div[3]/div[2]/div[1]/div/div[2]/div/div[1]/div[1]/div/span[1]/input");
@@ -67,14 +72,19 @@ public class Teste1 extends Filtros {
 				writeportx(driver,
 						"/html/body/center/div[3]/form[1]/div[3]/div[2]/div[1]/div/div[2]/div/div[5]/div[4]/div/input");
 				// Consultar
-				click(driver, "btnSearch1");
+				if(test.get(0).getUrl()=="https://192.168.80.18:8081/mir.console/pages/view/viewproduct.jsf"){
+					clickx(driver, "btnSearch2");
+				} else if((test.get(0).getUrl()=="https://192.168.80.18:8081/mir.console/pages/view/viewissuer.jsf")) { 
+					click(driver, "btnFilter2");
+				}else
+					click(driver, "btnSearch1");
 				waiting(driver, "dialogLoadbar");
 				// Verificar se possui dados
 				notequalsid(driver, test.get(0).getTable());
 				// Verificar se ocorre erro
 				erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 				driver.quit();
-			}
+				}
 
 		}
 }
