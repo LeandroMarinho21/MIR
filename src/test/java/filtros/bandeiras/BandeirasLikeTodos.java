@@ -24,8 +24,8 @@ public class BandeirasLikeTodos extends Filtros {
 		escreverlogin(driver, "formLogin:txtUsuario");
 		escreversenhaenter(driver, "formLogin:txtPassword");
 		// Filtro
-		waitingtoclick(driver, "bntSearch");
-		click(driver, "bntSearch");
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
 		// Preencher Periodo
 		waitingtoclickx(driver,
 				"/html/body/center/div[3]/form[1]/div[3]/div[2]/div[1]/div/div[2]/div/div[1]/div[1]/div/span[1]/input");
@@ -45,7 +45,7 @@ public class BandeirasLikeTodos extends Filtros {
 		writeportx(driver,
 				"/html/body/center/div[3]/form[1]/div[3]/div[2]/div[1]/div/div[2]/div/div[5]/div[4]/div/input");
 		// Consultar
-		click(driver, "btnSearch1");
+		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
 		notequalsid(driver, "treeViewBTBrandDTO_data");
@@ -70,8 +70,8 @@ public class BandeirasLikeTodos extends Filtros {
 		escreverlogin(driver, "formLogin:txtUsuario");
 		escreversenhaenter(driver, "formLogin:txtPassword");
 		// Filtro
-		waitingtoclick(driver, "bntSearch");
-		click(driver, "bntSearch");
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
 		/// Preencher Periodo
 		waitingtoclickx(driver,
 				"/html/body/center/div[3]/form[1]/div[3]/div[2]/div[1]/div/div[2]/div/div[1]/div[1]/div/span[1]/input");
@@ -85,7 +85,7 @@ public class BandeirasLikeTodos extends Filtros {
 		writepanx(driver,
 				"/html/body/center/div[3]/form[1]/div[3]/div[2]/div[1]/div/div[2]/div/div[5]/div[1]/div/input");
 		// Consultar
-		click(driver, "btnSearch1");
+		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
 		notequalsid(driver, "treeViewBTBrandDTO_data");
@@ -110,8 +110,8 @@ public class BandeirasLikeTodos extends Filtros {
 		escreverlogin(driver, "formLogin:txtUsuario");
 		escreversenhaenter(driver, "formLogin:txtPassword");
 		// Filtro
-		waitingtoclick(driver, "bntSearch");
-		click(driver, "bntSearch");
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
 		/// Preencher Periodo
 		waitingtoclickx(driver,
 				"/html/body/center/div[3]/form[1]/div[3]/div[2]/div[1]/div/div[2]/div/div[1]/div[1]/div/span[1]/input");
@@ -125,7 +125,7 @@ public class BandeirasLikeTodos extends Filtros {
 		writecvvx(driver,
 				"/html/body/center/div[3]/form[1]/div[3]/div[2]/div[1]/div/div[2]/div/div[5]/div[2]/div/input");
 		// Consultar
-		click(driver, "btnSearch1");
+		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
 		notequalsid(driver, "treeViewBTBrandDTO_data");
@@ -150,8 +150,8 @@ public class BandeirasLikeTodos extends Filtros {
 		escreverlogin(driver, "formLogin:txtUsuario");
 		escreversenhaenter(driver, "formLogin:txtPassword");
 		// Filtro
-		waitingtoclick(driver, "bntSearch");
-		click(driver, "bntSearch");
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
 		/// Preencher Periodo
 		waitingtoclickx(driver,
 				"/html/body/center/div[3]/form[1]/div[3]/div[2]/div[1]/div/div[2]/div/div[1]/div[1]/div/span[1]/input");
@@ -165,7 +165,7 @@ public class BandeirasLikeTodos extends Filtros {
 		writedescx(driver,
 				"/html/body/center/div[3]/form[1]/div[3]/div[2]/div[1]/div/div[2]/div/div[5]/div[3]/div/input");
 		// Consultar
-		click(driver, "btnSearch1");
+		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
 		notequalsid(driver, "treeViewBTBrandDTO_data");
@@ -190,8 +190,8 @@ public class BandeirasLikeTodos extends Filtros {
 		escreverlogin(driver, "formLogin:txtUsuario");
 		escreversenhaenter(driver, "formLogin:txtPassword");
 		// Filtro
-		waitingtoclick(driver, "bntSearch");
-		click(driver, "bntSearch");
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
 		/// Preencher Periodo
 		waitingtoclickx(driver,
 				"/html/body/center/div[3]/form[1]/div[3]/div[2]/div[1]/div/div[2]/div/div[1]/div[1]/div/span[1]/input");
@@ -205,7 +205,7 @@ public class BandeirasLikeTodos extends Filtros {
 		writeportx(driver,
 				"/html/body/center/div[3]/form[1]/div[3]/div[2]/div[1]/div/div[2]/div/div[5]/div[4]/div/input");
 		// Consultar
-		click(driver, "btnSearch1");
+		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
 		notequalsid(driver, "treeViewBTBrandDTO_data");
