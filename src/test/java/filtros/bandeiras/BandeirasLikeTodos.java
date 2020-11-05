@@ -1,10 +1,13 @@
 package filtros.bandeiras;
 
+import java.util.List;
+
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import filtros.metodos.Filtros;
+import filtros.todos.ViewBTDTO;
 
 public class BandeirasLikeTodos extends Filtros {
 
@@ -13,16 +16,12 @@ public class BandeirasLikeTodos extends Filtros {
 	@Test
 	public void Testbandeiratodos() {
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://192.168.80.18:8081/mir.console/pages/view/viewbtbrand.jsf");
-		// driver.get("https://10.59.184.60/mir.console/pages/view/viewbtbrand.jsf");
 		// Erro de Privacidade
 		//click(driver, "details-button");
 		//click(driver, "proceed-link");
 		// Login
-		waitingtoclick(driver, "formLogin:txtUsuario");
-		click(driver, "formLogin:txtUsuario");
-		escreverlogin(driver, "formLogin:txtUsuario");
-		escreversenhaenter(driver, "formLogin:txtPassword");
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -51,6 +50,7 @@ public class BandeirasLikeTodos extends Filtros {
 		notequalsid(driver, "treeViewBTBrandDTO_data");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 	}
 
@@ -59,16 +59,12 @@ public class BandeirasLikeTodos extends Filtros {
 	@Test
 	public void Testbandeirapan() {
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://192.168.80.18:8081/mir.console/pages/view/viewbtbrand.jsf");
-		// driver.get("https://10.59.184.60/mir.console/pages/view/viewbtbrand.jsf");
 		/// Erro de Privacidade
 		// click(driver, "details-button");
 		// click(driver, "proceed-link");
 		/// Login
-		waitingtoclick(driver, "formLogin:txtUsuario");
-		click(driver, "formLogin:txtUsuario");
-		escreverlogin(driver, "formLogin:txtUsuario");
-		escreversenhaenter(driver, "formLogin:txtPassword");
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());;
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -91,6 +87,7 @@ public class BandeirasLikeTodos extends Filtros {
 		notequalsid(driver, "treeViewBTBrandDTO_data");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 	}
 
@@ -99,16 +96,12 @@ public class BandeirasLikeTodos extends Filtros {
 	@Test
 	public void Testbandeiracvv() {
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://192.168.80.18:8081/mir.console/pages/view/viewbtbrand.jsf");
-		// driver.get("https://10.59.184.60/mir.console/pages/view/viewbtbrand.jsf");
 		/// Erro de Privacidade
 		// click(driver, "details-button");
 		// click(driver, "proceed-link");
 		/// Login
-		waitingtoclick(driver, "formLogin:txtUsuario");
-		click(driver, "formLogin:txtUsuario");
-		escreverlogin(driver, "formLogin:txtUsuario");
-		escreversenhaenter(driver, "formLogin:txtPassword");
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -131,6 +124,7 @@ public class BandeirasLikeTodos extends Filtros {
 		notequalsid(driver, "treeViewBTBrandDTO_data");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 	}
 
@@ -139,16 +133,12 @@ public class BandeirasLikeTodos extends Filtros {
 	@Test
 	public void TestbandeiraDescriptor() {
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://192.168.80.18:8081/mir.console/pages/view/viewbtbrand.jsf");
-		// driver.get("https://10.59.184.60/mir.console/pages/view/viewbtbrand.jsf");
 		/// Erro de Privacidade
 		// click(driver, "details-button");
 		// click(driver, "proceed-link");
 		/// Login
-		waitingtoclick(driver, "formLogin:txtUsuario");
-		click(driver, "formLogin:txtUsuario");
-		escreverlogin(driver, "formLogin:txtUsuario");
-		escreversenhaenter(driver, "formLogin:txtPassword");
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -171,6 +161,7 @@ public class BandeirasLikeTodos extends Filtros {
 		notequalsid(driver, "treeViewBTBrandDTO_data");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 	}
 
@@ -179,16 +170,12 @@ public class BandeirasLikeTodos extends Filtros {
 	@Test
 	public void TestbandeiraPortador() {
 		WebDriver driver = new ChromeDriver();
-		driver.get("https://192.168.80.18:8081/mir.console/pages/view/viewbtbrand.jsf");
-		// driver.get("https://10.59.184.60/mir.console/pages/view/viewbtbrand.jsf");
 		/// Erro de Privacidade
 		// click(driver, "details-button");
 		// click(driver, "proceed-link");
 		/// Login
-		waitingtoclick(driver, "formLogin:txtUsuario");
-		click(driver, "formLogin:txtUsuario");
-		escreverlogin(driver, "formLogin:txtUsuario");
-		escreversenhaenter(driver, "formLogin:txtPassword");
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -211,6 +198,7 @@ public class BandeirasLikeTodos extends Filtros {
 		notequalsid(driver, "treeViewBTBrandDTO_data");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 	}
 }

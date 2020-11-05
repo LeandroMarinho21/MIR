@@ -33,6 +33,14 @@ public class Filtros {
 		escreverlogin(driver, "formLogin:txtUsuario");
 		escreversenhaenter(driver, "formLogin:txtPassword");
 	}
+		
+	public void login2(WebDriver driver, String link){
+		driver.get(link);
+		waitingtoclick(driver, "formLogin:txtUsuario");
+		click(driver, "formLogin:txtUsuario");
+		escreverlogin(driver, "formLogin:txtUsuario");
+		escreversenhaenter(driver, "formLogin:txtPassword");
+	}
 
 	public List<ViewBTDTO> getViews(){
 		List<ViewBTDTO> test = new ArrayList<>();
