@@ -127,28 +127,34 @@ public class Filtros {
 	}
 
 	//// Referentes a tela
-	public void writeperiod1x(WebDriver driver, String escreverix) {
-		driver.findElement(By.xpath(escreverix)).sendKeys("08092020 102000");
+	public void writeperiod1x(WebDriver driver, String escreverperiodo1) {
+		driver.findElement(By.xpath(escreverperiodo1)).sendKeys("08092020 102000");
+		assertEquals("08092020 102000", driver.findElement(By.xpath(escreverperiodo1)).getAttribute("value"));
 	}
 
-	public void writeperiod2x(WebDriver driver, String escreverex) {
-		driver.findElement(By.xpath(escreverex)).sendKeys("08092020 103000");
+	public void writeperiod2x(WebDriver driver, String escreverperiodo2) {
+		driver.findElement(By.xpath(escreverperiodo2)).sendKeys("08092020 103000");
+		assertEquals("08092020 102000", driver.findElement(By.xpath(escreverperiodo2)).getAttribute("value"));
 	}
 
 	public void writepanx(WebDriver driver, String escreverpanx) {
 		driver.findElement(By.xpath(escreverpanx)).sendKeys("0");
+		assertEquals("0", driver.findElement(By.xpath(escreverpanx)).getAttribute("value"));
 	}
 
 	public void writecvvx(WebDriver driver, String escrevercvvx) {
 		driver.findElement(By.xpath(escrevercvvx)).sendKeys("0");
+		assertEquals("0", driver.findElement(By.xpath(escrevercvvx)).getAttribute("value"));
 	}
 
 	public void writedescx(WebDriver driver, String escreverdescx) {
 		driver.findElement(By.xpath(escreverdescx)).sendKeys("m");
+		assertEquals("m", driver.findElement(By.xpath(escreverdescx)).getAttribute("value"));
 	}
 
 	public void writeportx(WebDriver driver, String escreverportx) {
 		driver.findElement(By.xpath(escreverportx)).sendKeys("0");
+		assertEquals("0", driver.findElement(By.xpath(escreverportx)).getAttribute("value"));
 	}
 
 	public void waitingrelatorio(WebDriver driver, String id_waiting3) {
