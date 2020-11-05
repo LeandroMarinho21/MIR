@@ -16,9 +16,6 @@ public class BandeirasLikeTodos extends Filtros {
 	@Test
 	public void Testbandeiratodos() {
 		WebDriver driver = new ChromeDriver();
-		// Erro de Privacidade
-		//click(driver, "details-button");
-		//click(driver, "proceed-link");
 		// Login
 		List<ViewBTDTO> links = getViews();
 		login2(driver, links.get(0).getUrl());
@@ -59,9 +56,6 @@ public class BandeirasLikeTodos extends Filtros {
 	@Test
 	public void Testbandeirapan() {
 		WebDriver driver = new ChromeDriver();
-		/// Erro de Privacidade
-		// click(driver, "details-button");
-		// click(driver, "proceed-link");
 		/// Login
 		List<ViewBTDTO> links = getViews();
 		login2(driver, links.get(0).getUrl());;
@@ -96,9 +90,6 @@ public class BandeirasLikeTodos extends Filtros {
 	@Test
 	public void Testbandeiracvv() {
 		WebDriver driver = new ChromeDriver();
-		/// Erro de Privacidade
-		// click(driver, "details-button");
-		// click(driver, "proceed-link");
 		/// Login
 		List<ViewBTDTO> links = getViews();
 		login2(driver, links.get(0).getUrl());
@@ -133,9 +124,6 @@ public class BandeirasLikeTodos extends Filtros {
 	@Test
 	public void TestbandeiraDescriptor() {
 		WebDriver driver = new ChromeDriver();
-		/// Erro de Privacidade
-		// click(driver, "details-button");
-		// click(driver, "proceed-link");
 		/// Login
 		List<ViewBTDTO> links = getViews();
 		login2(driver, links.get(0).getUrl());
@@ -170,9 +158,6 @@ public class BandeirasLikeTodos extends Filtros {
 	@Test
 	public void TestbandeiraPortador() {
 		WebDriver driver = new ChromeDriver();
-		/// Erro de Privacidade
-		// click(driver, "details-button");
-		// click(driver, "proceed-link");
 		/// Login
 		List<ViewBTDTO> links = getViews();
 		login2(driver, links.get(0).getUrl());
