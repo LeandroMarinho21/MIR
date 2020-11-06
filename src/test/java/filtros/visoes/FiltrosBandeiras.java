@@ -97,7 +97,7 @@ public class FiltrosBandeiras extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(0).getUrl());
+		login(driver, links.get(0).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -114,7 +114,7 @@ public class FiltrosBandeiras extends Filtros {
 				"//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher novos campos
 		writecvvx(driver,
-				"/html/body/center/div[3]/form[1]/div[3]/div[2]/div[1]/div/div[2]/div/div[5]/div[2]/div/input");
+				"//input[contains(@class,'entity_cvv')]\"");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
@@ -197,38 +197,5 @@ public class FiltrosBandeiras extends Filtros {
 		System.out.println("Sucess");
 		driver.quit();
 	}
-	
-	@Ignore
-	public void TestbandeiraEmissor() {
-		WebDriver driver = new ChromeDriver();
-		/// Login
-		List<ViewBTDTO> links = getViews();
-		login(driver, links.get(0).getUrl());;
-		// Filtro
-		waitingtoclick(driver, "btnFilter");
-		click(driver, "btnFilter");
-		/// Preencher Periodo
-		waitingtoclickx(driver,
-				"//input[contains(@id,'dt_transaction_ini_input')]");
-		writeperiod1x(driver,
-				"//input[contains(@id,'dt_transaction_ini_input')]");
-		waitingtoclickx(driver,
-				"//input[contains(@id,'dt_transaction_fin_component_input')]");
-		clickx(driver,
-				"//input[contains(@id,'dt_transaction_fin_component_input')]");
-		writeperiod2x(driver,
-				"//input[contains(@id,'dt_transaction_fin_component_input')]");
-		// Preencher novos campos
-		clickx(driver,
-				"//div[contains(@id,'formPanelRow:0:formPanel:1')]");
-		// Consultar
-		click(driver, "btnConsult");
-		waiting(driver, "dialogLoadbar");
-		// Verificar se possui dados
-		notequalsid(driver, "treeViewBTBrandDTO_data");
-		// Verificar se ocorre erro
-		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
-		System.out.println("Sucess");
-		driver.quit();
-	}
+
 }
