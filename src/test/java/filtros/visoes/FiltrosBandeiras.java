@@ -114,7 +114,7 @@ public class FiltrosBandeiras extends Filtros {
 				"//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher novos campos
 		writecvvx(driver,
-				"//input[contains(@class,'entity_cvv')]\"");
+				"//input[contains(@class,'entity_cvv')]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
