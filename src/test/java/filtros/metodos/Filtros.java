@@ -129,12 +129,10 @@ public class Filtros {
 	//// Referentes a tela
 	public void writeperiod1x(WebDriver driver, String escreverperiodo1) {
 		driver.findElement(By.xpath(escreverperiodo1)).sendKeys("08092020 1020");
-		assertEquals("08/09/2020 10:20", driver.findElement(By.xpath(escreverperiodo1)).getText());
 	}
 
 	public void writeperiod2x(WebDriver driver, String escreverperiodo2) {
 		driver.findElement(By.xpath(escreverperiodo2)).sendKeys("08092020 1030");
-		assertEquals("08/09/2020 10:30", driver.findElement(By.xpath(escreverperiodo2)).getText());
 	}
 
 	public void writepanx(WebDriver driver, String escreverpanx) {
