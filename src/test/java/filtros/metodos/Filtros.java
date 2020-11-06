@@ -157,8 +157,6 @@ public class Filtros {
 		String textoElement = driver.findElement(By.cssSelector(notrue)).getText();
 		assertNotEquals("Nenhum registro encontrado.", textoElement);
 	}    
-		
-}
 
 	//// Referentes a tela
 	public void writeperiod1x(WebDriver driver, String escreverperiodo1) {
