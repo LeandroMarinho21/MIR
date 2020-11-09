@@ -180,11 +180,15 @@ public class Filtros {
 		assertEquals("0", driver.findElement(By.xpath(ClicarTodos)).isSelected());
 	}
 	
+	public void writesimcard(WebDriver driver, String escreversimcard) {
+		driver.findElement(By.xpath(escreversimcard)).sendKeys("0");
+		assertEquals("0", driver.findElement(By.xpath(escreversimcard)).getAttribute("value"));
+	}
+	
 	public void writeimei(WebDriver driver, String escreverimei) {
 		driver.findElement(By.xpath(escreverimei)).sendKeys("0");
 		assertEquals("0", driver.findElement(By.xpath(escreverimei)).getAttribute("value"));
 	}
-	
 	
 	public void writepanx(WebDriver driver, String escreverpanx) {
 		driver.findElement(By.xpath(escreverpanx)).sendKeys("0");
