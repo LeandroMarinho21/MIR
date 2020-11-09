@@ -189,15 +189,6 @@ public class Filtros {
 		driver.findElement(By.xpath(escreverportx)).sendKeys("0");
 		assertEquals("0", driver.findElement(By.xpath(escreverportx)).getAttribute("value"));
 	}
-
-	public void SelectAllCombo(WebDriver driver, String SelecionarTodos){
-		WebElement element = driver.findElement(By.xpath(SelecionarTodos));
-		Select combo = new Select(element);
-		List<WebElement> allSelectedOptions = combo.getAllSelectedOptions();
-		Assert.assertEquals(3, allSelectedOptions.size());
-		
-		assertEquals("0", driver.findElement(By.xpath(SelecionarTodos)).getAttribute("value"));
-}
 }
 	
 

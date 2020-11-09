@@ -35,13 +35,13 @@ public class FiltrosBandeiras extends Filtros {
 				"//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher novos campos
 		writepanx(driver,
-				"/html/body/center/div[3]/form[1]/div[3]/div[2]/div[1]/div/div[2]/div/div[5]/div[1]/div/input");
+				"//input[contains(@class,'entity_panWeb')]");
 		writecvvx(driver,
-				"/html/body/center/div[3]/form[1]/div[3]/div[2]/div[1]/div/div[2]/div/div[5]/div[2]/div/input");
+				"//input[contains(@class,'entity_cvv')]");
 		writedescx(driver,
-				"/html/body/center/div[3]/form[1]/div[3]/div[2]/div[1]/div/div[2]/div/div[5]/div[3]/div/input");
+				"//input[contains(@class,'entity_descriptor')]");
 		writeportx(driver,
-				"/html/body/center/div[3]/form[1]/div[3]/div[2]/div[1]/div/div[2]/div/div[5]/div[4]/div/input");
+				"//input[contains(@class,'entity_portador')]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
@@ -77,7 +77,7 @@ public class FiltrosBandeiras extends Filtros {
 				"//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher novos campos
 		writepanx(driver,
-				"/html/body/center/div[3]/form[1]/div[3]/div[2]/div[1]/div/div[2]/div/div[5]/div[1]/div/input");
+				"//input[contains(@class,'entity_panWeb')]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
@@ -149,7 +149,7 @@ public class FiltrosBandeiras extends Filtros {
 				"//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher novos campos
 		writedescx(driver,
-				"/html/body/center/div[3]/form[1]/div[3]/div[2]/div[1]/div/div[2]/div/div[5]/div[3]/div/input");
+				"//input[contains(@class,'entity_descriptor')]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
@@ -185,7 +185,7 @@ public class FiltrosBandeiras extends Filtros {
 				"//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher novos campos
 		writeportx(driver,
-				"/html/body/center/div[3]/form[1]/div[3]/div[2]/div[1]/div/div[2]/div/div[5]/div[4]/div/input");
+				"//input[contains(@class,'entity_portador')]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
@@ -196,5 +196,4 @@ public class FiltrosBandeiras extends Filtros {
 		System.out.println("Sucess");
 		driver.quit();
 	}
-
 }
