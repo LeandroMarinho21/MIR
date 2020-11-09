@@ -175,6 +175,17 @@ public class Filtros {
 		driver.findElement(By.xpath(escreverperiodo2)).sendKeys("08092020 1030");
 	}
 
+	public void checkall(WebDriver driver, String ClicarTodos) {
+		driver.findElement(By.xpath(ClicarTodos)).click();
+		assertEquals("0", driver.findElement(By.xpath(ClicarTodos)).isSelected());
+	}
+	
+	public void writeimei(WebDriver driver, String escreverimei) {
+		driver.findElement(By.xpath(escreverimei)).sendKeys("0");
+		assertEquals("0", driver.findElement(By.xpath(escreverimei)).getAttribute("value"));
+	}
+	
+	
 	public void writepanx(WebDriver driver, String escreverpanx) {
 		driver.findElement(By.xpath(escreverpanx)).sendKeys("0");
 		assertEquals("0", driver.findElement(By.xpath(escreverpanx)).getAttribute("value"));

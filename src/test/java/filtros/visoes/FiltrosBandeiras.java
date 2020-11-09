@@ -15,8 +15,8 @@ public class FiltrosBandeiras extends Filtros {
 	
 	/// Objetivo: preencher todos os novos campos Pan Web,Cvv,Descriptor,Portador com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreunenhum erro administrativo.
-	@Ignore
-	public void TestbandeiraEmissor() {
+	@Test
+	public void TestbandeiraImei() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
@@ -35,20 +35,19 @@ public class FiltrosBandeiras extends Filtros {
 				"//input[contains(@id,'dt_transaction_fin_component_input')]");
 		writeperiod2x(driver,
 				"//input[contains(@id,'dt_transaction_fin_component_input')]");
-		// Preencher novos campos
-		clickx(driver,
-				"//div[contains(@class,'entity_Issuer')]");
+		// Preencher Combobox
+		writeimei(driver, "//input[contains(@class,'entity_imei')]");
 		// Consultar
-///		click(driver, "btnConsult");
-///		waiting(driver, "dialogLoadbar");
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
-///		waitingtoclick(driver,
-///				"treeViewBTBrandDTO");
-///		notequalsid(driver, "treeViewBTBrandDTO");
+		waitingtoclick(driver,
+				"treeViewBTBrandDTO_data");
+		notequalsid(driver, "treeViewBTBrandDTO_data");
 		// Verificar se ocorre erro
-///		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
-///		System.out.println("Sucess");
-	///	driver.quit();
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
+		driver.quit();
 	}
 
 	/// Objetivo: preencher todos os novos campos Pan Web,Cvv,Descriptor,Portador com parte do nome.
@@ -87,10 +86,11 @@ public class FiltrosBandeiras extends Filtros {
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
 		waitingtoclick(driver,
-				"treeViewBTBrandDTO");
-		notequalsid(driver, "treeViewBTBrandDTO");
+				"treeViewBTBrandDTO_data");
+		notequalsid(driver, "treeViewBTBrandDTO_data");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 	}
 
@@ -124,10 +124,11 @@ public class FiltrosBandeiras extends Filtros {
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
 		waitingtoclick(driver,
-				"treeViewBTBrandDTO");
-		notequalsid(driver, "treeViewBTBrandDTO");
+				"treeViewBTBrandDTO_data");
+		notequalsid(driver, "treeViewBTBrandDTO_data");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 	}
 
@@ -161,10 +162,11 @@ public class FiltrosBandeiras extends Filtros {
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
 		waitingtoclick(driver,
-				"treeViewBTBrandDTO");
-		notequalsid(driver, "treeViewBTBrandDTO");
+				"treeViewBTBrandDTO_data");
+		notequalsid(driver, "treeViewBTBrandDTO_data");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 	}
 
@@ -198,10 +200,11 @@ public class FiltrosBandeiras extends Filtros {
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
 		waitingtoclick(driver,
-				"treeViewBTBrandDTO");
-		notequalsid(driver, "treeViewBTBrandDTO");
+				"treeViewBTBrandDTO_data");
+		notequalsid(driver, "treeViewBTBrandDTO_data");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 	}
 
@@ -235,10 +238,11 @@ public class FiltrosBandeiras extends Filtros {
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
 		waitingtoclick(driver,
-				"treeViewBTBrandDTO");
-		notequalsid(driver, "treeViewBTBrandDTO");
+				"treeViewBTBrandDTO_data");
+		notequalsid(driver, "treeViewBTBrandDTO_data");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 	}
 }
