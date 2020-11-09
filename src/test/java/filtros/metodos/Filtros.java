@@ -5,6 +5,7 @@ import static org.junit.Assert.assertNotEquals;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import filtros.todos.ViewBTDTO;
 
@@ -139,7 +140,15 @@ public class Filtros {
 		WebDriverWait wait = new WebDriverWait(driver, 180);
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id(id_waiting3)));
 	}
-
+	
+	public void waitingtextpresentx(WebDriver driver, String esperatexto) {
+		WebDriverWait wait = new WebDriverWait(driver, 180);
+		wait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath(esperatexto), "Nenhum registro encontrado."));
+	}
+	public void wait3(WebDriver driver, String espera3) {
+	driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+	}
+	
 	public void notequals(WebDriver driver, String notrue) {
 		String textoElement = driver.findElement(By.xpath(notrue)).getText();
 		Assert.assertNotEquals("Nenhum registro encontrado.", textoElement);

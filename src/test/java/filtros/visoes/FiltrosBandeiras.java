@@ -1,6 +1,7 @@
 package filtros.visoes;
 
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.junit.Ignore;
 import org.junit.Test;
@@ -35,7 +36,7 @@ public class FiltrosBandeiras extends Filtros {
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
-		waitingtoclick(driver, "btnFilter");
+		wait3(driver, null);
 		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
@@ -67,7 +68,7 @@ public class FiltrosBandeiras extends Filtros {
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
-		waitingtoclick(driver, "btnFilter");
+		wait3(driver, null);
 		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
@@ -101,7 +102,7 @@ public class FiltrosBandeiras extends Filtros {
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
-		waitingtoclick(driver, "btnFilter");
+		wait3(driver, null);
 		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
@@ -133,7 +134,7 @@ public class FiltrosBandeiras extends Filtros {
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
-		waitingtoclick(driver, "btnFilter");
+		wait3(driver, null);
 		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
@@ -164,7 +165,7 @@ public class FiltrosBandeiras extends Filtros {
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
-		waitingtoclick(driver, "btnFilter");
+		wait3(driver, null);
 		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
@@ -195,7 +196,7 @@ public class FiltrosBandeiras extends Filtros {
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
-		waitingtoclick(driver, "btnFilter");
+		wait3(driver, null);
 		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
@@ -226,7 +227,7 @@ public class FiltrosBandeiras extends Filtros {
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
-		waitingtoclick(driver, "btnFilter");
+		wait3(driver, null);
 		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
