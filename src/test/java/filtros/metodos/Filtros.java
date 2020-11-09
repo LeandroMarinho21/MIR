@@ -100,7 +100,12 @@ public class Filtros {
 		WebDriverWait wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id(id_waiting2)));
 	}
+	public void waitingtoVisible(WebDriver driver, String Visivel) {
 
+		WebDriverWait wait = new WebDriverWait(driver, 180);
+		wait.until(ExpectedConditions.visibilityOf((WebElement)By.id(Visivel)));
+	}
+	
 	public void waitingtoclick(WebDriver driver, String id_waitingV) {
 
 		WebDriverWait wait = new WebDriverWait(driver, 180);

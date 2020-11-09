@@ -42,6 +42,8 @@ public class FiltrosBandeiras extends Filtros {
 ///		click(driver, "btnConsult");
 ///		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
+///		waitingtoclick(driver,
+///				"treeViewBTBrandDTO");
 ///		notequalsid(driver, "treeViewBTBrandDTO");
 		// Verificar se ocorre erro
 ///		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
@@ -84,6 +86,8 @@ public class FiltrosBandeiras extends Filtros {
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
+		waitingtoclick(driver,
+				"treeViewBTBrandDTO");
 		notequalsid(driver, "treeViewBTBrandDTO");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
@@ -119,6 +123,8 @@ public class FiltrosBandeiras extends Filtros {
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
+		waitingtoclick(driver,
+				"treeViewBTBrandDTO");
 		notequalsid(driver, "treeViewBTBrandDTO");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
@@ -154,6 +160,8 @@ public class FiltrosBandeiras extends Filtros {
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
+		waitingtoclick(driver,
+				"treeViewBTBrandDTO");
 		notequalsid(driver, "treeViewBTBrandDTO");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
@@ -189,6 +197,8 @@ public class FiltrosBandeiras extends Filtros {
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
+		waitingtoclick(driver,
+				"treeViewBTBrandDTO");
 		notequalsid(driver, "treeViewBTBrandDTO");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
@@ -224,6 +234,8 @@ public class FiltrosBandeiras extends Filtros {
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
+		waitingtoclick(driver,
+				"treeViewBTBrandDTO");
 		notequalsid(driver, "treeViewBTBrandDTO");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
