@@ -11,76 +11,64 @@ import filtros.metodos.Filtros;
 import filtros.todos.ViewBTDTO;
 
 public class FiltrosBandeiras extends Filtros {
-	
-	
+
 	/// Objetivo: preencher o campo Imei com parte do nome.
-		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreunenhum erro administrativo.
-		@Test
-		public void TestbandeiraSimcard() {
-			WebDriver driver = new ChromeDriver();
-			/// Login
-			List<ViewBTDTO> links = getViews();
-			login2(driver, links.get(0).getUrl());;
-			// Filtro
-			waitingtoclick(driver, "btnFilter");
-			click(driver, "btnFilter");
-			/// Preencher Periodo
-			waitingtoclickx(driver,
-					"//input[contains(@id,'dt_transaction_ini_input')]");
-			writeperiod1x(driver,
-					"//input[contains(@id,'dt_transaction_ini_input')]");
-			waitingtoclickx(driver,
-					"//input[contains(@id,'dt_transaction_fin_component_input')]");
-			clickx(driver,
-					"//input[contains(@id,'dt_transaction_fin_component_input')]");
-			writeperiod2x(driver,
-					"//input[contains(@id,'dt_transaction_fin_component_input')]");
-			// Preencher Combobox
-			writesimcard(driver, "//input[contains(@class,'entity_simCard')]");
-			// Consultar
-			click(driver, "btnConsult");
-			waiting(driver, "dialogLoadbar");
-			// Verificar se possui dados
-			waitingtoclick(driver,
-					"btnFilter");
-			notequalsid(driver, "treeViewBTBrandDTO_data");
-			// Verificar se ocorre erro
-			erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
-			System.out.println("Sucess");
-			driver.quit();
-		}
-	
-	/// Objetivo: preencher o campo Imei com parte do nome.
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreunenhum erro administrativo.
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
 	public void TestbandeiraImei() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(0).getUrl());;
+		login2(driver, links.get(0).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		/// Preencher Periodo
-		waitingtoclickx(driver,
-				"//input[contains(@id,'dt_transaction_ini_input')]");
-		writeperiod1x(driver,
-				"//input[contains(@id,'dt_transaction_ini_input')]");
-		waitingtoclickx(driver,
-				"//input[contains(@id,'dt_transaction_fin_component_input')]");
-		clickx(driver,
-				"//input[contains(@id,'dt_transaction_fin_component_input')]");
-		writeperiod2x(driver,
-				"//input[contains(@id,'dt_transaction_fin_component_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher Combobox
 		writeimei(driver, "//input[contains(@class,'entity_imei')]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
-		waitingtoclick(driver,
-				"btnFilter");
-		notequalsid(driver, "treeViewBTBrandDTO_data");
+		waitingtoclick(driver, "btnFilter");
+		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
+		driver.quit();
+	}
+	
+	/// Objetivo: preencher o campo SimCard com parte do nome.
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	@Test
+	public void TestbandeiraSimcard() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
+		;
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		/// Preencher Periodo
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		// Preencher Combobox
+		writesimcard(driver, "//input[contains(@class,'entity_simCard')]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar");
+		// Verificar se possui dados
+		waitingtoclick(driver, "btnFilter");
+		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		System.out.println("Sucess");
@@ -88,7 +76,7 @@ public class FiltrosBandeiras extends Filtros {
 	}
 
 	/// Objetivo: preencher todos os novos campos Pan Web,Cvv,Descriptor,Portador com parte do nome.
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreunenhum erro administrativo.
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
 	public void Testbandeiratodos() {
 		WebDriver driver = new ChromeDriver();
@@ -99,32 +87,22 @@ public class FiltrosBandeiras extends Filtros {
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		// Preencher Periodo
-		waitingtoclickx(driver,
-				"//input[contains(@id,'dt_transaction_ini_input')]");
-		writeperiod1x(driver,
-				"//input[contains(@id,'dt_transaction_ini_input')]");
-		clickx(driver,
-				"//input[contains(@id,'dt_transaction_fin_component_input')]");
-		waitingtoclickx(driver,
-				"//input[contains(@id,'dt_transaction_fin_component_input')]");
-		writeperiod2x(driver,
-				"//input[contains(@id,'dt_transaction_fin_component_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher novos campos
-		writepanx(driver,
-				"//input[contains(@class,'entity_panWeb')]");
-		writecvvx(driver,
-				"//input[contains(@class,'entity_cvv')]");
-		writedescx(driver,
-				"//input[contains(@class,'entity_descriptor')]");
-		writeportx(driver,
-				"//input[contains(@class,'entity_portador')]");
+		writepanx(driver, "//input[contains(@class,'entity_panWeb')]");
+		writecvvx(driver, "//input[contains(@class,'entity_cvv')]");
+		writedescx(driver, "//input[contains(@class,'entity_descriptor')]");
+		writeportx(driver, "//input[contains(@class,'entity_portador')]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
-		waitingtoclick(driver,
-				"btnFilter");
-		notequalsid(driver, "treeViewBTBrandDTO_data");
+		waitingtoclick(driver, "btnFilter");
+		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		System.out.println("Sucess");
@@ -138,31 +116,25 @@ public class FiltrosBandeiras extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(0).getUrl());;
+		login2(driver, links.get(0).getUrl());
+		;
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		/// Preencher Periodo
-		waitingtoclickx(driver,
-				"//input[contains(@id,'dt_transaction_ini_input')]");
-		writeperiod1x(driver,
-				"//input[contains(@id,'dt_transaction_ini_input')]");
-		waitingtoclickx(driver,
-				"//input[contains(@id,'dt_transaction_fin_component_input')]");
-		clickx(driver,
-				"//input[contains(@id,'dt_transaction_fin_component_input')]");
-		writeperiod2x(driver,
-				"//input[contains(@id,'dt_transaction_fin_component_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher novos campos
-		writepanx(driver,
-				"//input[contains(@class,'entity_panWeb')]");
+		writepanx(driver, "//input[contains(@class,'entity_panWeb')]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
-		waitingtoclick(driver,
-				"btnFilter");
-		notequalsid(driver, "treeViewBTBrandDTO_data");
+		waitingtoclick(driver, "btnFilter");
+		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		System.out.println("Sucess");
@@ -181,26 +153,19 @@ public class FiltrosBandeiras extends Filtros {
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		/// Preencher Periodo
-		waitingtoclickx(driver,
-				"//input[contains(@id,'dt_transaction_ini_input')]");
-		writeperiod1x(driver,
-				"//input[contains(@id,'dt_transaction_ini_input')]");
-		waitingtoclickx(driver,
-				"//input[contains(@id,'dt_transaction_fin_component_input')]");
-		clickx(driver,
-				"//input[contains(@id,'dt_transaction_fin_component_input')]");
-		writeperiod2x(driver,
-				"//input[contains(@id,'dt_transaction_fin_component_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher novos campos
-		writecvvx(driver,
-				"//input[contains(@class,'entity_cvv')]");
+		writecvvx(driver, "//input[contains(@class,'entity_cvv')]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
-		waitingtoclick(driver,
-				"btnFilter");
-		notequalsid(driver, "treeViewBTBrandDTO_data");
+		waitingtoclick(driver, "btnFilter");
+		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		System.out.println("Sucess");
@@ -219,26 +184,19 @@ public class FiltrosBandeiras extends Filtros {
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		/// Preencher Periodo
-		waitingtoclickx(driver,
-				"//input[contains(@id,'dt_transaction_ini_input')]");
-		writeperiod1x(driver,
-				"//input[contains(@id,'dt_transaction_ini_input')]");
-		waitingtoclickx(driver,
-				"//input[contains(@id,'dt_transaction_fin_component_input')]");
-		clickx(driver,
-				"//input[contains(@id,'dt_transaction_fin_component_input')]");
-		writeperiod2x(driver,
-				"//input[contains(@id,'dt_transaction_fin_component_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher novos campos
-		writedescx(driver,
-				"//input[contains(@class,'entity_descriptor')]");
+		writedescx(driver, "//input[contains(@class,'entity_descriptor')]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
-		waitingtoclick(driver,
-				"btnFilter");
-		notequalsid(driver, "treeViewBTBrandDTO_data");
+		waitingtoclick(driver, "btnFilter");
+		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		System.out.println("Sucess");
@@ -257,26 +215,19 @@ public class FiltrosBandeiras extends Filtros {
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		/// Preencher Periodo
-		waitingtoclickx(driver,
-				"//input[contains(@id,'dt_transaction_ini_input')]");
-		writeperiod1x(driver,
-				"//input[contains(@id,'dt_transaction_ini_input')]");
-		waitingtoclickx(driver,
-				"//input[contains(@id,'dt_transaction_fin_component_input')]");
-		clickx(driver,
-				"//input[contains(@id,'dt_transaction_fin_component_input')]");
-		writeperiod2x(driver,
-				"//input[contains(@id,'dt_transaction_fin_component_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher novos campos
-		writeportx(driver,
-				"//input[contains(@class,'entity_portador')]");
+		writeportx(driver, "//input[contains(@class,'entity_portador')]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
-		waitingtoclick(driver,
-				"btnFilter");
-		notequalsid(driver, "treeViewBTBrandDTO_data");
+		waitingtoclick(driver, "btnFilter");
+		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		System.out.println("Sucess");
