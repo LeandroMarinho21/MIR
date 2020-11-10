@@ -169,13 +169,10 @@ public class Filtros {
 		if (driver.findElement(By.xpath(erro)).isDisplayed()) {
 			new AssertionError("Ocorreu um erro desconhecido.");
 		}
-	}	
-	
-	public void erronenhum (WebDriver driver, String erro) {
-		if (driver.findElement(By.xpath(erro)).getText().contains("Nenhum")) {
-			new AssertionError("Ocorreu um erro desconhecido.");
 		}
-	}
+		
+	
+	
 	public void notequalscss(WebDriver driver, String notrue) {
 		String textoElement = driver.findElement(By.cssSelector(notrue)).getText();
 		assertNotEquals("Nenhum registro encontrado.", textoElement);
