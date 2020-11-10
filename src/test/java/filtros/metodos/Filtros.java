@@ -167,6 +167,7 @@ public class Filtros {
 	
 	public void notequals(WebDriver driver, String notrue) {
 		String textoElement = driver.findElement(By.xpath(notrue)).getText();
+		System.out.println(textoElement);
 		Assert.assertNotEquals("Nenhum registro encontrado.", textoElement);
 	}
 	
