@@ -17,7 +17,7 @@ public class Test1 extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(0).getUrl());
+		login(driver, links.get(0).getUrl());
 		// Filtro
 		System.out.println("Fiz Login");
 		waitingtoclick(driver, "btnFilter");
@@ -40,8 +40,7 @@ public class Test1 extends Filtros {
 		// Verificar se possui dados
 		wait3(driver, "");
 		System.out.println("Entrando");
-		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
-		notequals2(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		notequals(driver, "//*[contains(@class, 'treetable-empty-message')]");
 		System.out.println("Sai");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
