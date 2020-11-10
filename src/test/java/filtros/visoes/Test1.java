@@ -40,7 +40,7 @@ public class Test1 extends Filtros {
 		// Verificar se possui dados
 		wait3(driver, "");
 		System.out.println("Entrando");
-		notequals(driver, "//*[contains(@class, 'treetable-empty-message')]");
+		notequals(driver, "//*[contains(@class, 'ui-widget-content ui-treetable-empty-message')]");
 		System.out.println("Sai");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
