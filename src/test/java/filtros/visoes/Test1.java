@@ -25,14 +25,14 @@ public class Test1 extends Filtros {
 		System.out.println("Entrei no Filtro");
 		/// Preencher Periodo
 		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		System.out.println("Preenchi Períodos");
+//		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+//		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+///		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+//		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+///		System.out.println("Preenchi Períodos");
 		// Preencher Combobox
-		writeipterminal(driver, "//input[contains(@class,'entity_ipTerm')]");
-		System.out.println("Preenchi Campo");
+///		writeipterminal(driver, "//input[contains(@class,'entity_ipTerm')]");
+///		System.out.println("Preenchi Campo");
 		// Consultar
 		click(driver, "btnConsult");
 		System.out.println("Consultei");
