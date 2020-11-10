@@ -17,7 +17,7 @@ public class Test1 extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login(driver, links.get(0).getUrl());
+		login2driver, links.get(0).getUrl());
 		// Filtro
 		System.out.println("Fiz Login");
 		waitingtoclick(driver, "btnFilter");
