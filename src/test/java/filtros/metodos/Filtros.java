@@ -211,7 +211,7 @@ public class Filtros {
 	
 	public void writeipterminal(WebDriver driver, String escreveripterminal) {
 		driver.findElement(By.xpath(escreveripterminal)).sendKeys("0");
-		Assert.assertEquals("V", driver.findElement(By.xpath(escreveripterminal)).getAttribute("value"));
+		Assert.assertEquals("0", driver.findElement(By.xpath(escreveripterminal)).getAttribute("value"));
 	}
 	
 	public void writemacaddress(WebDriver driver, String escrevermacaddress) {
