@@ -39,7 +39,7 @@ public class Test1 extends Filtros {
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
 		wait3(driver, "");
-		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		notequals(driver, "//*[contains(@class, 'ui-widget-content ui-treetable-empty-message')]");
 		System.out.println("Verifiquei1");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
