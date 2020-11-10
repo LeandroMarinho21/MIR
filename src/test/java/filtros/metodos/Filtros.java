@@ -13,6 +13,8 @@ import org.junit.Assert;
 import org.junit.internal.runners.statements.Fail;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -23,6 +25,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Filtros {
 	
+
 	public void waitemcimacss(WebDriver driver, String esperar) {
 		WebElement element = driver.findElement(By.cssSelector(esperar));
 		Actions builder = new Actions(driver);
@@ -146,8 +149,18 @@ public class Filtros {
 		WebDriverWait wait = new WebDriverWait(driver, 180);
 		wait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath(esperatexto), "Nenhum registro encontrado."));
 	}
+	
+	public void waitingnotpresent(WebDriver driver, String esperatexto) {
+		WebDriverWait wait = new WebDriverWait(driver, 180);
+		wait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath(esperatexto), "Nenhum registro encontrado."));
+	}
 
 
+	public void verificarelementox(WebDriver driver, String notrue) {
+		String textoElement = driver.findElement(By.xpath(notrue)).getText();
+		Assert.assertNotSame("Nenhum registro encontrado.", "Nenhum registro encontrado.", textoElement);
+	}
+	
 	public void wait3(WebDriver driver, String espera3) {
 	driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 	}
@@ -170,8 +183,6 @@ public class Filtros {
 			new AssertionError("Ocorreu um erro desconhecido.");
 		}
 		}
-		
-	
 	
 	public void notequalscss(WebDriver driver, String notrue) {
 		String textoElement = driver.findElement(By.cssSelector(notrue)).getText();
