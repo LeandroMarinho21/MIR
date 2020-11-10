@@ -39,7 +39,7 @@ public class Test1 extends Filtros {
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
 		wait3(driver, "");
-		notequals(driver, "/html/body/center/div[3]/form[1]/div[3]/div[2]/div[2]/table/tbody/tr/td[1]/div/div[2]/div[2]/table/tbody");
+		notequalscss(driver, "#treeViewBTBrandDTO_data > tr > td");
 		System.out.println("Verifiquei1");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
