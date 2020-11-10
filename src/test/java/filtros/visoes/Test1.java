@@ -38,6 +38,7 @@ public class Test1 extends Filtros {
 		System.out.println("Consultei");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
+		wait3(driver, "");
 		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
 		System.out.println("Verifiquei1");
 		// Verificar se ocorre erro
