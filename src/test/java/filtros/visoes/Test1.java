@@ -41,6 +41,7 @@ public class Test1 extends Filtros {
 		wait3(driver, "");
 		System.out.println("Entrando");
 		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		notequals2(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
 		System.out.println("Sai");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");

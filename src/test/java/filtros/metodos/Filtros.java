@@ -172,6 +172,13 @@ public class Filtros {
 		Assert.assertNotEquals("Nenhum registro encontrado.", textoElement);
 	}
 	
+	public void notequals2(WebDriver driver, String notrue) {
+		System.out.println("To aqui no metodo");
+		String textoElement = driver.findElement(By.xpath(notrue)).getText();
+		System.out.println(textoElement);
+		Assert.assertNotEquals("", textoElement);
+	}
+	
 	public void notequalsid(WebDriver driver, String notrue) {
 		String textoElement = driver.findElement(By.id(notrue)).getText();
 		Assert.assertNotEquals("Nenhum registro encontrado.", textoElement);
