@@ -17,12 +17,10 @@ public class Test1 extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(0).getUrl());
+		login(driver, links.get(0).getUrl());
 		// Filtro
-		System.out.println("Fiz Login");
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
-		System.out.println("Entrei no Filtro");
 		/// Preencher Periodo
 		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
 //		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
@@ -35,18 +33,13 @@ public class Test1 extends Filtros {
 ///		System.out.println("Preenchi Campo");
 		// Consultar
 		click(driver, "btnConsult");
-		System.out.println("Consultei");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
 		wait3(driver, "");
-		System.out.println("Entrando");
 		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
 		notequals2(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
-		System.out.println("Sai");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
-		System.out.println("Verifiquei2");
-		System.out.println("Sucess");
 		driver.quit();
 	}
 

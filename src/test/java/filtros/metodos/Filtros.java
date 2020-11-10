@@ -166,14 +166,12 @@ public class Filtros {
 	}
 	
 	public void notequals(WebDriver driver, String notrue) {
-		System.out.println("To aqui no metodo");
 		String textoElement = driver.findElement(By.xpath(notrue)).getText();
 		System.out.println(textoElement);
 		Assert.assertNotEquals("Nenhum registro encontrado.", textoElement);
 	}
 	
 	public void notequals2(WebDriver driver, String notrue) {
-		System.out.println("To aqui no metodo");
 		String textoElement = driver.findElement(By.xpath(notrue)).getText();
 		System.out.println(textoElement);
 		Assert.assertNotEquals("", textoElement);
@@ -229,14 +227,44 @@ public class Filtros {
 		Assert.assertEquals("V", driver.findElement(By.xpath(escreveroperadora)).getAttribute("value"));
 	}
 	
+	
+	public void writemacaddress(WebDriver driver, String escrevermacaddress) {
+		driver.findElement(By.xpath(escrevermacaddress)).sendKeys("0");
+		Assert.assertEquals("0", driver.findElement(By.xpath(escrevermacaddress)).getAttribute("value"));
+	}
+	
 	public void writeipterminal(WebDriver driver, String escreveripterminal) {
 		driver.findElement(By.xpath(escreveripterminal)).sendKeys("0");
 		Assert.assertEquals("0", driver.findElement(By.xpath(escreveripterminal)).getAttribute("value"));
 	}
 	
-	public void writemacaddress(WebDriver driver, String escrevermacaddress) {
-		driver.findElement(By.xpath(escrevermacaddress)).sendKeys("0");
-		Assert.assertEquals("0", driver.findElement(By.xpath(escrevermacaddress)).getAttribute("value"));
+	public void writecodpais(WebDriver driver, String escrevercodpais) {
+		driver.findElement(By.xpath(escrevercodpais)).sendKeys("0");
+		Assert.assertEquals("0", driver.findElement(By.xpath(escrevercodpais)).getAttribute("value"));
+	}
+	
+	public void writecodrede(WebDriver driver, String escrevercodrede) {
+		driver.findElement(By.xpath(escrevercodrede)).sendKeys("0");
+		Assert.assertEquals("0", driver.findElement(By.xpath(escrevercodrede)).getAttribute("value"));
+	}
+	
+	public void writecodarea(WebDriver driver, String escrevercodarea) {
+		driver.findElement(By.xpath(escrevercodarea)).sendKeys("0");
+		Assert.assertEquals("0", driver.findElement(By.xpath(escrevercodarea)).getAttribute("value"));
+	}
+	
+	public void writeidtcel(WebDriver driver, String escreveridtcel) {
+		driver.findElement(By.xpath(escreveridtcel)).sendKeys("0");
+		Assert.assertEquals("0", driver.findElement(By.xpath(escreveridtcel)).getAttribute("value"));
+	}
+	
+	public void writeversionplat(WebDriver driver, String escreverversaodaplataforma) {
+		driver.findElement(By.xpath(escreverversaodaplataforma)).sendKeys("0");
+		Assert.assertEquals("0", driver.findElement(By.xpath(escreverversaodaplataforma)).getAttribute("value"));
+	}
+	public void writeversionca(WebDriver driver, String escreverversaoca) {
+		driver.findElement(By.xpath(escreverversaoca)).sendKeys("0");
+		Assert.assertEquals("0", driver.findElement(By.xpath(escreverversaoca)).getAttribute("value"));
 	}
 	
 	public void writepanx(WebDriver driver, String escreverpanx) {

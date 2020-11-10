@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.logging.Logs;
 
 import filtros.metodos.Filtros;
 import filtros.todos.ViewBTDTO;
@@ -107,7 +108,7 @@ public class FiltrosBandeiras extends Filtros {
 		driver.quit();
 	}
 	
-	/// Objetivo: preencher o campo Nome Operadora com parte do nome.
+	/// Objetivo: preencher o campo Mac Address com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
@@ -139,6 +140,9 @@ public class FiltrosBandeiras extends Filtros {
 		driver.quit();
 	}
 	
+	/// Objetivo: preencher o campo Ip Terminal com parte do nome.
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	
 	@Test
 	public void TestBandeiraIpTerminal() {
 		WebDriver driver = new ChromeDriver();
@@ -156,6 +160,198 @@ public class FiltrosBandeiras extends Filtros {
 		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher Combobox
 		writeipterminal(driver, "//input[contains(@class,'entity_ipTerm')]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar");
+		// Verificar se possui dados
+		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		notequals2(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
+		driver.quit();
+	}
+	
+	/// Objetivo: preencher o campo Codigo do pais para celular com parte do nome.
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	
+	@Test
+	public void TestBandeiraCodPaisParaCel() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		/// Preencher Periodo
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		// Preencher Combobox
+		writecodpais(driver, "//input[contains(@class,'entity_cgiMcc')]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar");
+		// Verificar se possui dados
+		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		notequals2(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
+		driver.quit();
+	}
+	
+	/// Objetivo: preencher o campo Codigo de rede movel com parte do nome.
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	
+	@Test
+	public void TestBandeiraCodRede() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		/// Preencher Periodo
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		// Preencher Combobox
+		writecodrede(driver, "//input[contains(@class,'entity_cgiMnc')]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar");
+		// Verificar se possui dados
+		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		notequals2(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
+		driver.quit();
+	}
+	
+	/// Objetivo: preencher o campo Codigo de area de localizacao com parte do nome.
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	
+	@Test
+	public void TestBandeiraCodArea() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		/// Preencher Periodo
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		// Preencher Combobox
+		writecodarea(driver, "//input[contains(@class,'entity_cgiLac')]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar");
+		// Verificar se possui dados
+		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		notequals2(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
+		driver.quit();
+	}
+	
+	/// Objetivo: preencher o campo Identidade do celular com parte do nome.
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	
+	@Test
+	public void TestBandeiraIdtDoCel() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		/// Preencher Periodo
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		// Preencher Combobox
+		writeidtcel(driver, "//input[contains(@class,'entity_cgiCI')]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar");
+		// Verificar se possui dados
+		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		notequals2(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
+		driver.quit();
+	}
+	
+	/// Objetivo: preencher o campo Versao da plataforma com parte do nome.
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	
+	@Test
+	public void TestBandeiraVersaoPlataforma() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		/// Preencher Periodo
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		// Preencher Combobox
+		writeversionplat(driver, "//input[contains(@class,'entity_vrsPlat')]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar");
+		// Verificar se possui dados
+		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		notequals2(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
+		driver.quit();
+	}
+	
+	/// Objetivo: preencher o campo Versao CA com parte do nome.
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	
+	@Test
+	public void TestBandeiraVersaoCA() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		/// Preencher Periodo
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		// Preencher Combobox
+		writeversionca(driver, "//input[contains(@class,'entity_vrsCA')]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
