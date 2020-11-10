@@ -10,6 +10,7 @@ import java.util.concurrent.TimeUnit;
 import filtros.todos.ViewBTDTO;
 
 import org.junit.Assert;
+import org.junit.internal.runners.statements.Fail;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -145,6 +146,8 @@ public class Filtros {
 		WebDriverWait wait = new WebDriverWait(driver, 180);
 		wait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath(esperatexto), "Nenhum registro encontrado."));
 	}
+
+
 	public void wait3(WebDriver driver, String espera3) {
 	driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 	}
@@ -163,10 +166,16 @@ public class Filtros {
 		assertNotEquals("Ocorreu um erro desconhecido, consulte o administrador.", textoElement);
 	}
 	public void erroDesc (WebDriver driver, String erro) {
-		if (driver.findElement(By.xpath(erro)).isDisplayed())
+		if (driver.findElement(By.xpath(erro)).isDisplayed()) {
 			new AssertionError("Ocorreu um erro desconhecido.");
+		}
 	}	
-		
+	
+	public void erronenhum (WebDriver driver, String erro) {
+		if (driver.findElement(By.xpath(erro)).getText().contains("Nenhum")) {
+			new AssertionError("Ocorreu um erro desconhecido.");
+		}
+	}
 	public void notequalscss(WebDriver driver, String notrue) {
 		String textoElement = driver.findElement(By.cssSelector(notrue)).getText();
 		assertNotEquals("Nenhum registro encontrado.", textoElement);
