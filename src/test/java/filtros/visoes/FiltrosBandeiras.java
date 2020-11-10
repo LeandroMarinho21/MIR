@@ -38,6 +38,7 @@ public class FiltrosBandeiras extends Filtros {
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
 		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		notequals2(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		System.out.println("Sucess");
@@ -68,6 +69,7 @@ public class FiltrosBandeiras extends Filtros {
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
 		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		notequals2(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		System.out.println("Sucess");
@@ -98,6 +100,7 @@ public class FiltrosBandeiras extends Filtros {
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
 		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		notequals2(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		System.out.println("Sucess");
@@ -129,6 +132,7 @@ public class FiltrosBandeiras extends Filtros {
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
 		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		notequals2(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		System.out.println("Sucess");
@@ -157,6 +161,7 @@ public class FiltrosBandeiras extends Filtros {
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
 		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		notequals2(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		System.out.println("Sucess");
@@ -191,6 +196,7 @@ public class FiltrosBandeiras extends Filtros {
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
 		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		notequals2(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		System.out.println("Sucess");
@@ -222,6 +228,7 @@ public class FiltrosBandeiras extends Filtros {
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
 		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		notequals2(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		System.out.println("Sucess");
@@ -252,6 +259,7 @@ public class FiltrosBandeiras extends Filtros {
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
 		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		notequals2(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		System.out.println("Sucess");
@@ -282,6 +290,7 @@ public class FiltrosBandeiras extends Filtros {
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
 		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		notequals2(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		System.out.println("Sucess");
@@ -312,6 +321,7 @@ public class FiltrosBandeiras extends Filtros {
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
 		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		notequals2(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		System.out.println("Sucess");
