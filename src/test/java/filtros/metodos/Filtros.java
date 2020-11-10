@@ -163,7 +163,7 @@ public class Filtros {
 	}
 	public void notequalserro(WebDriver driver, String notrue) {
 		String textoElement = driver.findElement(By.xpath(notrue)).getText();
-		assertNotEquals("Ocorreu um erro desconhecido, consulte o administrador.", textoElement);
+		Assert.assertNotEquals("Ocorreu um erro desconhecido, consulte o administrador.", textoElement);
 	}
 	public void erroDesc (WebDriver driver, String erro) {
 		if (driver.findElement(By.xpath(erro)).isDisplayed()) {
@@ -192,37 +192,51 @@ public class Filtros {
 
 	public void checkall(WebDriver driver, String ClicarTodos) {
 		driver.findElement(By.xpath(ClicarTodos)).click();
-		assertEquals("0", driver.findElement(By.xpath(ClicarTodos)).isSelected());
-	}
-	
-	public void writesimcard(WebDriver driver, String escreversimcard) {
-		driver.findElement(By.xpath(escreversimcard)).sendKeys("0");
-		assertEquals("0", driver.findElement(By.xpath(escreversimcard)).getAttribute("value"));
+		Assert.assertTrue(driver.findElement(By.xpath(ClicarTodos)).isSelected());
 	}
 	
 	public void writeimei(WebDriver driver, String escreverimei) {
 		driver.findElement(By.xpath(escreverimei)).sendKeys("0");
-		assertEquals("0", driver.findElement(By.xpath(escreverimei)).getAttribute("value"));
+		Assert.assertEquals("0", driver.findElement(By.xpath(escreverimei)).getAttribute("value"));
+	}
+	public void writesimcard(WebDriver driver, String escreversimcard) {
+		driver.findElement(By.xpath(escreversimcard)).sendKeys("0");
+		Assert.assertEquals("0", driver.findElement(By.xpath(escreversimcard)).getAttribute("value"));
+	}
+	
+	public void writeoperadora(WebDriver driver, String escreveroperadora) {
+		driver.findElement(By.xpath(escreveroperadora)).sendKeys("V");
+		Assert.assertEquals("V", driver.findElement(By.xpath(escreveroperadora)).getAttribute("value"));
+	}
+	
+	public void writeipterminal(WebDriver driver, String escreveripterminal) {
+		driver.findElement(By.xpath(escreveripterminal)).sendKeys("0");
+		Assert.assertEquals("0", driver.findElement(By.xpath(escreveripterminal)).getAttribute("value"));
+	}
+	
+	public void writemacaddress(WebDriver driver, String escrevermacaddress) {
+		driver.findElement(By.xpath(escrevermacaddress)).sendKeys("0");
+		Assert.assertEquals("0", driver.findElement(By.xpath(escrevermacaddress)).getAttribute("value"));
 	}
 	
 	public void writepanx(WebDriver driver, String escreverpanx) {
 		driver.findElement(By.xpath(escreverpanx)).sendKeys("0");
-		assertEquals("0", driver.findElement(By.xpath(escreverpanx)).getAttribute("value"));
+		Assert.assertEquals("0", driver.findElement(By.xpath(escreverpanx)).getAttribute("value"));
 	}
 	
 	public void writecvvx(WebDriver driver, String escrevercvvx) {
 		driver.findElement(By.xpath(escrevercvvx)).sendKeys("0");
-		assertEquals("0", driver.findElement(By.xpath(escrevercvvx)).getAttribute("value"));
+		Assert.assertEquals("0", driver.findElement(By.xpath(escrevercvvx)).getAttribute("value"));
 	}
 
 	public void writedescx(WebDriver driver, String escreverdescx) {
 		driver.findElement(By.xpath(escreverdescx)).sendKeys("m");
-		assertEquals("m", driver.findElement(By.xpath(escreverdescx)).getAttribute("value"));
+		Assert.assertEquals("m", driver.findElement(By.xpath(escreverdescx)).getAttribute("value"));
 	}
 
 	public void writeportx(WebDriver driver, String escreverportx) {
 		driver.findElement(By.xpath(escreverportx)).sendKeys("0");
-		assertEquals("0", driver.findElement(By.xpath(escreverportx)).getAttribute("value"));
+		Assert.assertEquals("0", driver.findElement(By.xpath(escreverportx)).getAttribute("value"));
 	}
 }
 	

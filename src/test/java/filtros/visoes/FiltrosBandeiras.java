@@ -73,6 +73,96 @@ public class FiltrosBandeiras extends Filtros {
 		System.out.println("Sucess");
 		driver.quit();
 	}
+	
+	/// Objetivo: preencher o campo Nome Operadora com parte do nome.
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	@Test
+	public void TestbandeiraNomeOperadora() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login(driver, links.get(0).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		/// Preencher Periodo
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		// Preencher Combobox
+		writeoperadora(driver, "//input[contains(@class,'entity_nmOpe')]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar");
+		// Verificar se possui dados
+		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
+		driver.quit();
+	}
+	
+	/// Objetivo: preencher o campo Nome Operadora com parte do nome.
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	
+	@Test
+	public void Testbandeiramacaddress() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login(driver, links.get(0).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		/// Preencher Periodo
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		// Preencher Combobox
+		writemacaddress(driver, "//input[contains(@class,'entity_macAdr')]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar");
+		// Verificar se possui dados
+		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
+		driver.quit();
+	}
+	
+	@Test
+	public void TestBandeiraIpTerminal() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login(driver, links.get(0).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		/// Preencher Periodo
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		// Preencher Combobox
+		writeipterminal(driver, "//input[contains(@class,'entity_ipTerm')]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar");
+		// Verificar se possui dados
+		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
+		driver.quit();
+	}
+
 
 	/// Objetivo: preencher todos os novos campos Pan Web,Cvv,Descriptor,Portador com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
