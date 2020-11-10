@@ -176,7 +176,7 @@ public class Filtros {
 		System.out.println("To aqui no metodo");
 		String textoElement = driver.findElement(By.xpath(notrue)).getText();
 		System.out.println(textoElement);
-		Assert.assertNotEquals(null, textoElement);
+		Assert.assertNotEquals("", textoElement);
 	}
 	
 	public void notequalsid(WebDriver driver, String notrue) {
