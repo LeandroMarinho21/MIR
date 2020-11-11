@@ -21,23 +21,15 @@ public class Test1 extends Filtros {
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
-		/// Preencher Periodo
-		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-//		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-//		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-///		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-//		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-///		System.out.println("Preenchi Períodos");
+		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
-///		writeipterminal(driver, "//input[contains(@class,'entity_ipTerm')]");
-///		System.out.println("Preenchi Campo");
+		clickx(driver, "//div[contains(@class,'entity_Issuer')]");
+		clickx(driver, "//div[30]/div/ul/li/label[text()='Alelo (78)']");
 		// Consultar
 		click(driver, "btnConsult");
-		waiting(driver, "dialogLoadbar");
+		waiting(driver, "dialogLoadbar ");
 		// Verificar se possui dados
-		wait3(driver, "");
-		notequals(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
-		notequals2(driver, "//*[contains(@class, 'ui-treetable-data ui-widget-content')]");
+		waitingtoclickx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		driver.quit();

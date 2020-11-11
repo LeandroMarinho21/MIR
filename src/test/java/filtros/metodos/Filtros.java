@@ -15,6 +15,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.SearchContext;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -78,7 +79,7 @@ public class Filtros {
 	public void click(WebDriver driver, String clicar) {
 		driver.findElement(By.id(clicar)).click();
 	}
-
+	
 	public void clickx(WebDriver driver, String clicar) {
 		driver.findElement(By.xpath(clicar)).click();
 	}
@@ -118,8 +119,7 @@ public class Filtros {
 	}
 
 	public void waitingtoclickx(WebDriver driver, String id_waitingclick) {
-
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, 180);
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(id_waitingclick)));
 	}
 	public void waitingtoclickcss(WebDriver driver, String css_waitingclick) {
@@ -154,7 +154,16 @@ public class Filtros {
 		WebDriverWait wait = new WebDriverWait(driver, 180);
 		wait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath(esperatexto), "Nenhum registro encontrado."));
 	}
-
+	
+	public void waitingelementx(WebDriver driver, String id_waitingclick) {
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		try {
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(id_waitingclick)));
+		} 
+		catch (TimeoutException t) {
+			t.printStackTrace();
+		}
+	}
 
 	public void verificarelementox(WebDriver driver, String notrue) {
 		String textoElement = driver.findElement(By.xpath(notrue)).getText();
@@ -208,9 +217,14 @@ public class Filtros {
 		driver.findElement(By.xpath(escreverperiodo2)).sendKeys("08092020 1030");
 	}
 
-	public void checkall(WebDriver driver, String ClicarTodos) {
-		driver.findElement(By.xpath(ClicarTodos)).click();
-		Assert.assertTrue(driver.findElement(By.xpath(ClicarTodos)).isSelected());
+	public void check3x(WebDriver driver, String lista) {
+		WebElement element = driver.findElement(By.xpath(lista));
+		Select combo = new Select(element);
+		combo.selectByVisibleText("Alelo(78)");
+		combo.selectByVisibleText("VR(55)");
+		combo.selectByVisibleText("VR(79)");
+		List<WebElement> allSelectedOptions = combo.getAllSelectedOptions();
+		Assert.assertEquals(3, allSelectedOptions.size());
 	}
 	
 	public void writeimei(WebDriver driver, String escreverimei) {
@@ -278,8 +292,8 @@ public class Filtros {
 	}
 
 	public void writedescx(WebDriver driver, String escreverdescx) {
-		driver.findElement(By.xpath(escreverdescx)).sendKeys("m");
-		Assert.assertEquals("m", driver.findElement(By.xpath(escreverdescx)).getAttribute("value"));
+		driver.findElement(By.xpath(escreverdescx)).sendKeys("0");
+		Assert.assertEquals("0", driver.findElement(By.xpath(escreverdescx)).getAttribute("value"));
 	}
 
 	public void writeportx(WebDriver driver, String escreverportx) {
