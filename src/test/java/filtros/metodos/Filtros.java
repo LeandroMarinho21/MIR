@@ -161,7 +161,8 @@ public class Filtros {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(id_waitingclick)));
 		} 
 		catch (TimeoutException t) {
-			t.printStackTrace();
+			System.out.println(t.getMessage());
+			throw t;
 		}
 	}
 

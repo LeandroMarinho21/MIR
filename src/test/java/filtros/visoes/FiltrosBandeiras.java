@@ -11,14 +11,14 @@ import filtros.todos.ViewBTDTO;
 public class FiltrosBandeiras extends Filtros {
 
 	
-	/// Objetivo: preencher o campo Imei com parte do nome.
+	/// Objetivo: preencher o combo emissor 
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
 	public void TestbandeiraEmissores() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login(driver, links.get(0).getUrl());
+		login2(driver, links.get(0).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -36,12 +36,15 @@ public class FiltrosBandeiras extends Filtros {
 		driver.quit();
 		}
 	
+	/// Objetivo: preencher o combo subproduto
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	
 	@Test
 	public void TestbandeiraSubproduto() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login(driver, links.get(0).getUrl());
+		login2(driver, links.get(0).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -49,6 +52,32 @@ public class FiltrosBandeiras extends Filtros {
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_SubProduct')]");
 		clickx(driver, "//div[31]/div/ul/li/label[text()='Alelo Alimentação (129)']");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar ");
+		// Verificar se possui dados
+		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		driver.quit();
+		}
+	
+	/// Objetivo: preencher o combo subproduto
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	
+	@Test
+	public void TestbandeiraQtdParcelas() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		waiting(driver, "dialogLoadbar");
+		// Preencher Combobox
+		clickx(driver, "//div[contains(@class,'entity_Plot')]");
+		clickx(driver, "//div[32]/div/ul/li/label[text()='0 (0)']");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar ");
@@ -67,7 +96,7 @@ public class FiltrosBandeiras extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login(driver, links.get(0).getUrl());
+		login2(driver, links.get(0).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -500,7 +529,7 @@ public class FiltrosBandeiras extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login(driver, links.get(0).getUrl());
+		login2(driver, links.get(0).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
