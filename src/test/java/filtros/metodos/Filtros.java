@@ -157,7 +157,11 @@ public class Filtros {
 	
 	public void waitingelementx(WebDriver driver, String id_waitingclick) {
 		WebDriverWait wait = new WebDriverWait(driver, 5);
+		try {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(id_waitingclick)));
+		} 
+		catch (TimeoutException t) {
+		}
 	}
 
 	public void verificarelementox(WebDriver driver, String notrue) {
