@@ -18,7 +18,7 @@ public class FiltrosBandeiras extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(0).getUrl());
+		login(driver, links.get(0).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -44,7 +44,7 @@ public class FiltrosBandeiras extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(0).getUrl());
+		login(driver, links.get(0).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -70,7 +70,7 @@ public class FiltrosBandeiras extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(0).getUrl());
+		login(driver, links.get(0).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -96,17 +96,17 @@ public class FiltrosBandeiras extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(0).getUrl());
+		login(driver, links.get(0).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_CellphoneOperator')]");
-		clickx(driver, "//div[34]/div/ul/li/label[text()='0 (0)']");
+		clickx(driver, "//div[34]/div/ul/li/label[text()='Vivo (4)']");
 		// Consultar
 		click(driver, "btnConsult");
-		waiting(driver, "dialogLoadbar ");
+		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
 		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
 		// Verificar se ocorre erro
