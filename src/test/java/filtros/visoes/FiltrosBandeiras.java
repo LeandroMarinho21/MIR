@@ -11,14 +11,14 @@ import filtros.todos.ViewBTDTO;
 public class FiltrosBandeiras extends Filtros {
 
 	
-	/// Objetivo: preencher o combo emissor 
+	/// Objetivo: Preencher o combo Emissores 
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
 	public void TestbandeiraEmissores() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login(driver, links.get(0).getUrl());
+		login2(driver, links.get(0).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -36,7 +36,7 @@ public class FiltrosBandeiras extends Filtros {
 		driver.quit();
 		}
 	
-	/// Objetivo: preencher o combo subproduto
+	/// Objetivo: Preencher o combo Subproduto
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
@@ -44,7 +44,7 @@ public class FiltrosBandeiras extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login(driver, links.get(0).getUrl());
+		login2(driver, links.get(0).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -62,7 +62,7 @@ public class FiltrosBandeiras extends Filtros {
 		driver.quit();
 		}
 	
-	/// Objetivo: preencher o combo Quantidade de Parcelas
+	/// Objetivo: Preencher o combo Quantidade de Parcelas
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
@@ -70,7 +70,7 @@ public class FiltrosBandeiras extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login(driver, links.get(0).getUrl());
+		login2(driver, links.get(0).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -88,7 +88,7 @@ public class FiltrosBandeiras extends Filtros {
 		driver.quit();
 		}
 	
-	/// Objetivo: preencher o combo Quantidade de Parcelas
+	/// Objetivo: Preencher o combo Quantidade de Parcelas
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
@@ -96,7 +96,7 @@ public class FiltrosBandeiras extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login(driver, links.get(0).getUrl());
+		login2(driver, links.get(0).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -115,7 +115,7 @@ public class FiltrosBandeiras extends Filtros {
 		}
 
 	
-	/// Objetivo: preencher o campo Imei com parte do nome.
+	/// Objetivo: Preencher o campo Imei com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
 	public void TestbandeiraImei() {
@@ -145,7 +145,7 @@ public class FiltrosBandeiras extends Filtros {
 		driver.quit();
 	}
 	
-	/// Objetivo: preencher o campo SimCard com parte do nome.
+	/// Objetivo: Preencher o campo SimCard com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
 	public void TestbandeiraSimcard() {
@@ -175,7 +175,7 @@ public class FiltrosBandeiras extends Filtros {
 		driver.quit();
 	}
 	
-	/// Objetivo: preencher o campo Nome Operadora com parte do nome.
+	/// Objetivo: Preencher o campo Nome Operadora com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
 	public void TestbandeiraNomeOperadora() {
@@ -205,7 +205,7 @@ public class FiltrosBandeiras extends Filtros {
 		driver.quit();
 	}
 	
-	/// Objetivo: preencher o campo Mac Address com parte do nome.
+	/// Objetivo: Preencher o campo Mac Address com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
@@ -236,7 +236,7 @@ public class FiltrosBandeiras extends Filtros {
 		driver.quit();
 	}
 	
-	/// Objetivo: preencher o campo Ip Terminal com parte do nome.
+	/// Objetivo: Preencher o campo Ip Terminal com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
@@ -267,7 +267,7 @@ public class FiltrosBandeiras extends Filtros {
 		driver.quit();
 	}
 	
-	/// Objetivo: preencher o campo Codigo do pais para celular com parte do nome.
+	/// Objetivo: Preencher o campo Codigo do pais para celular com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
@@ -298,7 +298,7 @@ public class FiltrosBandeiras extends Filtros {
 		driver.quit();
 	}
 	
-	/// Objetivo: preencher o campo Codigo de rede movel com parte do nome.
+	/// Objetivo: Preencher o campo Codigo de rede movel com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
@@ -329,7 +329,7 @@ public class FiltrosBandeiras extends Filtros {
 		driver.quit();
 	}
 	
-	/// Objetivo: preencher o campo Codigo de area de localizacao com parte do nome.
+	/// Objetivo: Preencher o campo Codigo de area de localizacao com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
@@ -360,7 +360,7 @@ public class FiltrosBandeiras extends Filtros {
 		driver.quit();
 	}
 	
-	/// Objetivo: preencher o campo Identidade do celular com parte do nome.
+	/// Objetivo: Preencher o campo Identidade do celular com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
@@ -391,7 +391,7 @@ public class FiltrosBandeiras extends Filtros {
 		driver.quit();
 	}
 	
-	/// Objetivo: preencher o campo Versao da plataforma com parte do nome.
+	/// Objetivo: Preencher o campo Versao da plataforma com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
@@ -422,7 +422,7 @@ public class FiltrosBandeiras extends Filtros {
 		driver.quit();
 	}
 	
-	/// Objetivo: preencher o campo Versao CA com parte do nome.
+	/// Objetivo: Preencher o campo Versao CA com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
@@ -454,7 +454,7 @@ public class FiltrosBandeiras extends Filtros {
 	}
 
 
-	/// Objetivo: preencher todos os novos campos Pan Web,Cvv,Descriptor,Portador com parte do nome.
+	/// Objetivo: Preencher todos os novos campos Pan Web,Cvv,Descriptor,Portador com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
 	public void Testbandeiratodos() {
@@ -487,7 +487,7 @@ public class FiltrosBandeiras extends Filtros {
 		driver.quit();
 	}
 
-	/// Objetivo: preencher o text area Pan Web com parte do nome.
+	/// Objetivo: Preencher o text area Pan Web com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
 	public void Testbandeirapan() {
@@ -495,7 +495,6 @@ public class FiltrosBandeiras extends Filtros {
 		/// Login
 		List<ViewBTDTO> links = getViews();
 		login2(driver, links.get(0).getUrl());
-		;
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -518,7 +517,7 @@ public class FiltrosBandeiras extends Filtros {
 		driver.quit();
 	}
 
-	/// Objetivo: preencher o text area CVV com parte do nome.
+	/// Objetivo: Preencher o text area CVV com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
 	public void Testbandeiracvv() {
@@ -548,7 +547,7 @@ public class FiltrosBandeiras extends Filtros {
 		driver.quit();
 	}
 
-	/// Objetivo: preencher o text area Descriptor com parte do nome.
+	/// Objetivo: Preencher o text area Descriptor com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
 	public void TestbandeiraDescriptor() {
@@ -578,7 +577,7 @@ public class FiltrosBandeiras extends Filtros {
 		driver.quit();
 	}
 
-	/// Objetivo: preencher o text area Portador com parte do nome.
+	/// Objetivo: Preencher o text area Portador com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
 	public void TestbandeiraPortador() {
