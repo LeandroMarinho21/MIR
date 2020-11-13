@@ -14,11 +14,11 @@ public class FiltrosBandeiras extends Filtros {
 	/// Objetivo: Preencher o combo Emissores 
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestbandeiraEmissores() {
+	public void TestBandeiraEmissores() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(0).getUrl());
+		login(driver, links.get(0).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -33,6 +33,7 @@ public class FiltrosBandeiras extends Filtros {
 		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 		}
 	
@@ -40,11 +41,11 @@ public class FiltrosBandeiras extends Filtros {
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
-	public void TestbandeiraSubproduto() {
+	public void TestBandeiraSubproduto() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(0).getUrl());
+		login(driver, links.get(0).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -59,6 +60,7 @@ public class FiltrosBandeiras extends Filtros {
 		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 		}
 	
@@ -66,7 +68,7 @@ public class FiltrosBandeiras extends Filtros {
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
-	public void TestbandeiraQtdParcelas() {
+	public void TestBandeiraQtdParcelas() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
@@ -85,6 +87,7 @@ public class FiltrosBandeiras extends Filtros {
 		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 		}
 	
@@ -92,7 +95,7 @@ public class FiltrosBandeiras extends Filtros {
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
-	public void TestbandeiraOperadoras() {
+	public void TestBandeiraOperadoras() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
@@ -111,6 +114,7 @@ public class FiltrosBandeiras extends Filtros {
 		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 		}
 
@@ -118,7 +122,7 @@ public class FiltrosBandeiras extends Filtros {
 	/// Objetivo: Preencher o campo Imei com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestbandeiraImei() {
+	public void TestBandeiraImei() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
@@ -148,7 +152,7 @@ public class FiltrosBandeiras extends Filtros {
 	/// Objetivo: Preencher o campo SimCard com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestbandeiraSimcard() {
+	public void TestBandeiraSimcard() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
@@ -178,7 +182,7 @@ public class FiltrosBandeiras extends Filtros {
 	/// Objetivo: Preencher o campo Nome Operadora com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestbandeiraNomeOperadora() {
+	public void TestBandeiraNomeOperadora() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
@@ -209,7 +213,7 @@ public class FiltrosBandeiras extends Filtros {
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
-	public void Testbandeiramacaddress() {
+	public void TestBandeiraMacAddress() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
@@ -453,44 +457,10 @@ public class FiltrosBandeiras extends Filtros {
 		driver.quit();
 	}
 
-
-	/// Objetivo: Preencher todos os novos campos Pan Web,Cvv,Descriptor,Portador com parte do nome.
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
-	@Test
-	public void Testbandeiratodos() {
-		WebDriver driver = new ChromeDriver();
-		// Login
-		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(0).getUrl());
-		// Filtro
-		waitingtoclick(driver, "btnFilter");
-		click(driver, "btnFilter");
-		// Preencher Periodo
-		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		// Preencher novos campos
-		writepanx(driver, "//input[contains(@class,'entity_panWeb')]");
-		writecvvx(driver, "//input[contains(@class,'entity_cvv')]");
-		writedescx(driver, "//input[contains(@class,'entity_descriptor')]");
-		writeportx(driver, "//input[contains(@class,'entity_portador')]");
-		// Consultar
-		click(driver, "btnConsult");
-		waiting(driver, "dialogLoadbar");
-		// Verificar se possui dados
-		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
-		// Verificar se ocorre erro
-		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
-		System.out.println("Sucess");
-		driver.quit();
-	}
-
 	/// Objetivo: Preencher o text area Pan Web com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void Testbandeirapan() {
+	public void TestBandeiraPanWeb() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
@@ -520,7 +490,7 @@ public class FiltrosBandeiras extends Filtros {
 	/// Objetivo: Preencher o text area CVV com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void Testbandeiracvv() {
+	public void TestBandeiraCVV() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
@@ -550,7 +520,7 @@ public class FiltrosBandeiras extends Filtros {
 	/// Objetivo: Preencher o text area Descriptor com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestbandeiraDescriptor() {
+	public void TestBandeiraDescriptor() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
@@ -580,7 +550,7 @@ public class FiltrosBandeiras extends Filtros {
 	/// Objetivo: Preencher o text area Portador com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestbandeiraPortador() {
+	public void TestBandeiraPortador() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
@@ -610,7 +580,7 @@ public class FiltrosBandeiras extends Filtros {
 	/// Objetivo: Preencher o combo Tipo de Venda
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestbandeiraTipoDeVenda() {
+	public void TestBandeiraTipoDeVenda() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
@@ -629,13 +599,14 @@ public class FiltrosBandeiras extends Filtros {
 		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 		}
 	
 	/// Objetivo: Preencher o combo Meio de captura
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestbandeiraMeioDeCaptura() {
+	public void TestBandeiraMeioDeCaptura() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
@@ -654,13 +625,14 @@ public class FiltrosBandeiras extends Filtros {
 		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 		}
 	
 	/// Objetivo: Preencher o combo MeioDeCaptura
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestbandeiraModoDeEntrada() {
+	public void TestBandeiraModoDeEntrada() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
@@ -679,13 +651,14 @@ public class FiltrosBandeiras extends Filtros {
 		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 		}
 	
 	/// Objetivo: Preencher o combo Grupo Ramo Atividade
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestbandeiraGrupoRamoAtividade() {
+	public void TestBandeiraGrupoRamoAtividade() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
@@ -704,13 +677,14 @@ public class FiltrosBandeiras extends Filtros {
 		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 		}
 	
 	/// Objetivo: Preencher o combo Tipo de Emissor
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestbandeiraTipoDeEmissor() {
+	public void TestBandeiraTipoDeEmissor() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
@@ -729,13 +703,14 @@ public class FiltrosBandeiras extends Filtros {
 		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 		}
 	
 	/// Objetivo: Preencher o combo Tipo de Transacao
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestbandeiraTipoDeTransacao() {
+	public void TestBandeiraTipoDeTransacao() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
@@ -754,13 +729,14 @@ public class FiltrosBandeiras extends Filtros {
 		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 		}
 	
 	/// Objetivo: Preencher o combo Origens Transacoes Web
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestbandeiraOrigensTrancoesWeb() {
+	public void TestBandeiraOrigensTrancoesWeb() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
@@ -779,13 +755,14 @@ public class FiltrosBandeiras extends Filtros {
 		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 		}
 	
 	/// Objetivo: Preencher o combo Codigo da Empresa Adquirente
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestbandeiraCodigoEmpresaAdquirente() {
+	public void TestBandeiraCodigoEmpresaAdquirente() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
@@ -804,13 +781,14 @@ public class FiltrosBandeiras extends Filtros {
 		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 		}
 	
 	/// Objetivo: Preencher o combo Codigo Motivo Rede Externa
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestbandeiraCodigoMotivoRedeExterna() {
+	public void TestBandeiraCodigoMotivoRedeExterna() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
@@ -829,13 +807,14 @@ public class FiltrosBandeiras extends Filtros {
 		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 		}
 	
 	/// Objetivo: Preencher o combo Switch
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestbandeiraSwitch() {
+	public void TestBandeiraSwitch() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
@@ -854,13 +833,14 @@ public class FiltrosBandeiras extends Filtros {
 		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 		}
 	
 	/// Objetivo: Preencher o combo FrontEnd
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestbandeiraFrontEnd() {
+	public void TestBandeiraFrontEnd() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
@@ -879,13 +859,14 @@ public class FiltrosBandeiras extends Filtros {
 		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 		}
 	
 	/// Objetivo: Preencher o combo Codigo de Servico
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestbandeiraCodServico() {
+	public void TestBandeiraCodServico() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
@@ -904,13 +885,14 @@ public class FiltrosBandeiras extends Filtros {
 		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 		}
 	
 	/// Objetivo: Preencher o combo Transacoes Tokenizadas
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestbandeiraTransacoesTokenizadas() {
+	public void TestBandeiraTransacoesTokenizadas() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
@@ -929,13 +911,14 @@ public class FiltrosBandeiras extends Filtros {
 		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 		}
 	
 	/// Objetivo: Preencher o combo Transacoes Tokenizadas
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestbandeiraQRCode() {
+	public void TestBandeiraQRCode() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
@@ -954,13 +937,14 @@ public class FiltrosBandeiras extends Filtros {
 		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 		}
 	
 	/// Objetivo: Preencher o combo Codigo Carteira
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestbandeiraCodigoCarteira() {
+	public void TestBandeiraCodigoCarteira() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
@@ -979,13 +963,14 @@ public class FiltrosBandeiras extends Filtros {
 		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 		}
 	
 	/// Objetivo: Preencher o combo Grupo de Bandeira
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestbandeiraGrupodeBandeira() {
+	public void TestBandeiraGrupodeBandeira() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
@@ -1004,6 +989,7 @@ public class FiltrosBandeiras extends Filtros {
 		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
 		driver.quit();
 		}
 	
