@@ -25,7 +25,7 @@ public class FiltrosBandeiras extends Filtros {
 		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_Issuer')]");
-		clickx(driver, "//div[31]/div/ul/li/label[text()='Alelo (78)']");
+		clickx(driver, "//div[31]/div[1]/div[1]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar ");
@@ -51,7 +51,7 @@ public class FiltrosBandeiras extends Filtros {
 		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_SubProduct')]");
-		clickx(driver, "/html/body/div[32]/div/ul/li/label[text()='Alelo Alimentação (129)']");
+		clickx(driver, "//div[32]/div[1]/div[1]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar ");
@@ -77,7 +77,7 @@ public class FiltrosBandeiras extends Filtros {
 		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_Plot')]");
-		clickx(driver, "//div[33]/div/ul/li/label[text()='0 (0)']");
+		clickx(driver, "//div[33]/div[1]/div[1]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar ");
@@ -103,7 +103,7 @@ public class FiltrosBandeiras extends Filtros {
 		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_CellphoneOperator')]");
-		clickx(driver, "//div[34]/div/ul/li/label[text()='Vivo (4)']");
+		clickx(driver, "//div[34]/div[1]/div[1]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
@@ -606,4 +606,406 @@ public class FiltrosBandeiras extends Filtros {
 		System.out.println("Sucess");
 		driver.quit();
 	}
+	
+	/// Objetivo: Preencher o combo Tipo de Venda
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	@Test
+	public void TestbandeiraTipoDeVenda() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		waiting(driver, "dialogLoadbar");
+		// Preencher Combobox
+		clickx(driver, "//div[contains(@class,'entity_SaleType')]");
+		clickx(driver, "//div[35]/div[1]/div[1]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar ");
+		// Verificar se possui dados
+		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		driver.quit();
+		}
+	
+	/// Objetivo: Preencher o combo Meio de captura
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	@Test
+	public void TestbandeiraMeioDeCaptura() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		waiting(driver, "dialogLoadbar");
+		// Preencher Combobox
+		clickx(driver, "//div[contains(@class,'entity_DeviceCapture')]");
+		clickx(driver, "//div[36]/div[1]/div[1]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar ");
+		// Verificar se possui dados
+		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		driver.quit();
+		}
+	
+	/// Objetivo: Preencher o combo MeioDeCaptura
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	@Test
+	public void TestbandeiraModoDeEntrada() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		waiting(driver, "dialogLoadbar");
+		// Preencher Combobox
+		clickx(driver, "//div[contains(@class,'entity_EnterMode')]");
+		clickx(driver, "//div[37]/div[1]/div[1]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar ");
+		// Verificar se possui dados
+		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		driver.quit();
+		}
+	
+	/// Objetivo: Preencher o combo Grupo Ramo Atividade
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	@Test
+	public void TestbandeiraGrupoRamoAtividade() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		waiting(driver, "dialogLoadbar");
+		// Preencher Combobox
+		clickx(driver, "//div[contains(@class,'entity_PrincipalBusiness')]");
+		clickx(driver, "//div[38]/div[1]/div[1]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar ");
+		// Verificar se possui dados
+		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		driver.quit();
+		}
+	
+	/// Objetivo: Preencher o combo Tipo de Emissor
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	@Test
+	public void TestbandeiraTipoDeEmissor() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		waiting(driver, "dialogLoadbar");
+		// Preencher Combobox
+		clickx(driver, "//div[contains(@class,'entity_IssuerType')]");
+		clickx(driver, "//div[39]/div[1]/div[1]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar ");
+		// Verificar se possui dados
+		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		driver.quit();
+		}
+	
+	/// Objetivo: Preencher o combo Tipo de Transacao
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	@Test
+	public void TestbandeiraTipoDeTransacao() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		waiting(driver, "dialogLoadbar");
+		// Preencher Combobox
+		clickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
+		clickx(driver, "//div[40]/div[1]/div[1]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar ");
+		// Verificar se possui dados
+		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		driver.quit();
+		}
+	
+	/// Objetivo: Preencher o combo Origens Transacoes Web
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	@Test
+	public void TestbandeiraOrigensTrancoesWeb() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		waiting(driver, "dialogLoadbar");
+		// Preencher Combobox
+		clickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
+		clickx(driver, "//div[41]/div[1]/div[1]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar ");
+		// Verificar se possui dados
+		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		driver.quit();
+		}
+	
+	/// Objetivo: Preencher o combo Codigo da Empresa Adquirente
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	@Test
+	public void TestbandeiraCodigoEmpresaAdquirente() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		waiting(driver, "dialogLoadbar");
+		// Preencher Combobox
+		clickx(driver, "//div[contains(@class,'entity_CompanyCodePurchasing')]");
+		clickx(driver, "//div[43]/div[1]/div[1]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar ");
+		// Verificar se possui dados
+		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		driver.quit();
+		}
+	
+	/// Objetivo: Preencher o combo Codigo Motivo Rede Externa
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	@Test
+	public void TestbandeiraCodigoMotivoRedeExterna() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		waiting(driver, "dialogLoadbar");
+		// Preencher Combobox
+		clickx(driver, "//div[contains(@class,'entity_ReasonCodeExternalNetwork')]");
+		clickx(driver, "//div[44]/div[1]/div[1]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar ");
+		// Verificar se possui dados
+		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		driver.quit();
+		}
+	
+	/// Objetivo: Preencher o combo Switch
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	@Test
+	public void TestbandeiraSwitch() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		waiting(driver, "dialogLoadbar");
+		// Preencher Combobox
+		clickx(driver, "//div[contains(@class,'entity_Switch')]");
+		clickx(driver, "//div[45]/div[1]/div[1]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar ");
+		// Verificar se possui dados
+		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		driver.quit();
+		}
+	
+	/// Objetivo: Preencher o combo FrontEnd
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	@Test
+	public void TestbandeiraFrontEnd() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		waiting(driver, "dialogLoadbar");
+		// Preencher Combobox
+		clickx(driver, "//div[contains(@class,'entity_Frontend')]");
+		clickx(driver, "//div[46]/div[1]/div[1]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar ");
+		// Verificar se possui dados
+		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		driver.quit();
+		}
+	
+	/// Objetivo: Preencher o combo Codigo de Servico
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	@Test
+	public void TestbandeiraCodServico() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		waiting(driver, "dialogLoadbar");
+		// Preencher Combobox
+		clickx(driver, "//div[contains(@class,'entity_ServiceCode')]");
+		clickx(driver, "//div[47]/div[1]/div[1]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar ");
+		// Verificar se possui dados
+		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		driver.quit();
+		}
+	
+	/// Objetivo: Preencher o combo Transacoes Tokenizadas
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	@Test
+	public void TestbandeiraTransacoesTokenizadas() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		waiting(driver, "dialogLoadbar");
+		// Preencher Combobox
+		clickx(driver, "//div[contains(@class,'entity_TokenTransaction')]");
+		clickx(driver, "//div[48]/div[1]/div[1]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar ");
+		// Verificar se possui dados
+		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		driver.quit();
+		}
+	
+	/// Objetivo: Preencher o combo Transacoes Tokenizadas
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	@Test
+	public void TestbandeiraQRCode() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		waiting(driver, "dialogLoadbar");
+		// Preencher Combobox
+		clickx(driver, "//div[contains(@class,'entity_QrCode')]");
+		clickx(driver, "//div[49]/div[1]/div[1]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar ");
+		// Verificar se possui dados
+		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		driver.quit();
+		}
+	
+	/// Objetivo: Preencher o combo Codigo Carteira
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	@Test
+	public void TestbandeiraCodigoCarteira() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		waiting(driver, "dialogLoadbar");
+		// Preencher Combobox
+		clickx(driver, "//div[contains(@class,'entity_Wallet')]");
+		clickx(driver, "//div[50]/div[1]/div[1]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar ");
+		// Verificar se possui dados
+		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		driver.quit();
+		}
+	
+	/// Objetivo: Preencher o combo Grupo de Bandeira
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	@Test
+	public void TestbandeiraGrupodeBandeira() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(0).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		waiting(driver, "dialogLoadbar");
+		// Preencher Combobox
+		clickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
+		clickx(driver, "//div[51]/div[1]/div[1]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar ");
+		// Verificar se possui dados
+		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		driver.quit();
+		}
+	
+	
 }
