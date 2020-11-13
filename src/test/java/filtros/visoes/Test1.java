@@ -24,7 +24,7 @@ public class Test1 extends Filtros {
 		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_Issuer')]");
-		clickx(driver, "//div[30]/div/ul/li/label[text()='Alelo (78)']");
+		clickx(driver, "//div[31]/div[1]/div[1]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar ");

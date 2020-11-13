@@ -747,7 +747,7 @@ public class FiltrosBandeiras extends Filtros {
 		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
-		clickx(driver, "//div[41]/div[1]/div[1]");
+		clickx(driver, "//div[42]/div[1]/div[1]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar ");
