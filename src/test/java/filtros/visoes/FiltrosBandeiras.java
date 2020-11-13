@@ -18,7 +18,7 @@ public class FiltrosBandeiras extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login(driver, links.get(0).getUrl());
+		login2(driver, links.get(0).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -45,7 +45,7 @@ public class FiltrosBandeiras extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login(driver, links.get(0).getUrl());
+		login2(driver, links.get(0).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
