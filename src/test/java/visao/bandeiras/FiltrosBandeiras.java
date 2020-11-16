@@ -1,15 +1,17 @@
-package filtros.visoes;
+package visao.bandeiras;
 
 import java.util.List;
-
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import filtros.metodos.Filtros;
-import filtros.todos.ViewBTDTO;
+import filtros.metodos.ViewBTDTO;
 
-public class FiltrosVoucher extends Filtros {
+public class FiltrosBandeiras extends Filtros {
+
+	
 	/// Objetivo: Preencher o combo Emissores 
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
@@ -17,7 +19,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(0).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -44,7 +46,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(0).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -991,6 +993,6 @@ public class FiltrosVoucher extends Filtros {
 		System.out.println("Sucess");
 		driver.quit();
 		}
-
-
+	
+	
 }

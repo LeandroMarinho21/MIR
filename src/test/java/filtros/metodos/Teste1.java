@@ -1,4 +1,4 @@
-package filtros.todos;
+package filtros.metodos;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,16 +9,17 @@ import org.junit.Test;
 import org.junit.internal.runners.statements.Fail;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
-import filtros.metodos.Filtros;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Teste1 extends Filtros {
 
-	/// Objetivo: preencher todos os novos campos Pan Web,Cvv,Descriptor,Portador com parte do nome.
-		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorrer nenhum erro administrativo.
+	/// Objetivo: preencher todos os novos campos Pan Web,Cvv,Descriptor,Portador
+	/// com parte do nome.
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorrer nenhum
+	/// erro administrativo.
 
 	String view = "";
+
 	@Test
 	public void Test() throws Exception {
 		boolean erro = false;
@@ -28,35 +29,37 @@ public class Teste1 extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		List<ViewBTDTO> links = getViews();
 		login(driver, links.get(0).getUrl());
-		for(ViewBTDTO obj : links){
-			try{
+		for (ViewBTDTO obj : links) {
+			try {
 				TestDiego(driver, obj.getUrl(), obj.getTable(), btnFilter, btnApply);
-			} catch (Exception | AssertionError e){
+			} catch (Exception | AssertionError e) {
 				erro = true;
-				System.err.println("Erro na tela: "+view);
+				System.err.println("Erro na tela: " + view);
 				e.printStackTrace();
 			}
 		}
-		if(erro)
+		if (erro)
 			throw new Exception();
 	}
 
-	public void TestDiego(WebDriver driver, String link, String table, String btnFilter, String btnApply){
-		if(driver.getCurrentUrl()!=link)
+	public void TestDiego(WebDriver driver, String link, String table, String btnFilter, String btnApply) {
+		if (driver.getCurrentUrl() != link)
 			driver.get(link);
 		try {
 			view = driver.findElement(By.xpath("/html/body/center/div[3]/form[1]/div[3]/div[1]/span")).getText();
-		} catch (NoSuchElementException e){
-			view = driver.findElement(By.xpath("/html/body/center/div[3]/form[1]/div[3]/div[2]/div[2]/table/tbody/tr/td[1]/div/div[1]/span")).getText();
+		} catch (NoSuchElementException e) {
+			view = driver.findElement(By.xpath(
+					"/html/body/center/div[3]/form[1]/div[3]/div[2]/div[2]/table/tbody/tr/td[1]/div/div[1]/span"))
+					.getText();
 		}
 		// Filtro
 		waitingtoclickx(driver, "/html/body/center/div[3]/form[1]/div[3]/div[1]/div/button[1]");
-			clickx(driver, btnFilter);
+		clickx(driver, btnFilter);
 		// Preencher Periodo
 		waitingtoclickx(driver,
 				"/html/body/center/div[3]/form[1]/div[3]/div[2]/div[1]/div/div[2]/div/div[1]/div[1]/div/span[1]/input");
-		//Desflaga o Agrupamento por bandeiras quando é tela de visão emissor
-		if(link=="https://192.168.80.18:8081/mir.console/pages/view/viewissuer.jsf"){
+		// Desflaga o Agrupamento por bandeiras quando é tela de visão emissor
+		if (link == "https://192.168.80.18:8081/mir.console/pages/view/viewissuer.jsf") {
 			clickx(driver, "/html/body/center/div[3]/form[1]/div[3]/div[2]/div[1]/div/div[2]/div/div[1]/div[2]/div");
 		}
 		writeperiod1x(driver,

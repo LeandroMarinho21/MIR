@@ -7,8 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import filtros.todos.ViewBTDTO;
-
 import org.junit.Assert;
 import org.junit.internal.runners.statements.Fail;
 import org.openqa.selenium.By;
