@@ -12,9 +12,9 @@ import filtros.metodos.ViewBTDTO;
 public class FiltrosPrivateLabel extends Filtros {
 	
 	/// Objetivo: Preencher o combo Emissores 
-		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		@Test
-		public void TestBandeiraEmissores() {
+		public void TestPrivateLabelEmissores() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -41,7 +41,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		
 		@Test
-		public void TestBandeiraSubproduto() {
+		public void TestPrivateLabelSubproduto() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -68,7 +68,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		
 		@Test
-		public void TestBandeiraQtdParcelas() {
+		public void TestPrivateLabelQtdParcelas() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -95,7 +95,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		
 		@Test
-		public void TestBandeiraOperadoras() {
+		public void TestPrivateLabelOperadoras() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -122,7 +122,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Objetivo: Preencher o campo Imei com parte do nome.
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		@Test
-		public void TestBandeiraImei() {
+		public void TestPrivateLabelImei() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -152,7 +152,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Objetivo: Preencher o campo SimCard com parte do nome.
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		@Test
-		public void TestBandeiraSimcard() {
+		public void TestPrivateLabelSimcard() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -182,7 +182,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Objetivo: Preencher o campo Nome Operadora com parte do nome.
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		@Test
-		public void TestBandeiraNomeOperadora() {
+		public void TestPrivateLabelNomeOperadora() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -213,7 +213,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		
 		@Test
-		public void TestBandeiraMacAddress() {
+		public void TestPrivateLabelMacAddress() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -244,7 +244,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		
 		@Test
-		public void TestBandeiraIpTerminal() {
+		public void TestPrivateLabelIpTerminal() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -275,7 +275,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		
 		@Test
-		public void TestBandeiraCodPaisParaCel() {
+		public void TestPrivateLabelCodPaisParaCel() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -306,7 +306,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		
 		@Test
-		public void TestBandeiraCodRede() {
+		public void TestPrivateLabelCodRede() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -337,7 +337,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		
 		@Test
-		public void TestBandeiraCodArea() {
+		public void TestPrivateLabelCodArea() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -368,7 +368,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		
 		@Test
-		public void TestBandeiraIdtDoCel() {
+		public void TestPrivateLabelIdtDoCel() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -399,7 +399,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		
 		@Test
-		public void TestBandeiraVersaoPlataforma() {
+		public void TestPrivateLabelVersaoPlataforma() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -430,7 +430,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		
 		@Test
-		public void TestBandeiraVersaoCA() {
+		public void TestPrivateLabelVersaoCA() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -460,7 +460,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Objetivo: Preencher o text area Pan Web com parte do nome.
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		@Test
-		public void TestBandeiraPanWeb() {
+		public void TestPrivateLabelPanWeb() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -490,7 +490,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Objetivo: Preencher o text area CVV com parte do nome.
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		@Test
-		public void TestBandeiraCVV() {
+		public void TestPrivateLabelCVV() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -520,7 +520,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Objetivo: Preencher o text area Descriptor com parte do nome.
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		@Test
-		public void TestBandeiraDescriptor() {
+		public void TestPrivateLabelDescriptor() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -550,7 +550,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Objetivo: Preencher o text area Portador com parte do nome.
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		@Test
-		public void TestBandeiraPortador() {
+		public void TestPrivateLabelPortador() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -580,7 +580,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Objetivo: Preencher o combo Tipo de Venda
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		@Test
-		public void TestBandeiraTipoDeVenda() {
+		public void TestPrivateLabelTipoDeVenda() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -606,7 +606,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Objetivo: Preencher o combo Meio de captura
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		@Test
-		public void TestBandeiraMeioDeCaptura() {
+		public void TestPrivateLabelMeioDeCaptura() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -632,7 +632,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Objetivo: Preencher o combo MeioDeCaptura
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		@Test
-		public void TestBandeiraModoDeEntrada() {
+		public void TestPrivateLabelModoDeEntrada() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -658,7 +658,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Objetivo: Preencher o combo Grupo Ramo Atividade
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		@Test
-		public void TestBandeiraGrupoRamoAtividade() {
+		public void TestPrivateLabelGrupoRamoAtividade() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -684,7 +684,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Objetivo: Preencher o combo Tipo de Emissor
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		@Test
-		public void TestBandeiraTipoDeEmissor() {
+		public void TestPrivateLabelTipoDeEmissor() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -710,7 +710,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Objetivo: Preencher o combo Tipo de Transacao
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		@Test
-		public void TestBandeiraTipoDeTransacao() {
+		public void TestPrivateLabelTipoDeTransacao() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -736,7 +736,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Objetivo: Preencher o combo Origens Transacoes Web
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		@Test
-		public void TestBandeiraOrigensTrancoesWeb() {
+		public void TestPrivateLabelOrigensTrancoesWeb() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -762,7 +762,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Objetivo: Preencher o combo Codigo da Empresa Adquirente
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		@Test
-		public void TestBandeiraCodigoEmpresaAdquirente() {
+		public void TestPrivateLabelCodigoEmpresaAdquirente() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -788,7 +788,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Objetivo: Preencher o combo Codigo Motivo Rede Externa
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		@Test
-		public void TestBandeiraCodigoMotivoRedeExterna() {
+		public void TestPrivateLabelCodigoMotivoRedeExterna() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -814,7 +814,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Objetivo: Preencher o combo Switch
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		@Test
-		public void TestBandeiraSwitch() {
+		public void TestPrivateLabelSwitch() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -840,7 +840,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Objetivo: Preencher o combo FrontEnd
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		@Test
-		public void TestBandeiraFrontEnd() {
+		public void TestPrivateLabelFrontEnd() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -866,7 +866,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Objetivo: Preencher o combo Codigo de Servico
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		@Test
-		public void TestBandeiraCodServico() {
+		public void TestPrivateLabelCodServico() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -892,7 +892,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Objetivo: Preencher o combo Transacoes Tokenizadas
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		@Test
-		public void TestBandeiraTransacoesTokenizadas() {
+		public void TestPrivateLabelTransacoesTokenizadas() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -918,7 +918,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Objetivo: Preencher o combo Transacoes Tokenizadas
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		@Test
-		public void TestBandeiraQRCode() {
+		public void TestPrivateLabelQRCode() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -944,7 +944,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Objetivo: Preencher o combo Codigo Carteira
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		@Test
-		public void TestBandeiraCodigoCarteira() {
+		public void TestPrivateLabelCodigoCarteira() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();
@@ -970,7 +970,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		/// Objetivo: Preencher o combo Grupo de Bandeira
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		@Test
-		public void TestBandeiraGrupodeBandeira() {
+		public void TestPrivateLabelGrupodeBandeira() {
 			WebDriver driver = new ChromeDriver();
 			/// Login
 			List<ViewBTDTO> links = getViews();

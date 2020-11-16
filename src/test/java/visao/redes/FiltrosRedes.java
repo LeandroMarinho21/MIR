@@ -1,4 +1,4 @@
-package visao.voucher;
+package visao.redes;
 
 import java.util.List;
 
@@ -9,22 +9,22 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import filtros.metodos.Filtros;
 import filtros.metodos.ViewBTDTO;
 
-public class FiltrosVoucher extends Filtros {
+public class FiltrosRedes extends Filtros {
 	/// Objetivo: Preencher o combo Emissores 
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestVoucherEmissores() {
+	public void TestRedesEmissores() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_Issuer')]");
-		clickx(driver, "//div[31]/div[1]/div[1]");
+		clickx(driver, "//div[34]/div[1]/div[1]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar ");
@@ -36,22 +36,48 @@ public class FiltrosVoucher extends Filtros {
 		driver.quit();
 		}
 	
+	/// Objetivo: Preencher o combo Produto
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	
+	@Test
+	public void TestRedesProduto() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(5).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		waiting(driver, "dialogLoadbar");
+		// Preencher Combobox
+		clickx(driver, "//div[contains(@class,'entity_Product')]");
+		clickx(driver, "//div[35]/div[1]/div[1]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar ");
+		// Verificar se possui dados
+		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
+		driver.quit();
+		}
 	/// Objetivo: Preencher o combo Subproduto
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
-	public void TestVoucherSubproduto() {
+	public void TestRedesSubproduto() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_SubProduct')]");
-		clickx(driver, "//div[32]/div[1]/div[1]");
+		clickx(driver, "//div[36]/div[1]/div[1]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar ");
@@ -67,18 +93,18 @@ public class FiltrosVoucher extends Filtros {
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
-	public void TestVoucherQtdParcelas() {
+	public void TestRedesQtdParcelas() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_Plot')]");
-		clickx(driver, "//div[33]/div[1]/div[1]");
+		clickx(driver, "//div[37]/div[1]/div[1]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar ");
@@ -94,18 +120,45 @@ public class FiltrosVoucher extends Filtros {
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
-	public void TestVoucherOperadoras() {
+	public void TestRedesOperadoras() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_CellphoneOperator')]");
-		clickx(driver, "//div[34]/div[1]/div[1]");
+		clickx(driver, "//div[38]/div[1]/div[1]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar");
+		// Verificar se possui dados
+		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
+		driver.quit();
+		}
+	
+	/// Objetivo: Preencher o combo Codigo Submodalidade
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	
+	@Test
+	public void TestRedesCodigoSubmodalidade() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(5).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		waiting(driver, "dialogLoadbar");
+		// Preencher Combobox
+		clickx(driver, "//div[contains(@class,'entity_SubModality')]");
+		clickx(driver, "//div[39]/div[1]/div[1]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
@@ -121,11 +174,11 @@ public class FiltrosVoucher extends Filtros {
 	/// Objetivo: Preencher o campo Imei com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestVoucherImei() {
+	public void TestRedesImei() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -151,11 +204,11 @@ public class FiltrosVoucher extends Filtros {
 	/// Objetivo: Preencher o campo SimCard com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestVoucherSimcard() {
+	public void TestRedesSimcard() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -181,11 +234,11 @@ public class FiltrosVoucher extends Filtros {
 	/// Objetivo: Preencher o campo Nome Operadora com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestVoucherNomeOperadora() {
+	public void TestRedesNomeOperadora() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -212,11 +265,11 @@ public class FiltrosVoucher extends Filtros {
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
-	public void TestVoucherMacAddress() {
+	public void TestRedesMacAddress() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -243,11 +296,11 @@ public class FiltrosVoucher extends Filtros {
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
-	public void TestVoucherIpTerminal() {
+	public void TestRedesIpTerminal() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -274,11 +327,11 @@ public class FiltrosVoucher extends Filtros {
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
-	public void TestVoucherCodPaisParaCel() {
+	public void TestRedesCodPaisParaCel() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -305,11 +358,11 @@ public class FiltrosVoucher extends Filtros {
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
-	public void TestVoucherCodRede() {
+	public void TestRedesCodRede() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -336,11 +389,11 @@ public class FiltrosVoucher extends Filtros {
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
-	public void TestVoucherCodArea() {
+	public void TestRedesCodArea() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -367,11 +420,11 @@ public class FiltrosVoucher extends Filtros {
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
-	public void TestVoucherIdtDoCel() {
+	public void TestRedesIdtDoCel() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -398,11 +451,11 @@ public class FiltrosVoucher extends Filtros {
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
-	public void TestVoucherVersaoPlataforma() {
+	public void TestRedesVersaoPlataforma() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -429,11 +482,11 @@ public class FiltrosVoucher extends Filtros {
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
-	public void TestVoucherVersaoCA() {
+	public void TestRedesVersaoCA() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -459,11 +512,11 @@ public class FiltrosVoucher extends Filtros {
 	/// Objetivo: Preencher o text area Pan Web com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestVoucherPanWeb() {
+	public void TestRedesPanWeb() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -489,11 +542,11 @@ public class FiltrosVoucher extends Filtros {
 	/// Objetivo: Preencher o text area CVV com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestVoucherCVV() {
+	public void TestRedesCVV() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -519,11 +572,11 @@ public class FiltrosVoucher extends Filtros {
 	/// Objetivo: Preencher o text area Descriptor com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestVoucherDescriptor() {
+	public void TestRedesDescriptor() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -549,11 +602,11 @@ public class FiltrosVoucher extends Filtros {
 	/// Objetivo: Preencher o text area Portador com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestVoucherPortador() {
+	public void TestRedesPortador() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -579,18 +632,18 @@ public class FiltrosVoucher extends Filtros {
 	/// Objetivo: Preencher o combo Tipo de Venda
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestVoucherTipoDeVenda() {
+	public void TestRedesTipoDeVenda() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_SaleType')]");
-		clickx(driver, "//div[35]/div[1]/div[1]");
+		clickx(driver, "//div[40]/div[1]/div[1]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar ");
@@ -605,18 +658,18 @@ public class FiltrosVoucher extends Filtros {
 	/// Objetivo: Preencher o combo Meio de captura
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestVoucherMeioDeCaptura() {
+	public void TestRedesMeioDeCaptura() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_DeviceCapture')]");
-		clickx(driver, "//div[36]/div[1]/div[1]");
+		clickx(driver, "//div[41]/div[1]/div[1]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar ");
@@ -631,18 +684,18 @@ public class FiltrosVoucher extends Filtros {
 	/// Objetivo: Preencher o combo MeioDeCaptura
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestVoucherModoDeEntrada() {
+	public void TestRedesModoDeEntrada() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_EnterMode')]");
-		clickx(driver, "//div[37]/div[1]/div[1]");
+		clickx(driver, "//div[42]/div[1]/div[1]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar ");
@@ -657,18 +710,18 @@ public class FiltrosVoucher extends Filtros {
 	/// Objetivo: Preencher o combo Grupo Ramo Atividade
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestVoucherGrupoRamoAtividade() {
+	public void TestRedesGrupoRamoAtividade() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_PrincipalBusiness')]");
-		clickx(driver, "//div[38]/div[1]/div[1]");
+		clickx(driver, "//div[43]/div[1]/div[1]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar ");
@@ -683,18 +736,44 @@ public class FiltrosVoucher extends Filtros {
 	/// Objetivo: Preencher o combo Tipo de Emissor
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestVoucherTipoDeEmissor() {
+	public void TestRedesTipoDeEmissor() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_IssuerType')]");
-		clickx(driver, "//div[39]/div[1]/div[1]");
+		clickx(driver, "//div[44]/div[1]/div[1]");
+		// Consultar
+		click(driver, "btnConsult");
+		waiting(driver, "dialogLoadbar ");
+		// Verificar se possui dados
+		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
+		// Verificar se ocorre erro
+		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		System.out.println("Sucess");
+		driver.quit();
+		}
+	
+	/// Objetivo: Preencher o combo Bandeira
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	@Test
+	public void TestRedesBandeira() {
+		WebDriver driver = new ChromeDriver();
+		/// Login
+		List<ViewBTDTO> links = getViews();
+		login2(driver, links.get(5).getUrl());
+		// Filtro
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
+		waiting(driver, "dialogLoadbar");
+		// Preencher Combobox
+		clickx(driver, "//div[contains(@class,'entity_Brand')]");
+		clickx(driver, "//div[45]/div[1]/div[1]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar ");
@@ -709,18 +788,18 @@ public class FiltrosVoucher extends Filtros {
 	/// Objetivo: Preencher o combo Tipo de Transacao
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestVoucherTipoDeTransacao() {
+	public void TestRedesTipoDeTransacao() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
-		clickx(driver, "//div[40]/div[1]/div[1]");
+		clickx(driver, "//div[46]/div[1]/div[1]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar ");
@@ -735,18 +814,18 @@ public class FiltrosVoucher extends Filtros {
 	/// Objetivo: Preencher o combo Origens Transacoes Web
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestVoucherOrigensTrancoesWeb() {
+	public void TestRedesOrigensTrancoesWeb() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
-		clickx(driver, "//div[42]/div[1]/div[1]");
+		clickx(driver, "//div[48]/div[1]/div[1]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar ");
@@ -761,18 +840,18 @@ public class FiltrosVoucher extends Filtros {
 	/// Objetivo: Preencher o combo Codigo da Empresa Adquirente
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestVoucherCodigoEmpresaAdquirente() {
+	public void TestRedesCodigoEmpresaAdquirente() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_CompanyCodePurchasing')]");
-		clickx(driver, "//div[43]/div[1]/div[1]");
+		clickx(driver, "//div[49]/div[1]/div[1]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar ");
@@ -787,18 +866,18 @@ public class FiltrosVoucher extends Filtros {
 	/// Objetivo: Preencher o combo Codigo Motivo Rede Externa
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestVoucherCodigoMotivoRedeExterna() {
+	public void TestRedesCodigoMotivoRedeExterna() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_ReasonCodeExternalNetwork')]");
-		clickx(driver, "//div[44]/div[1]/div[1]");
+		clickx(driver, "//div[50]/div[1]/div[1]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar ");
@@ -813,18 +892,18 @@ public class FiltrosVoucher extends Filtros {
 	/// Objetivo: Preencher o combo Switch
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestVoucherSwitch() {
+	public void TestRedesSwitch() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_Switch')]");
-		clickx(driver, "//div[45]/div[1]/div[1]");
+		clickx(driver, "//div[51]/div[1]/div[1]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar ");
@@ -839,18 +918,18 @@ public class FiltrosVoucher extends Filtros {
 	/// Objetivo: Preencher o combo FrontEnd
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestVoucherFrontEnd() {
+	public void TestRedesFrontEnd() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_Frontend')]");
-		clickx(driver, "//div[46]/div[1]/div[1]");
+		clickx(driver, "//div[52]/div[1]/div[1]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar ");
@@ -865,18 +944,18 @@ public class FiltrosVoucher extends Filtros {
 	/// Objetivo: Preencher o combo Codigo de Servico
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestVoucherCodServico() {
+	public void TestRedesCodServico() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_ServiceCode')]");
-		clickx(driver, "//div[47]/div[1]/div[1]");
+		clickx(driver, "//div[53]/div[1]/div[1]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar ");
@@ -891,18 +970,18 @@ public class FiltrosVoucher extends Filtros {
 	/// Objetivo: Preencher o combo Transacoes Tokenizadas
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestVoucherTransacoesTokenizadas() {
+	public void TestRedesTransacoesTokenizadas() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_TokenTransaction')]");
-		clickx(driver, "//div[48]/div[1]/div[1]");
+		clickx(driver, "//div[54]/div[1]/div[1]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar ");
@@ -917,18 +996,18 @@ public class FiltrosVoucher extends Filtros {
 	/// Objetivo: Preencher o combo Transacoes Tokenizadas
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestVoucherQRCode() {
+	public void TestRedesQRCode() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_QrCode')]");
-		clickx(driver, "//div[49]/div[1]/div[1]");
+		clickx(driver, "//div[55]/div[1]/div[1]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar ");
@@ -943,18 +1022,18 @@ public class FiltrosVoucher extends Filtros {
 	/// Objetivo: Preencher o combo Codigo Carteira
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestVoucherCodigoCarteira() {
+	public void TestRedesCodigoCarteira() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_Wallet')]");
-		clickx(driver, "//div[50]/div[1]/div[1]");
+		clickx(driver, "//div[56]/div[1]/div[1]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar ");
@@ -969,18 +1048,18 @@ public class FiltrosVoucher extends Filtros {
 	/// Objetivo: Preencher o combo Grupo de Bandeira
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	@Test
-	public void TestVoucherGrupodeBandeira() {
+	public void TestRedesGrupodeBandeira() {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
 		// Preencher Combobox
 		clickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
-		clickx(driver, "//div[51]/div[1]/div[1]");
+		clickx(driver, "//div[57]/div[1]/div[1]");
 		// Consultar
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar ");
@@ -991,6 +1070,7 @@ public class FiltrosVoucher extends Filtros {
 		System.out.println("Sucess");
 		driver.quit();
 		}
-
+	
+	
 
 }
