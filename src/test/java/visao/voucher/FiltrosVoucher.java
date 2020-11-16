@@ -17,7 +17,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -44,7 +44,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -71,7 +71,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -98,7 +98,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -125,7 +125,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -155,7 +155,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -185,7 +185,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -216,7 +216,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -247,7 +247,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -278,7 +278,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -309,7 +309,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -340,7 +340,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -371,7 +371,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -402,7 +402,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -433,7 +433,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -463,7 +463,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -493,7 +493,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -523,7 +523,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -553,7 +553,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -583,7 +583,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -609,7 +609,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -635,7 +635,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -661,7 +661,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -687,7 +687,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -713,7 +713,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -739,7 +739,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -765,7 +765,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -791,7 +791,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -817,7 +817,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -843,7 +843,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -869,7 +869,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -895,7 +895,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -921,7 +921,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -947,7 +947,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -973,7 +973,7 @@ public class FiltrosVoucher extends Filtros {
 		WebDriver driver = new ChromeDriver();
 		/// Login
 		List<ViewBTDTO> links = getViews();
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
