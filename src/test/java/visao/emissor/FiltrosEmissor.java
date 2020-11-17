@@ -28,6 +28,7 @@ public class FiltrosEmissor extends Filtros {
 			click(driver, "btnFilter");
 			waiting(driver, "dialogLoadbar");
 			clickx(driver, "//div[4]//span[@class='ui-chkbox-icon ui-c ui-chkbox-icon ui-icon ui-icon-check ui-c']");
+			waitingtoclick(driver, "btnConsult");
 			}	
 	
 		@After
@@ -39,6 +40,7 @@ public class FiltrosEmissor extends Filtros {
 			waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
 			// Verificar se ocorre erro
 			erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+			System.out.println("Sucess");
 			driver.quit();
 			}
 	
@@ -88,7 +90,7 @@ public class FiltrosEmissor extends Filtros {
 		@Test
 		public void TestEmissorBandeira() {
 			// Preencher Combobox
-			clickx(driver, "//div[contains(@class,'entity_entity_Brand')]");
+			clickx(driver, "//div[contains(@class,'entity_Brand')]");
 			clickx(driver, "//div[36]/div[1]/div[1]");
 			}
 
