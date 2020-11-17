@@ -73,6 +73,7 @@ public class Filtros {
 		test.add(bt5);
 		return test;
 	}
+
 	
 	public void click(WebDriver driver, String clicar) {
 		driver.findElement(By.id(clicar)).click();
