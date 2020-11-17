@@ -20,7 +20,6 @@ public class FiltrosEmissor extends Filtros {
 		@Before
 			public void Inicializar() {
 			driver = new ChromeDriver();
-			driver.manage().window().maximize();
 			List<ViewBTDTO> links = getViews();
 			/// Login
 			login2(driver, links.get(1).getUrl());
