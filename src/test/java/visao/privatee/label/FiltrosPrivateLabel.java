@@ -20,7 +20,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		driver = new ChromeDriver();
 		List<ViewBTDTO> links = getViews();
 		/// Login
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
