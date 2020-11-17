@@ -208,11 +208,11 @@ public class Filtros {
 		driver.findElement(By.xpath(escreverperiodo1)).sendKeys("08092020 1020");
 	}
 	public void writeperiod1css(WebDriver driver, String escreverperiodo1) {
-		driver.findElement(By.cssSelector(escreverperiodo1)).sendKeys("08092020 1020");
+		driver.findElement(By.cssSelector(escreverperiodo1)).sendKeys("08092020 1100");
 	}
 
 	public void writeperiod2x(WebDriver driver, String escreverperiodo2) {
-		driver.findElement(By.xpath(escreverperiodo2)).sendKeys("08092020 1030");
+		driver.findElement(By.xpath(escreverperiodo2)).sendKeys("08092020 1200");
 	}
 
 	public void check3x(WebDriver driver, String lista) {

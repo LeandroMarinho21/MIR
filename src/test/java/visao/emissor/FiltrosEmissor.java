@@ -1,15 +1,11 @@
 package visao.emissor;
 
-import static org.junit.Assert.assertTrue;
-
 import java.util.List;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-
 import filtros.metodos.Filtros;
 import filtros.metodos.ViewBTDTO;
 
@@ -21,12 +17,19 @@ public class FiltrosEmissor extends Filtros {
 			public void Inicializar() {
 			driver = new ChromeDriver();
 			List<ViewBTDTO> links = getViews();
-			/// Login
+			// Login
 			login2(driver, links.get(1).getUrl());
 			// Filtro
 			waitingtoclick(driver, "btnFilter");
 			click(driver, "btnFilter");
 			waiting(driver, "dialogLoadbar");
+			// Preencher Periodo
+			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+			writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+			clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+			writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+			waitingtoclickx(driver, "//div[4]//span[@class='ui-chkbox-icon ui-c ui-chkbox-icon ui-icon ui-icon-check ui-c");
 			clickx(driver, "//div[4]//span[@class='ui-chkbox-icon ui-c ui-chkbox-icon ui-icon ui-icon-check ui-c']");
 			waitingtoclick(driver, "btnConsult");
 			}	
@@ -97,43 +100,27 @@ public class FiltrosEmissor extends Filtros {
 		
 		/// Objetivo: Preencher o campo Imei com parte do nome.
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+		
 		@Test
 		public void TestEmissorImei() {
-			/// Preencher Periodo
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 			// Preencher Combobox
 			writeimei(driver, "//input[contains(@class,'entity_imei')]");
 			}
 		
 		/// Objetivo: Preencher o campo SimCard com parte do nome.
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+		
 		@Test
 		public void TestEmissorSimcard() {
-
-			/// Preencher Periodo
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 			// Preencher Combobox
 			writesimcard(driver, "//input[contains(@class,'entity_simCard')]");
 			}
 		
 		/// Objetivo: Preencher o campo Nome Operadora com parte do nome.
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+		
 		@Test
 		public void TestEmissorNomeOperadora() {
-			/// Preencher Periodo
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 			// Preencher Combobox
 			writeoperadora(driver, "//input[contains(@class,'entity_nmOpe')]");
 			}
@@ -143,12 +130,6 @@ public class FiltrosEmissor extends Filtros {
 		
 		@Test
 		public void TestEmissorMacAddress() {
-			/// Preencher Periodo
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 			// Preencher Combobox
 			writemacaddress(driver, "//input[contains(@class,'entity_macAdr')]");
 			}
@@ -158,12 +139,6 @@ public class FiltrosEmissor extends Filtros {
 		
 		@Test
 		public void TestEmissorIpTerminal() {
-			/// Preencher Periodo
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 			// Preencher Combobox
 			writeipterminal(driver, "//input[contains(@class,'entity_ipTerm')]");
 			}
@@ -173,12 +148,6 @@ public class FiltrosEmissor extends Filtros {
 		
 		@Test
 		public void TestEmissorCodPaisParaCel() {
-			/// Preencher Periodo
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 			// Preencher Combobox
 			writecodpais(driver, "//input[contains(@class,'entity_cgiMcc')]");
 			}
@@ -188,12 +157,6 @@ public class FiltrosEmissor extends Filtros {
 		
 		@Test
 		public void TestEmissorCodRede() {
-			/// Preencher Periodo
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 			// Preencher Combobox
 			writecodrede(driver, "//input[contains(@class,'entity_cgiMnc')]");
 			}
@@ -203,12 +166,6 @@ public class FiltrosEmissor extends Filtros {
 		
 		@Test
 		public void TestEmissorCodArea() {
-			/// Preencher Periodo
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 			// Preencher Combobox
 			writecodarea(driver, "//input[contains(@class,'entity_cgiLac')]");
 			}
@@ -218,12 +175,6 @@ public class FiltrosEmissor extends Filtros {
 		
 		@Test
 		public void TestEmissorIdtDoCel() {
-			/// Preencher Periodo
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 			// Preencher Combobox
 			writeidtcel(driver, "//input[contains(@class,'entity_cgiCI')]");
 			}
@@ -233,12 +184,6 @@ public class FiltrosEmissor extends Filtros {
 		
 		@Test
 		public void TestEmissorVersaoPlataforma() {
-			/// Preencher Periodo
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 			// Preencher Combobox
 			writeversionplat(driver, "//input[contains(@class,'entity_vrsPlat')]");
 			}
@@ -248,12 +193,6 @@ public class FiltrosEmissor extends Filtros {
 		
 		@Test
 		public void TestEmissorVersaoCA() {
-			/// Preencher Periodo
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 			// Preencher Combobox
 			writeversionca(driver, "//input[contains(@class,'entity_vrsCA')]");
 			}
@@ -263,12 +202,6 @@ public class FiltrosEmissor extends Filtros {
 		
 		@Test
 		public void TestEmissorPanWeb() {
-			/// Preencher Periodo
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 			// Preencher novos campos
 			writepanx(driver, "//input[contains(@class,'entity_panWeb')]");
 			}
@@ -278,12 +211,6 @@ public class FiltrosEmissor extends Filtros {
 		
 		@Test
 		public void TestEmissorCVV() {
-			/// Preencher Periodo
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 			// Preencher novos campos
 			writecvvx(driver, "//input[contains(@class,'entity_cvv')]");
 			}
@@ -293,12 +220,6 @@ public class FiltrosEmissor extends Filtros {
 		
 		@Test
 		public void TestEmissorDescriptor() {
-			/// Preencher Periodo
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 			// Preencher novos campos
 			writedescx(driver, "//input[contains(@class,'entity_descriptor')]");
 			}
@@ -308,12 +229,6 @@ public class FiltrosEmissor extends Filtros {
 		
 		@Test
 		public void TestEmissorPortador() {
-			/// Preencher Periodo
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-			writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 			// Preencher novos campos
 			writeportx(driver, "//input[contains(@class,'entity_portador')]");
 			}
