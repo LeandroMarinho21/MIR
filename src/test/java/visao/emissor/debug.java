@@ -50,7 +50,6 @@ public class debug extends Filtros {
 	@Test
 	public void TestNovosCampos11() {
 		// Preencher Combobox
-		waitingtoclickx(driver, "//div[contains(@class,'entity_imei')]");
 		writeimei(driver, "//input[contains(@class,'entity_imei')]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_simCard')]");
 		writesimcard(driver, "//input[contains(@class,'entity_simCard')]");
@@ -71,7 +70,6 @@ public class debug extends Filtros {
 		writeversionplat(driver, "//input[contains(@class,'entity_vrsPlat')]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_vrsCA')]");
 		writeversionca(driver, "//input[contains(@class,'entity_vrsCA')]");
-
 		System.out.println("Selecionei");
 	}
 
