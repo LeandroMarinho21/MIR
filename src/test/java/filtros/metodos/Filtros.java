@@ -151,12 +151,14 @@ public class Filtros {
 	
 	public void waitingElementBeClickableid(WebDriver driver, String ElementoClicavel) {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
+		System.out.println("Entrei metodo");
 		try {
 		wait.until(ExpectedConditions.elementToBeClickable(By.id(ElementoClicavel)));
 		} 
 		catch (TimeoutException t) {
 			System.out.println(t.getMessage());
 			driver.quit();
+			System.out.println("Sai metodo");
 			throw t;
 		}			
 	}
