@@ -20,16 +20,11 @@ public class FiltrosPrivateLabel extends Filtros {
 		driver = new ChromeDriver();
 		List<ViewBTDTO> links = getViews();
 		/// Login
-		login2(driver, links.get(3).getUrl());
+		login(driver, links.get(3).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
-		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		}	
 
 	@After
@@ -192,6 +187,12 @@ public class FiltrosPrivateLabel extends Filtros {
 		
 		@Test
 		public void TestPrivateLabelPanWeb() {
+			// Prencher Período
+			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+			writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+			clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+			writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 			// Preencher novos campos
 			writepanx(driver, "//input[contains(@class,'entity_panWeb')]");
 			}
@@ -201,6 +202,12 @@ public class FiltrosPrivateLabel extends Filtros {
 		
 		@Test
 		public void TestPrivateLabelCVV() {
+			// Preencher Período
+			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+			writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+			clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+			writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 			// Preencher novos campos
 			writecvvx(driver, "//input[contains(@class,'entity_cvv')]");
 			}
@@ -210,6 +217,12 @@ public class FiltrosPrivateLabel extends Filtros {
 		
 		@Test
 		public void TestPrivateLabelDescriptor() {
+			// Preencher Período
+			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+			writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+			clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+			writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 			// Preencher novos campos
 			writedescx(driver, "//input[contains(@class,'entity_descriptor')]");
 			}
@@ -219,6 +232,12 @@ public class FiltrosPrivateLabel extends Filtros {
 		
 		@Test
 		public void TestPrivateLabelPortador() {
+			// Preencher Período
+			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+			writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+			clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+			writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 			// Preencher novos campos
 			writeportx(driver, "//input[contains(@class,'entity_portador')]");
 			}

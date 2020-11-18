@@ -25,11 +25,6 @@ public class FiltrosVoucher extends Filtros {
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
-		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		}
 	
 	@After
@@ -193,6 +188,12 @@ public class FiltrosVoucher extends Filtros {
 	
 	@Test
 	public void TestVoucherPanWeb() {
+		// Prencher Período
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher novos campos
 		writepanx(driver, "//input[contains(@class,'entity_panWeb')]");
 		}
@@ -202,6 +203,12 @@ public class FiltrosVoucher extends Filtros {
 	
 	@Test
 	public void TestVoucherCVV() {
+		// Preencher Período
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher novos campos
 		writecvvx(driver, "//input[contains(@class,'entity_cvv')]");
 		}
@@ -211,6 +218,12 @@ public class FiltrosVoucher extends Filtros {
 	
 	@Test
 	public void TestVoucherDescriptor() {
+		// Preencher Período
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher novos campos
 		writedescx(driver, "//input[contains(@class,'entity_descriptor')]");
 		}
@@ -220,6 +233,12 @@ public class FiltrosVoucher extends Filtros {
 	
 	@Test
 	public void TestVoucherPortador() {
+		// Preencher Período
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher novos campos
 		writeportx(driver, "//input[contains(@class,'entity_portador')]");
 		}

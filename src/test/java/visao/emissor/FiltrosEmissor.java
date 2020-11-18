@@ -23,14 +23,7 @@ public class FiltrosEmissor extends Filtros {
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
-		// Preencher Periodo
-		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		clickx(driver, "//div[4]//span[@class='ui-chkbox-icon ui-c ui-chkbox-icon ui-icon ui-icon-check ui-c']");
-	}
+		}
 
 	@After
 	public void Encerramento() {
@@ -204,36 +197,60 @@ public class FiltrosEmissor extends Filtros {
 
 	@Test
 	public void TestEmissorPanWeb() {
+		// Prencher Período
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher novos campos
 		writepanx(driver, "//input[contains(@class,'entity_panWeb')]");
-	}
+		}
 
 	/// Objetivo: Preencher o text area CVV com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
-
+	
 	@Test
 	public void TestEmissorCVV() {
+		// Preencher Período
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher novos campos
 		writecvvx(driver, "//input[contains(@class,'entity_cvv')]");
-	}
+		}
 
 	/// Objetivo: Preencher o text area Descriptor com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
-
+	
 	@Test
 	public void TestEmissorDescriptor() {
+		// Preencher Período
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher novos campos
 		writedescx(driver, "//input[contains(@class,'entity_descriptor')]");
-	}
+		}
 
 	/// Objetivo: Preencher o text area Portador com parte do nome.
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
-
+	
 	@Test
 	public void TestEmissorPortador() {
+		// Preencher Período
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher novos campos
 		writeportx(driver, "//input[contains(@class,'entity_portador')]");
-	}
+		}
 
 	/// Objetivo: Preencher o combo Tipo de Venda
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.

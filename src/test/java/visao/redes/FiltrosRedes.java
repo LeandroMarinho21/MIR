@@ -25,11 +25,6 @@ public class FiltrosRedes extends Filtros {
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
-		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		}	
 
 	@After
@@ -215,6 +210,12 @@ public class FiltrosRedes extends Filtros {
 	
 	@Test
 	public void TestRedesPanWeb() {
+		// Prencher Período
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher novos campos
 		writepanx(driver, "//input[contains(@class,'entity_panWeb')]");
 		}
@@ -224,6 +225,12 @@ public class FiltrosRedes extends Filtros {
 	
 	@Test
 	public void TestRedesCVV() {
+		// Preencher Período
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher novos campos
 		writecvvx(driver, "//input[contains(@class,'entity_cvv')]");
 		}
@@ -233,6 +240,12 @@ public class FiltrosRedes extends Filtros {
 	
 	@Test
 	public void TestRedesDescriptor() {
+		// Preencher Período
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher novos campos
 		writedescx(driver, "//input[contains(@class,'entity_descriptor')]");
 		}
@@ -242,6 +255,12 @@ public class FiltrosRedes extends Filtros {
 	
 	@Test
 	public void TestRedesPortador() {
+		// Preencher Período
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher novos campos
 		writeportx(driver, "//input[contains(@class,'entity_portador')]");
 		}
