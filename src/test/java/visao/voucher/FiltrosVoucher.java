@@ -47,10 +47,10 @@ public class FiltrosVoucher extends Filtros {
 	public void TestCombos1() {
 		// Preencher primeiros combos
 		clickx(driver, "//div[contains(@class,'entity_Issuer')]");
-		clickx(driver, "//div[31]/div[1]/div[1]");
+		clickx(driver, "//div[30]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_SubProduct')]");
 		clickx(driver, "//div[contains(@class,'entity_SubProduct')]");
-		clickx(driver, "//div[32]/div[1]/div[1]");
+		clickx(driver, "//div[31]/div[1]/div[1]");
 		}
 		
 		/// Objetivo: Preencher os Combos
@@ -60,10 +60,10 @@ public class FiltrosVoucher extends Filtros {
 	public void TestCombos2() {
 			// Preencher primeiros combos
 		clickx(driver, "//div[contains(@class,'entity_Plot')]");
-		clickx(driver, "//div[33]/div[1]/div[1]");
+		clickx(driver, "//div[32]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_CellphoneOperator')]");
 		clickx(driver, "//div[contains(@class,'entity_CellphoneOperator')]");
-		clickx(driver, "//div[34]/div[1]/div[1]");
+		clickx(driver, "//div[33]/div[1]/div[1]");
 		}
 	
 	/// Objetivo: Preencher o Campos dos 11 campos
@@ -107,16 +107,16 @@ public class FiltrosVoucher extends Filtros {
 	public void TestCombos3() {
 		// Preencher primeiros combos
 		clickx(driver, "//div[contains(@class,'entity_SaleType')]");
-		clickx(driver, "//div[35]/div[1]/div[1]");
+		clickx(driver, "//div[34]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_DeviceCapture')]");
 		clickx(driver, "//div[contains(@class,'entity_DeviceCapture')]");
-		clickx(driver, "//div[36]/div[1]/div[1]");
+		clickx(driver, "//div[35]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_EnterMode')]");
 		clickx(driver, "//div[contains(@class,'entity_EnterMode')]");
-		clickx(driver, "//div[37]/div[1]/div[1]");
+		clickx(driver, "//div[36]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_PrincipalBusiness')]");
 		clickx(driver, "//div[contains(@class,'entity_PrincipalBusiness')]");
-		clickx(driver, "//div[38]/div[1]/div[1]");
+		clickx(driver, "//div[37]/div[1]/div[1]");
 		}
 	
 	/// Objetivo: Preencher os Combos
@@ -126,13 +126,13 @@ public class FiltrosVoucher extends Filtros {
 	public void TestCombos4() {
 		// Preencher primeiros combos
 		clickx(driver, "//div[contains(@class,'entity_IssuerType')]");
-		clickx(driver, "//div[39]/div[1]/div[1]");
+		clickx(driver, "//div[38]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
 		clickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
-		clickx(driver, "//div[40]/div[1]/div[1]");
+		clickx(driver, "//div[39]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
 		clickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
-		clickx(driver, "//div[42]/div[1]/div[1]");
+		clickx(driver, "//div[41]/div[1]/div[1]");
 		}
 	
 	/// Objetivo: Preencher os Combos
@@ -142,19 +142,19 @@ public class FiltrosVoucher extends Filtros {
 	public void TestCombos5() {
 		// Preencher primeiros combos
 		clickx(driver, "//div[contains(@class,'entity_CompanyCodePurchasing')]");
-		clickx(driver, "//div[43]/div[1]/div[1]");
+		clickx(driver, "//div[42]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_ReasonCodeExternalNetwork')]");
 		clickx(driver, "//div[contains(@class,'entity_ReasonCodeExternalNetwork')]");
-		clickx(driver, "//div[44]/div[1]/div[1]");
+		clickx(driver, "//div[43]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_Switch')]");
 		clickx(driver, "//div[contains(@class,'entity_Switch')]");
-		clickx(driver, "//div[45]/div[1]/div[1]");
+		clickx(driver, "//div[44]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_Frontend')]");
 		clickx(driver, "//div[contains(@class,'entity_Frontend')]");
-		clickx(driver, "//div[46]/div[1]/div[1]");
+		clickx(driver, "//div[45]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_ServiceCode')]");
 		clickx(driver, "//div[contains(@class,'entity_ServiceCode')]");
-		clickx(driver, "//div[47]/div[1]/div[1]");
+		clickx(driver, "//div[46]/div[1]/div[1]");
 		}
 	
 	/// Objetivo: Preencher os Combos
@@ -164,15 +164,15 @@ public class FiltrosVoucher extends Filtros {
 	public void TestCombos6() {
 		// Preencher primeiros combos
 		clickx(driver, "//div[contains(@class,'entity_TokenTransaction')]");
-		clickx(driver, "//div[48]/div[1]/div[1]");
+		clickx(driver, "//div[47]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_QrCode')]");
 		clickx(driver, "//div[contains(@class,'entity_QrCode')]");
-		clickx(driver, "//div[49]/div[1]/div[1]");
+		clickx(driver, "//div[48]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_Wallet')]");
 		clickx(driver, "//div[contains(@class,'entity_Wallet')]");
-		clickx(driver, "//div[50]/div[1]/div[1]");
+		clickx(driver, "//div[49]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
 		clickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
-		clickx(driver, "//div[51]/div[1]/div[1]");
+		clickx(driver, "//div[50]/div[1]/div[1]");
 		}
 }
