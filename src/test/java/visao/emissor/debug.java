@@ -155,4 +155,53 @@ public class debug extends Filtros {
 		clickx(driver, "//div[48]/div[1]/div[1]");
 		System.out.println("Selecionei");
 		}
+	
+	@Test
+	public void TestCombos5() {
+		// Preencher primeiros combos
+		clickx(driver, "//div[contains(@class,'entity_IssuerType')]");
+		clickx(driver, "//div[44]/div[1]/div[1]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_Brand')]");
+		clickx(driver, "//div[contains(@class,'entity_Brand')]");
+		clickx(driver, "//div[45]/div[1]/div[1]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
+		clickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
+		clickx(driver, "//div[46]/div[1]/div[1]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
+		clickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
+		clickx(driver, "//div[48]/div[1]/div[1]");
+		System.out.println("Selecionei");
+		}
+	
+	@Test
+	public void TestCombos6() {
+		// Preencher primeiros combos
+		clickx(driver, "//div[contains(@class,'entity_CompanyCodePurchasing')]");
+		clickx(driver, "//div[49]/div[1]/div[1]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_ReasonCodeExternalNetwork')]");
+		clickx(driver, "//div[contains(@class,'entity_ReasonCodeExternalNetwork')]");
+		clickx(driver, "//div[50]/div[1]/div[1]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_Switch')]");
+		clickx(driver, "//div[contains(@class,'entity_Switch')]");
+		clickx(driver, "//div[51]/div[1]/div[1]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_Frontend')]");
+		clickx(driver, "//div[contains(@class,'entity_Frontend')]");
+		clickx(driver, "//div[52]/div[1]/div[1]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_ServiceCode')]");
+		clickx(driver, "//div[contains(@class,'entity_ServiceCode')]");
+		clickx(driver, "//div[53]/div[1]/div[1]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_TokenTransaction')]");
+		clickx(driver, "//div[contains(@class,'entity_TokenTransaction')]");
+		clickx(driver, "//div[54]/div[1]/div[1]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_QrCode')]");
+		clickx(driver, "//div[contains(@class,'entity_QrCode')]");
+		clickx(driver, "//div[55]/div[1]/div[1]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_Wallet')]");
+		clickx(driver, "//div[contains(@class,'entity_Wallet')]");
+		clickx(driver, "//div[56]/div[1]/div[1]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
+		clickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
+		clickx(driver, "//div[57]/div[1]/div[1]");
+		System.out.println("Selecionei");
+		}
 }
