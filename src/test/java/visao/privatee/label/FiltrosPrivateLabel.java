@@ -30,7 +30,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		waitingtoclick(driver, "btnConsult");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_Issuer')]");
 		}	
 
 	@After
