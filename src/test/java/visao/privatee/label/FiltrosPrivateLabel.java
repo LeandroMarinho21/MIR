@@ -38,7 +38,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
-		waitingelementid(driver, "listViewBTSubProductDTO:0:viewPrivateDesc");
+		waitingElementBeClickableid(driver, "listViewBTSubProductDTO:0:viewPrivateDesc");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		System.out.println("Sucess");

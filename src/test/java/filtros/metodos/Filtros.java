@@ -149,13 +149,13 @@ public class Filtros {
 		wait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath(esperatexto), "Nenhum registro encontrado."));
 	}
 	
-	public void waitingelementx(WebDriver driver, String id_waitingclick) {
+	public void waitingElementBeClickableid(WebDriver driver, String ElementoClicavel) {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		try {
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(id_waitingclick)));
+		wait.until(ExpectedConditions.elementToBeClickable(By.id(ElementoClicavel)));
 		} 
 		catch (TimeoutException t) {
-			System.out.println(t.getCause());
+			System.out.println(t.getMessage());
 			driver.quit();
 			throw t;
 		}			

@@ -18,7 +18,7 @@ public class FiltrosEmissor extends Filtros {
 		driver = new ChromeDriver();
 		List<ViewBTDTO> links = getViews();
 		// Login
-		login2(driver, links.get(1).getUrl());
+		login(driver, links.get(1).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -38,7 +38,7 @@ public class FiltrosEmissor extends Filtros {
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
-		waitingelementid(driver, "listViewBTIssuerDTO:0:tbody_desc");
+		waitingElementBeClickableid(driver, "listViewBTIssuerDTO:0:tbody_desc");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		System.out.println("Sucess");
