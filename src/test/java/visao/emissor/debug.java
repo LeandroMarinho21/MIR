@@ -24,20 +24,16 @@ public class debug extends Filtros {
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
-		System.out.println("Entrei Filtro");
 		waiting(driver, "dialogLoadbar");
 	}
 
 	@After
 	public void Encerramento() {
 		// Consultar
-		System.out.println("Sai Filtro");
 		click(driver, "btnConsult");
-		System.out.println("Consultei");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
 		waitingElementBeClickableid(driver, "listViewBTNetDTO:0:viewNetDesc");
-		System.out.println("Verifiquei");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		System.out.println("Sucess");
@@ -155,6 +151,9 @@ public class debug extends Filtros {
 		clickx(driver, "//div[48]/div[1]/div[1]");
 		System.out.println("Selecionei");
 		}
+	
+	/// Objetivo: Preencher os Combos
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		
 	@Test
 	public void TestCombos5() {
@@ -173,7 +172,14 @@ public class debug extends Filtros {
 		waitingtoclickx(driver, "//div[contains(@class,'entity_ServiceCode')]");
 		clickx(driver, "//div[contains(@class,'entity_ServiceCode')]");
 		clickx(driver, "//div[53]/div[1]/div[1]");
-		waitingtoclickx(driver, "//div[contains(@class,'entity_TokenTransaction')]");
+		}
+	
+	/// Objetivo: Preencher os Combos
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	
+	@Test
+	public void TestCombos6() {
+		// Preencher primeiros combos
 		clickx(driver, "//div[contains(@class,'entity_TokenTransaction')]");
 		clickx(driver, "//div[54]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_QrCode')]");
