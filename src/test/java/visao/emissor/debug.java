@@ -20,7 +20,7 @@ public class debug extends Filtros {
 		driver = new ChromeDriver();
 		List<ViewBTDTO> links = getViews();
 		// Login
-		login2(driver, links.get(1).getUrl());
+		login2(driver, links.get(4).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -44,10 +44,12 @@ public class debug extends Filtros {
 		driver.quit();
 	}
 	
+	/// Objetivo: Preencher os Primeiros combos
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
-	public void TestNovosCombos1() {
-		// Preencher Combobox
+	public void TestCombos1() {
+		// Preencher primeiros combos
 		waitingtoclickx(driver, "//div[contains(@class,'entity_Issuer')]");
 		clickx(driver, "//div[contains(@class,'entity_Issuer')]");
 		clickx(driver, "//div[34]/div[1]/div[1]");
@@ -57,6 +59,15 @@ public class debug extends Filtros {
 		waitingtoclickx(driver, "//div[contains(@class,'entity_SubProduct')]");
 		clickx(driver, "//div[contains(@class,'entity_SubProduct')]");
 		clickx(driver, "//div[36]/div[1]/div[1]");
+		System.out.println("Selecionei");
+	}
+		
+		/// Objetivo: Preencher os Primeiros combos
+		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+		
+		@Test
+		public void TestCombos2() {
+			// Preencher primeiros combos
 		waitingtoclickx(driver, "//div[contains(@class,'entity_Plot')]");
 		clickx(driver, "//div[contains(@class,'entity_Plot')]");
 		clickx(driver, "//div[37]/div[1]/div[1]");
