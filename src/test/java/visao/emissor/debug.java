@@ -155,26 +155,9 @@ public class debug extends Filtros {
 		clickx(driver, "//div[48]/div[1]/div[1]");
 		System.out.println("Selecionei");
 		}
-	
+		
 	@Test
 	public void TestCombos5() {
-		// Preencher primeiros combos
-		clickx(driver, "//div[contains(@class,'entity_IssuerType')]");
-		clickx(driver, "//div[44]/div[1]/div[1]");
-		waitingtoclickx(driver, "//div[contains(@class,'entity_Brand')]");
-		clickx(driver, "//div[contains(@class,'entity_Brand')]");
-		clickx(driver, "//div[45]/div[1]/div[1]");
-		waitingtoclickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
-		clickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
-		clickx(driver, "//div[46]/div[1]/div[1]");
-		waitingtoclickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
-		clickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
-		clickx(driver, "//div[48]/div[1]/div[1]");
-		System.out.println("Selecionei");
-		}
-	
-	@Test
-	public void TestCombos6() {
 		// Preencher primeiros combos
 		clickx(driver, "//div[contains(@class,'entity_CompanyCodePurchasing')]");
 		clickx(driver, "//div[49]/div[1]/div[1]");
