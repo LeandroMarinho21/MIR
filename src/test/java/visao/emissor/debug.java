@@ -149,7 +149,6 @@ public class debug extends Filtros {
 		waitingtoclickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
 		clickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
 		clickx(driver, "//div[48]/div[1]/div[1]");
-		System.out.println("Selecionei");
 		}
 	
 	/// Objetivo: Preencher os Combos
@@ -191,6 +190,5 @@ public class debug extends Filtros {
 		waitingtoclickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
 		clickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
 		clickx(driver, "//div[57]/div[1]/div[1]");
-		System.out.println("Selecionei");
 		}
 }
