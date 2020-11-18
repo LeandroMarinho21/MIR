@@ -49,7 +49,7 @@ public class debug extends Filtros {
 
 	@Test
 	public void TestNovosCampos11() {
-		// Preencher Combobox
+		// Preencher Campos
 		writeimei(driver, "//input[contains(@class,'entity_imei')]");
 		writesimcard(driver, "//input[contains(@class,'entity_simCard')]");
 		writeoperadora(driver, "//input[contains(@class,'entity_nmOpe')]");
@@ -63,5 +63,19 @@ public class debug extends Filtros {
 		writeversionca(driver, "//input[contains(@class,'entity_vrsCA')]");
 		System.out.println("Selecionei");
 	}
+	@Test
+	public void TestNovosCampos4() {
+		// Preencher Campos
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		// Preencher novos campos
+		writepanx(driver, "//input[contains(@class,'entity_panWeb')]");
+		writecvvx(driver, "//input[contains(@class,'entity_cvv')]");
+		writedescx(driver, "//input[contains(@class,'entity_descriptor')]");
+		writeportx(driver, "//input[contains(@class,'entity_portador')]");
+		}
 
 }
