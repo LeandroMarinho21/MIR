@@ -82,7 +82,7 @@ public class debug extends Filtros {
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
-	public void TestNovosCampos11() {
+	public void TestNovosCampos1() {
 		// Preencher Campos
 		writeimei(driver, "//input[contains(@class,'entity_imei')]");
 		writesimcard(driver, "//input[contains(@class,'entity_simCard')]");
@@ -102,7 +102,7 @@ public class debug extends Filtros {
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
-	public void TestNovosCampos4() {
+	public void TestNovosCampos2() {
 		// Preencher Campos
 		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
 		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
