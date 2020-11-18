@@ -26,20 +26,12 @@ public class debug extends Filtros {
 		click(driver, "btnFilter");
 		System.out.println("Entrei Filtro");
 		waiting(driver, "dialogLoadbar");
-		// Preencher Periodo
-		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		clickx(driver, "//div[4]//span[@class='ui-chkbox-icon ui-c ui-chkbox-icon ui-icon ui-icon-check ui-c']");
-		System.out.println("Sai Filtro");
-
 	}
 
 	@After
 	public void Encerramento() {
 		// Consultar
+		System.out.println("Sai Filtro");
 		click(driver, "btnConsult");
 		System.out.println("Consultei");
 		waiting(driver, "dialogLoadbar");
@@ -62,7 +54,6 @@ public class debug extends Filtros {
 		clickx(driver, "//div[contains(@class,'entity_Issuer')]");
 		clickx(driver, "//div[32]/div[1]/div[1]");
 		System.out.println("Selecionei");
-
 	}
 
 }
