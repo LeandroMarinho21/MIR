@@ -44,7 +44,7 @@ public class debug extends Filtros {
 		driver.quit();
 	}
 	
-	/// Objetivo: Preencher os Primeiros combos
+	/// Objetivo: Preencher os Combos
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
@@ -61,11 +61,11 @@ public class debug extends Filtros {
 		System.out.println("Selecionei");
 	}
 		
-		/// Objetivo: Preencher os Primeiros combos
+		/// Objetivo: Preencher os Combos
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		
-		@Test
-		public void TestCombos2() {
+	@Test
+	public void TestCombos2() {
 			// Preencher primeiros combos
 		clickx(driver, "//div[contains(@class,'entity_Plot')]");
 		clickx(driver, "//div[37]/div[1]/div[1]");
@@ -115,5 +115,44 @@ public class debug extends Filtros {
 		writedescx(driver, "//input[contains(@class,'entity_descriptor')]");
 		writeportx(driver, "//input[contains(@class,'entity_portador')]");
 		}
-
+	
+	/// Objetivo: Preencher o Campos dos 4 campos
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	
+	@Test
+	public void TestCombos3() {
+		// Preencher primeiros combos
+		clickx(driver, "//div[contains(@class,'entity_SaleType')]");
+		clickx(driver, "//div[40]/div[1]/div[1]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_DeviceCapture')]");
+		clickx(driver, "//div[contains(@class,'entity_DeviceCapture')]");
+		clickx(driver, "//div[41]/div[1]/div[1]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_EnterMode')]");
+		clickx(driver, "//div[contains(@class,'entity_EnterMode')]");
+		clickx(driver, "//div[42]/div[1]/div[1]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_PrincipalBusiness')]");
+		clickx(driver, "//div[contains(@class,'entity_PrincipalBusiness')]");
+		clickx(driver, "//div[43]/div[1]/div[1]");
+		System.out.println("Selecionei");
+		}
+	
+	/// Objetivo: Preencher os Combos
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	
+	@Test
+	public void TestCombos4() {
+		// Preencher primeiros combos
+		clickx(driver, "//div[contains(@class,'entity_IssuerType')]");
+		clickx(driver, "//div[44]/div[1]/div[1]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_Brand')]");
+		clickx(driver, "//div[contains(@class,'entity_Brand')]");
+		clickx(driver, "//div[45]/div[1]/div[1]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
+		clickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
+		clickx(driver, "//div[46]/div[1]/div[1]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
+		clickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
+		clickx(driver, "//div[48]/div[1]/div[1]");
+		System.out.println("Selecionei");
+		}
 }
