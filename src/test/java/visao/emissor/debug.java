@@ -36,7 +36,7 @@ public class debug extends Filtros {
 		System.out.println("Consultei");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
-		waitingElementBeClickableid(driver, "listViewBTIssuerDTO:0:tbody_desc");
+		waitingElementBeClickableid(driver, "listViewBTNetDTO:0:viewNetDesc");
 		System.out.println("Verifiquei");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
@@ -50,7 +50,6 @@ public class debug extends Filtros {
 	@Test
 	public void TestCombos1() {
 		// Preencher primeiros combos
-		waitingtoclickx(driver, "//div[contains(@class,'entity_Issuer')]");
 		clickx(driver, "//div[contains(@class,'entity_Issuer')]");
 		clickx(driver, "//div[34]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_Product')]");
@@ -68,7 +67,6 @@ public class debug extends Filtros {
 		@Test
 		public void TestCombos2() {
 			// Preencher primeiros combos
-		waitingtoclickx(driver, "//div[contains(@class,'entity_Plot')]");
 		clickx(driver, "//div[contains(@class,'entity_Plot')]");
 		clickx(driver, "//div[37]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_CellphoneOperator')]");
