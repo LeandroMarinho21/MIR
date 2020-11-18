@@ -155,9 +155,9 @@ public class FiltrosVoucher extends Filtros {
 		// Preencher primeiros combos
 		clickx(driver, "//div[contains(@class,'entity_CompanyCodePurchasing')]");
 		clickx(driver, "//div[42]/div[1]/div[1]");
-		waitingtoclickx(driver, "//div[contains(@class,'entity_ReasonCodeExternalNetwork')]");
-		clickx(driver, "//div[contains(@class,'entity_ReasonCodeExternalNetwork')]");
-		clickx(driver, "//div[43]/div[1]/div[1]");
+///		waitingtoclickx(driver, "//div[contains(@class,'entity_ReasonCodeExternalNetwork')]");
+///		clickx(driver, "//div[contains(@class,'entity_ReasonCodeExternalNetwork')]");
+///		clickx(driver, "//div[43]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_Switch')]");
 		clickx(driver, "//div[contains(@class,'entity_Switch')]");
 		clickx(driver, "//div[44]/div[1]/div[1]");
