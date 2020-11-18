@@ -48,11 +48,30 @@ public class debug extends Filtros {
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 
 	@Test
-	public void TestEmissorEmissores() {
+	public void TestNovosCampos11() {
 		// Preencher Combobox
-		waitingtoclickx(driver, "//div[contains(@class,'entity_Issuer')]");
-		clickx(driver, "//div[contains(@class,'entity_Issuer')]");
-		clickx(driver, "//div[32]/div[1]/div[1]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_imei')]");
+		writeimei(driver, "//input[contains(@class,'entity_imei')]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_simCard')]");
+		writesimcard(driver, "//input[contains(@class,'entity_simCard')]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_nmOpe')]");
+		writeoperadora(driver, "//input[contains(@class,'entity_nmOpe')]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_macAdr')]");
+		writemacaddress(driver, "//input[contains(@class,'entity_macAdr')]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_ipTerm')]");
+		writeipterminal(driver, "//input[contains(@class,'entity_ipTerm')]");
+		writecodpais(driver, "//input[contains(@class,'entity_cgiMcc')]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_cgiMnc')]");
+		writecodrede(driver, "//input[contains(@class,'entity_cgiMnc')]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_cgiLac')]");
+		writecodarea(driver, "//input[contains(@class,'entity_cgiLac')]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_cgiCI')]");
+		writeidtcel(driver, "//input[contains(@class,'entity_cgiCI')]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_vrsPlat')]");
+		writeversionplat(driver, "//input[contains(@class,'entity_vrsPlat')]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_vrsCA')]");
+		writeversionca(driver, "//input[contains(@class,'entity_vrsCA')]");
+
 		System.out.println("Selecionei");
 	}
 
