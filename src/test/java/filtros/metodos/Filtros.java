@@ -96,13 +96,13 @@ public class Filtros {
 
 	public void waiting(WebDriver driver, String id_waiting) {
 
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, 180);
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id(id_waiting)));
 	}
 
 	public void waiting2(WebDriver driver, String id_waiting2) {
 
-		WebDriverWait wait = new WebDriverWait(driver, 60);
+		WebDriverWait wait = new WebDriverWait(driver, 180);
 		wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id(id_waiting2)));
 	}
 	public void waitingtoVisible(WebDriver driver, String Visivel) {
