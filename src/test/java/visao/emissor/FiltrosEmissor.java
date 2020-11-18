@@ -31,7 +31,6 @@ public class FiltrosEmissor extends Filtros {
 			writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 			waitingtoclickx(driver, "//div[4]//span[@class='ui-chkbox-icon ui-c ui-chkbox-icon ui-icon ui-icon-check ui-c");
 			clickx(driver, "//div[4]//span[@class='ui-chkbox-icon ui-c ui-chkbox-icon ui-icon ui-icon-check ui-c']");
-			waitingtoclickx(driver, "//div[contains(@class,'entity_Issuer')]");
 			}	
 	
 		@After
