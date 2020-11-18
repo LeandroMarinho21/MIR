@@ -20,12 +20,12 @@ public class FiltrosRedes extends Filtros {
 		driver = new ChromeDriver();
 		List<ViewBTDTO> links = getViews();
 		// Login
-		login(driver, links.get(4).getUrl());
+		login2(driver, links.get(4).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
-	}
+		}
 
 	@After
 	public void Encerramento() {
@@ -38,7 +38,7 @@ public class FiltrosRedes extends Filtros {
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		System.out.println("Sucess");
 		driver.quit();
-	}
+		}
 	
 	/// Objetivo: Preencher os Combos
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
@@ -54,7 +54,7 @@ public class FiltrosRedes extends Filtros {
 		waitingtoclickx(driver, "//div[contains(@class,'entity_SubProduct')]");
 		clickx(driver, "//div[contains(@class,'entity_SubProduct')]");
 		clickx(driver, "//div[35]/div[1]/div[1]");
-	}
+		}
 		
 		/// Objetivo: Preencher os Combos
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
@@ -71,7 +71,7 @@ public class FiltrosRedes extends Filtros {
 		waitingtoclickx(driver, "//div[contains(@class,'entity_SubModality')]");
 		clickx(driver, "//div[contains(@class,'entity_SubModality')]");
 		clickx(driver, "//div[38]/div[1]/div[1]");
-	}
+		}
 	
 	/// Objetivo: Preencher o Campos dos 11 campos
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
@@ -90,7 +90,7 @@ public class FiltrosRedes extends Filtros {
 		writeidtcel(driver, "//input[contains(@class,'entity_cgiCI')]");
 		writeversionplat(driver, "//input[contains(@class,'entity_vrsPlat')]");
 		writeversionca(driver, "//input[contains(@class,'entity_vrsCA')]");
-	}
+		}
 	
 	/// Objetivo: Preencher o Campos dos 4 campos
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.

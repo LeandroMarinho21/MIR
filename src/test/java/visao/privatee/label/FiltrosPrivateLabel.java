@@ -25,7 +25,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
-	}
+		}
 
 	@After
 	public void Encerramento() {
@@ -38,7 +38,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		System.out.println("Sucess");
 		driver.quit();
-	}
+		}
 	
 	/// Objetivo: Preencher os Combos
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
@@ -51,7 +51,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		waitingtoclickx(driver, "//div[contains(@class,'entity_SubProduct')]");
 		clickx(driver, "//div[contains(@class,'entity_SubProduct')]");
 		clickx(driver, "//div[39]/div[1]/div[1]");
-	}
+		}
 		
 		/// Objetivo: Preencher os Combos
 		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
@@ -64,7 +64,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		waitingtoclickx(driver, "//div[contains(@class,'entity_CellphoneOperator')]");
 		clickx(driver, "//div[contains(@class,'entity_CellphoneOperator')]");
 		clickx(driver, "//div[41]/div[1]/div[1]");
-	}
+		}
 	
 	/// Objetivo: Preencher o Campos dos 11 campos
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
@@ -83,7 +83,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		writeidtcel(driver, "//input[contains(@class,'entity_cgiCI')]");
 		writeversionplat(driver, "//input[contains(@class,'entity_vrsPlat')]");
 		writeversionca(driver, "//input[contains(@class,'entity_vrsCA')]");
-	}
+		}
 	
 	/// Objetivo: Preencher o Campos dos 4 campos
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
