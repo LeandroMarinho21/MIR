@@ -44,9 +44,34 @@ public class debug extends Filtros {
 		driver.quit();
 	}
 	
-	/// Objetivo: Preencher o combo Emissores
+	
+	@Test
+	public void TestNovosCombos1() {
+		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_Issuer')]");
+		clickx(driver, "//div[contains(@class,'entity_Issuer')]");
+		clickx(driver, "//div[34]/div[1]/div[1]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_Product')]");
+		clickx(driver, "//div[contains(@class,'entity_Product')]");
+		clickx(driver, "//div[35]/div[1]/div[1]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_SubProduct')]");
+		clickx(driver, "//div[contains(@class,'entity_SubProduct')]");
+		clickx(driver, "//div[36]/div[1]/div[1]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_Plot')]");
+		clickx(driver, "//div[contains(@class,'entity_Plot')]");
+		clickx(driver, "//div[37]/div[1]/div[1]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_CellphoneOperator')]");
+		clickx(driver, "//div[contains(@class,'entity_CellphoneOperator')]");
+		clickx(driver, "//div[38]/div[1]/div[1]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_SubModality')]");
+		clickx(driver, "//div[contains(@class,'entity_SubModality')]");
+		clickx(driver, "//div[39]/div[1]/div[1]");
+		System.out.println("Selecionei");
+	}
+	
+	/// Objetivo: Preencher o Campos dos 11 campos
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
-
+	
 	@Test
 	public void TestNovosCampos11() {
 		// Preencher Campos
@@ -63,6 +88,10 @@ public class debug extends Filtros {
 		writeversionca(driver, "//input[contains(@class,'entity_vrsCA')]");
 		System.out.println("Selecionei");
 	}
+	
+	/// Objetivo: Preencher o Campos dos 4 campos
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	
 	@Test
 	public void TestNovosCampos4() {
 		// Preencher Campos
