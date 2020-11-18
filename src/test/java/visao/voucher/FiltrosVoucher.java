@@ -16,11 +16,11 @@ public class FiltrosVoucher extends Filtros {
 	private WebDriver driver;
 	
 	@Before
-		public void Inicializar() {
+	public void Inicializar() {
 		driver = new ChromeDriver();
 		List<ViewBTDTO> links = getViews();
 		/// Login
-		login2(driver, links.get(3).getUrl());
+		login2(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -30,21 +30,21 @@ public class FiltrosVoucher extends Filtros {
 		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		waitingtoclickx(driver, "//div[contains(@class,'entity_Issuer')]");
-		}	
-
+		}
+	
 	@After
-	public void Encerramento() {
+	public void encerramento() {
 		// Consultar
 		click(driver, "btnConsult");
-		waiting(driver, "dialogLoadbar ");
+		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
-		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
+		waitingelementid(driver, "treeViewBTSubProductDTO_node_0");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		System.out.println("Sucess");
 		driver.quit();
 		}
+
 	
 	/// Objetivo: Preencher o combo Emissores 
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
@@ -52,6 +52,7 @@ public class FiltrosVoucher extends Filtros {
 	@Test
 	public void TestVoucherEmissores() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_Issuer')]");
 		clickx(driver, "//div[contains(@class,'entity_Issuer')]");
 		clickx(driver, "//div[31]/div[1]/div[1]");
 		}
@@ -62,6 +63,7 @@ public class FiltrosVoucher extends Filtros {
 	@Test
 	public void TestVoucherSubproduto() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_SubProduct')]");
 		clickx(driver, "//div[contains(@class,'entity_SubProduct')]");
 		clickx(driver, "//div[32]/div[1]/div[1]");
 		}
@@ -72,6 +74,7 @@ public class FiltrosVoucher extends Filtros {
 	@Test
 	public void TestVoucherQtdParcelas() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_Plot')]");
 		clickx(driver, "//div[contains(@class,'entity_Plot')]");
 		clickx(driver, "//div[33]/div[1]/div[1]");
 		}
@@ -82,6 +85,7 @@ public class FiltrosVoucher extends Filtros {
 	@Test
 	public void TestVoucherOperadoras() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_CellphoneOperator')]");
 		clickx(driver, "//div[contains(@class,'entity_CellphoneOperator')]");
 		clickx(driver, "//div[34]/div[1]/div[1]");
 		}
@@ -226,6 +230,7 @@ public class FiltrosVoucher extends Filtros {
 	@Test
 	public void TestVoucherTipoDeVenda() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_SaleType')]");
 		clickx(driver, "//div[contains(@class,'entity_SaleType')]");
 		clickx(driver, "//div[35]/div[1]/div[1]");
 		}
@@ -236,6 +241,7 @@ public class FiltrosVoucher extends Filtros {
 	@Test
 	public void TestVoucherMeioDeCaptura() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_DeviceCapture')]");
 		clickx(driver, "//div[contains(@class,'entity_DeviceCapture')]");
 		clickx(driver, "//div[36]/div[1]/div[1]");
 		}
@@ -246,6 +252,7 @@ public class FiltrosVoucher extends Filtros {
 	@Test
 	public void TestVoucherModoDeEntrada() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_EnterMode')]");
 		clickx(driver, "//div[contains(@class,'entity_EnterMode')]");
 		clickx(driver, "//div[37]/div[1]/div[1]");
 		}
@@ -256,6 +263,7 @@ public class FiltrosVoucher extends Filtros {
 	@Test
 	public void TestVoucherGrupoRamoAtividade() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_PrincipalBusiness')]");
 		clickx(driver, "//div[contains(@class,'entity_PrincipalBusiness')]");
 		clickx(driver, "//div[38]/div[1]/div[1]");
 		}
@@ -266,8 +274,9 @@ public class FiltrosVoucher extends Filtros {
 	@Test
 	public void TestVoucherTipoDeEmissor() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_IssuerType')]");
 		clickx(driver, "//div[contains(@class,'entity_IssuerType')]");
-
+		clickx(driver, "//div[39]/div[1]/div[1]");
 		}
 	
 	/// Objetivo: Preencher o combo Tipo de Transacao
@@ -276,6 +285,7 @@ public class FiltrosVoucher extends Filtros {
 	@Test
 	public void TestVoucherTipoDeTransacao() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
 		clickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
 		clickx(driver, "//div[40]/div[1]/div[1]");
 		}
@@ -286,6 +296,7 @@ public class FiltrosVoucher extends Filtros {
 	@Test
 	public void TestVoucherOrigensTrancoesWeb() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
 		clickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
 		clickx(driver, "//div[42]/div[1]/div[1]");
 		}
@@ -296,6 +307,7 @@ public class FiltrosVoucher extends Filtros {
 	@Test
 	public void TestVoucherCodigoEmpresaAdquirente() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_CompanyCodePurchasing')]");
 		clickx(driver, "//div[contains(@class,'entity_CompanyCodePurchasing')]");
 		clickx(driver, "//div[43]/div[1]/div[1]");
 		}
@@ -306,6 +318,7 @@ public class FiltrosVoucher extends Filtros {
 	@Test
 	public void TestVoucherCodigoMotivoRedeExterna() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_ReasonCodeExternalNetwork')]");
 		clickx(driver, "//div[contains(@class,'entity_ReasonCodeExternalNetwork')]");
 		clickx(driver, "//div[44]/div[1]/div[1]");
 		}
@@ -316,6 +329,7 @@ public class FiltrosVoucher extends Filtros {
 	@Test
 	public void TestVoucherSwitch() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_Switch')]");
 		clickx(driver, "//div[contains(@class,'entity_Switch')]");
 		clickx(driver, "//div[45]/div[1]/div[1]");
 		}
@@ -326,6 +340,7 @@ public class FiltrosVoucher extends Filtros {
 	@Test
 	public void TestVoucherFrontEnd() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_Frontend')]");
 		clickx(driver, "//div[contains(@class,'entity_Frontend')]");
 		clickx(driver, "//div[46]/div[1]/div[1]");
 		}
@@ -336,6 +351,7 @@ public class FiltrosVoucher extends Filtros {
 	@Test
 	public void TestVoucherCodServico() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_ServiceCode')]");
 		clickx(driver, "//div[contains(@class,'entity_ServiceCode')]");
 		clickx(driver, "//div[47]/div[1]/div[1]");
 		}
@@ -346,6 +362,7 @@ public class FiltrosVoucher extends Filtros {
 	@Test
 	public void TestVoucherTransacoesTokenizadas() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_TokenTransaction')]");
 		clickx(driver, "//div[contains(@class,'entity_TokenTransaction')]");
 		clickx(driver, "//div[48]/div[1]/div[1]");
 		}
@@ -356,6 +373,7 @@ public class FiltrosVoucher extends Filtros {
 	@Test
 	public void TestVoucherQRCode() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_QrCode')]");
 		clickx(driver, "//div[contains(@class,'entity_QrCode')]");
 		clickx(driver, "//div[49]/div[1]/div[1]");
 		}
@@ -366,6 +384,7 @@ public class FiltrosVoucher extends Filtros {
 	@Test
 	public void TestVoucherCodigoCarteira() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_Wallet')]");
 		clickx(driver, "//div[contains(@class,'entity_Wallet')]");
 		clickx(driver, "//div[50]/div[1]/div[1]");
 		}
@@ -376,6 +395,7 @@ public class FiltrosVoucher extends Filtros {
 	@Test
 	public void TestVoucherGrupodeBandeira() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
 		clickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
 		clickx(driver, "//div[51]/div[1]/div[1]");
 		}

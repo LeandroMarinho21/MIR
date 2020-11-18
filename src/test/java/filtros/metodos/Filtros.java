@@ -149,20 +149,30 @@ public class Filtros {
 		wait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath(esperatexto), "Nenhum registro encontrado."));
 	}
 	
-	public void waitingnotpresent(WebDriver driver, String esperatexto) {
-		WebDriverWait wait = new WebDriverWait(driver, 180);
-		wait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath(esperatexto), "Nenhum registro encontrado."));
-	}
-	
 	public void waitingelementx(WebDriver driver, String id_waitingclick) {
 		WebDriverWait wait = new WebDriverWait(driver, 10);
 		try {
 		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(id_waitingclick)));
 		} 
 		catch (TimeoutException t) {
-		}
+			System.out.println(t.getCause());
+			driver.quit();
+			throw t;
+		}			
 	}
-
+	
+	public void waitingelementid(WebDriver driver, String ElementoVisivel) {
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		try {
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(ElementoVisivel)));
+		} 
+		catch (TimeoutException t) {
+			System.out.println(t.getMessage());
+			driver.quit();
+			throw t;
+		}	
+	}
+	
 	public void verificarelementox(WebDriver driver, String notrue) {
 		String textoElement = driver.findElement(By.xpath(notrue)).getText();
 		Assert.assertNotSame("Nenhum registro encontrado.", "Nenhum registro encontrado.", textoElement);
@@ -174,6 +184,12 @@ public class Filtros {
 	
 	public void notequals(WebDriver driver, String notrue) {
 		String textoElement = driver.findElement(By.xpath(notrue)).getText();
+		System.out.println(textoElement);
+		Assert.assertNotEquals("Nenhum registro encontrado.", textoElement);
+	}
+	
+	public void notequalsclass(WebDriver driver, String notrue) {
+		String textoElement = driver.findElement(By.className(notrue)).getText();
 		System.out.println(textoElement);
 		Assert.assertNotEquals("Nenhum registro encontrado.", textoElement);
 	}
@@ -205,10 +221,7 @@ public class Filtros {
 
 	//// Referentes a tela
 	public void writeperiod1x(WebDriver driver, String escreverperiodo1) {
-		driver.findElement(By.xpath(escreverperiodo1)).sendKeys("08092020 1020");
-	}
-	public void writeperiod1css(WebDriver driver, String escreverperiodo1) {
-		driver.findElement(By.cssSelector(escreverperiodo1)).sendKeys("08092020 1100");
+		driver.findElement(By.xpath(escreverperiodo1)).sendKeys("08092020 1100");
 	}
 
 	public void writeperiod2x(WebDriver driver, String escreverperiodo2) {
@@ -290,8 +303,8 @@ public class Filtros {
 	}
 
 	public void writedescx(WebDriver driver, String escreverdescx) {
-		driver.findElement(By.xpath(escreverdescx)).sendKeys("0");
-		Assert.assertEquals("0", driver.findElement(By.xpath(escreverdescx)).getAttribute("value"));
+		driver.findElement(By.xpath(escreverdescx)).sendKeys("m");
+		Assert.assertEquals("m", driver.findElement(By.xpath(escreverdescx)).getAttribute("value"));
 	}
 
 	public void writeportx(WebDriver driver, String escreverportx) {

@@ -16,7 +16,7 @@ public class FiltrosRedes extends Filtros {
 	private WebDriver driver;
 	
 	@Before
-		public void Inicializar() {
+	public void Inicializar() {
 		driver = new ChromeDriver();
 		List<ViewBTDTO> links = getViews();
 		/// Login
@@ -30,16 +30,15 @@ public class FiltrosRedes extends Filtros {
 		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		waitingtoclickx(driver, "//div[contains(@class,'entity_Issuer')]");
 		}	
 
 	@After
 	public void Encerramento() {
 		// Consultar
 		click(driver, "btnConsult");
-		waiting(driver, "dialogLoadbar ");
+		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
-		waitingelementx(driver, "//tr[@class='ui-widget-content ui-treetable-selectable-node default']");
+		waitingelementid(driver, "listViewBTNetDTO:0:viewNetDesc");
 		// Verificar se ocorre erro
 		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
 		System.out.println("Sucess");
@@ -52,6 +51,7 @@ public class FiltrosRedes extends Filtros {
 	@Test
 	public void TestRedesEmissores() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_Issuer')]");
 		clickx(driver, "//div[contains(@class,'entity_Issuer')]");
 		clickx(driver, "//div[34]/div[1]/div[1]");
 		}
@@ -62,6 +62,7 @@ public class FiltrosRedes extends Filtros {
 	@Test
 	public void TestRedesProduto() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_Product')]");
 		clickx(driver, "//div[contains(@class,'entity_Product')]");
 		clickx(driver, "//div[35]/div[1]/div[1]");
 		}
@@ -72,6 +73,7 @@ public class FiltrosRedes extends Filtros {
 	@Test
 	public void TestRedesSubproduto() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_SubProduct')]");
 		clickx(driver, "//div[contains(@class,'entity_SubProduct')]");
 		clickx(driver, "//div[36]/div[1]/div[1]");
 		}
@@ -82,6 +84,7 @@ public class FiltrosRedes extends Filtros {
 	@Test
 	public void TestRedesQtdParcelas() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_Plot')]");
 		clickx(driver, "//div[contains(@class,'entity_Plot')]");
 		clickx(driver, "//div[37]/div[1]/div[1]");
 		}
@@ -93,6 +96,7 @@ public class FiltrosRedes extends Filtros {
 	public void TestRedesOperadoras() {
 		WebDriver driver = new ChromeDriver();
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_CellphoneOperator')]");
 		clickx(driver, "//div[contains(@class,'entity_CellphoneOperator')]");
 		clickx(driver, "//div[38]/div[1]/div[1]");
 		}
@@ -103,6 +107,7 @@ public class FiltrosRedes extends Filtros {
 	@Test
 	public void TestRedesCodigoSubmodalidade() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_SubModality')]");
 		clickx(driver, "//div[contains(@class,'entity_SubModality')]");
 		clickx(driver, "//div[39]/div[1]/div[1]");
 		}
@@ -247,6 +252,7 @@ public class FiltrosRedes extends Filtros {
 	@Test
 	public void TestRedesTipoDeVenda() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_SaleType')]");
 		clickx(driver, "//div[contains(@class,'entity_SaleType')]");
 		clickx(driver, "//div[40]/div[1]/div[1]");
 		}
@@ -257,6 +263,7 @@ public class FiltrosRedes extends Filtros {
 	@Test
 	public void TestRedesMeioDeCaptura() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_DeviceCapture')]");
 		clickx(driver, "//div[contains(@class,'entity_DeviceCapture')]");
 		clickx(driver, "//div[41]/div[1]/div[1]");
 		}
@@ -267,6 +274,7 @@ public class FiltrosRedes extends Filtros {
 	@Test
 	public void TestRedesModoDeEntrada() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_EnterMode')]");
 		clickx(driver, "//div[contains(@class,'entity_EnterMode')]");
 		clickx(driver, "//div[42]/div[1]/div[1]");
 		}
@@ -277,6 +285,7 @@ public class FiltrosRedes extends Filtros {
 	@Test
 	public void TestRedesGrupoRamoAtividade() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_PrincipalBusiness')]");
 		clickx(driver, "//div[contains(@class,'entity_PrincipalBusiness')]");
 		clickx(driver, "//div[43]/div[1]/div[1]");
 		}
@@ -287,6 +296,7 @@ public class FiltrosRedes extends Filtros {
 	@Test
 	public void TestRedesTipoDeEmissor() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_IssuerType')]");
 		clickx(driver, "//div[contains(@class,'entity_IssuerType')]");
 		clickx(driver, "//div[44]/div[1]/div[1]");
 		}
@@ -297,6 +307,7 @@ public class FiltrosRedes extends Filtros {
 	@Test
 	public void TestRedesBandeira() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_Brand')]");
 		clickx(driver, "//div[contains(@class,'entity_Brand')]");
 		clickx(driver, "//div[45]/div[1]/div[1]");
 		}
@@ -307,6 +318,7 @@ public class FiltrosRedes extends Filtros {
 	@Test
 	public void TestRedesTipoDeTransacao() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
 		clickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
 		clickx(driver, "//div[46]/div[1]/div[1]");
 		}
@@ -317,6 +329,7 @@ public class FiltrosRedes extends Filtros {
 	@Test
 	public void TestRedesOrigensTrancoesWeb() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
 		clickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
 		clickx(driver, "//div[48]/div[1]/div[1]");
 		}
@@ -327,6 +340,7 @@ public class FiltrosRedes extends Filtros {
 	@Test
 	public void TestRedesCodigoEmpresaAdquirente() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_CompanyCodePurchasing')]");
 		clickx(driver, "//div[contains(@class,'entity_CompanyCodePurchasing')]");
 		clickx(driver, "//div[49]/div[1]/div[1]");
 		}
@@ -337,6 +351,7 @@ public class FiltrosRedes extends Filtros {
 	@Test
 	public void TestRedesCodigoMotivoRedeExterna() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_ReasonCodeExternalNetwork')]");
 		clickx(driver, "//div[contains(@class,'entity_ReasonCodeExternalNetwork')]");
 		clickx(driver, "//div[50]/div[1]/div[1]");
 		}
@@ -347,6 +362,7 @@ public class FiltrosRedes extends Filtros {
 	public void TestRedesSwitch() {
 
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_Switch')]");
 		clickx(driver, "//div[contains(@class,'entity_Switch')]");
 		clickx(driver, "//div[51]/div[1]/div[1]");
 		}
@@ -358,6 +374,7 @@ public class FiltrosRedes extends Filtros {
 	public void TestRedesFrontEnd() {
 		WebDriver driver = new ChromeDriver();
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_Frontend')]");
 		clickx(driver, "//div[contains(@class,'entity_Frontend')]");
 		clickx(driver, "//div[52]/div[1]/div[1]");
 		}
@@ -368,6 +385,7 @@ public class FiltrosRedes extends Filtros {
 	@Test
 	public void TestRedesCodServico() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_ServiceCode')]");
 		clickx(driver, "//div[contains(@class,'entity_ServiceCode')]");
 		clickx(driver, "//div[53]/div[1]/div[1]");
 		}
@@ -378,6 +396,7 @@ public class FiltrosRedes extends Filtros {
 	@Test
 	public void TestRedesTransacoesTokenizadas() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_TokenTransaction')]");
 		clickx(driver, "//div[contains(@class,'entity_TokenTransaction')]");
 		clickx(driver, "//div[54]/div[1]/div[1]");
 		}
@@ -388,6 +407,7 @@ public class FiltrosRedes extends Filtros {
 	@Test
 	public void TestRedesQRCode() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_QrCode')]");
 		clickx(driver, "//div[contains(@class,'entity_QrCode')]");
 		clickx(driver, "//div[55]/div[1]/div[1]");
 		}
@@ -398,6 +418,7 @@ public class FiltrosRedes extends Filtros {
 	@Test
 	public void TestRedesCodigoCarteira() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_Wallet')]");
 		clickx(driver, "//div[contains(@class,'entity_Wallet')]");
 		clickx(driver, "//div[56]/div[1]/div[1]");
 		}
@@ -407,10 +428,8 @@ public class FiltrosRedes extends Filtros {
 	@Test
 	public void TestRedesGrupodeBandeira() {
 		// Preencher Combobox
+		waitingtoclickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
 		clickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
 		clickx(driver, "//div[57]/div[1]/div[1]");
 		}
-	
-	
-
 }
