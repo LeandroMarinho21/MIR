@@ -221,11 +221,11 @@ public class Filtros {
 
 	//// Referentes a tela
 	public void writeperiod1x(WebDriver driver, String escreverperiodo1) {
-		driver.findElement(By.xpath(escreverperiodo1)).sendKeys("08092020 1100");
+		driver.findElement(By.xpath(escreverperiodo1)).sendKeys("080920201100");
 	}
 
 	public void writeperiod2x(WebDriver driver, String escreverperiodo2) {
-		driver.findElement(By.xpath(escreverperiodo2)).sendKeys("08092020 1200");
+		driver.findElement(By.xpath(escreverperiodo2)).sendKeys("080920201200");
 	}
 
 	public void check3x(WebDriver driver, String lista) {

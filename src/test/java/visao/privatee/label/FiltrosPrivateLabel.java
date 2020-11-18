@@ -93,9 +93,6 @@ public class FiltrosPrivateLabel extends Filtros {
 		// Preencher Campos
 		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
 		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher novos campos
 		writepanx(driver, "//input[contains(@class,'entity_panWeb')]");
 		writecvvx(driver, "//input[contains(@class,'entity_cvv')]");
@@ -133,9 +130,9 @@ public class FiltrosPrivateLabel extends Filtros {
 		waitingtoclickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
 		clickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
 		clickx(driver, "//div[39]/div[1]/div[1]");
-		waitingtoclickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
-		clickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
-		clickx(driver, "//div[41]/div[1]/div[1]");
+///		waitingtoclickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
+///		clickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
+///		clickx(driver, "//div[41]/div[1]/div[1]");
 		}
 	
 	/// Objetivo: Preencher os Combos
