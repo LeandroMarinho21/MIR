@@ -34,7 +34,7 @@ public class FiltrosEmissor extends Filtros {
 		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		WebElement PeriodoFin = driver.findElement(By.xpath("//input[contains(@id,'dt_transaction_fin_component_input')]"));
-		sendKeys("080920201100", PeriodoFin);
+		sendKeys("080920201200", PeriodoFin);
 		}
 
 	@After
