@@ -3,21 +3,18 @@ package filtros.metodos;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
-import java.sql.Driver;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
-import org.junit.internal.runners.statements.Fail;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -225,9 +222,8 @@ public class Filtros {
 		driver.findElement(By.xpath(escreverperiodo1));
 	}
 
-	public void writeperiod2x(WebDriver driver, String escreverperiodo2) throws InterruptedException {
+	public void writeperiod2x(WebDriver driver, String escreverperiodo2) {
 		driver.findElement(By.xpath(escreverperiodo2)).sendKeys("080920201200");
-        Thread.sleep(1000);
 	}
 	
 	public void sendKeys(String keysToSend,WebElement element){

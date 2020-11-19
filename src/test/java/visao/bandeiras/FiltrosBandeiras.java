@@ -23,7 +23,7 @@ public class FiltrosBandeiras extends Filtros {
 		driver = new ChromeDriver();
 		List<ViewBTDTO> links = getViews();
 		/// Login
-		login(driver, links.get(0).getUrl());
+		login2(driver, links.get(0).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
