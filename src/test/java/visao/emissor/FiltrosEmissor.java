@@ -148,19 +148,19 @@ public class FiltrosEmissor extends Filtros {
 	public void TestCombos5() {
 		// Preencher primeiros combos
 		clickx(driver, "//div[contains(@class,'entity_CompanyCodePurchasing')]");
-		clickx(driver, "//div[43]/div[1]/div[1]");
+		clickx(driver, "//div[44]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_ReasonCodeExternalNetwork')]");
 		clickx(driver, "//div[contains(@class,'entity_ReasonCodeExternalNetwork')]");
-		clickx(driver, "//div[44]/div[1]/div[1]");
+		clickx(driver, "//div[45]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_Switch')]");
 		clickx(driver, "//div[contains(@class,'entity_Switch')]");
-		clickx(driver, "//div[45]/div[1]/div[1]");
+		clickx(driver, "//div[46]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_Frontend')]");
 		clickx(driver, "//div[contains(@class,'entity_Frontend')]");
-		clickx(driver, "//div[46]/div[1]/div[1]");
+		clickx(driver, "//div[47]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_ServiceCode')]");
 		clickx(driver, "//div[contains(@class,'entity_ServiceCode')]");
-		clickx(driver, "//div[47]/div[1]/div[1]");
+		clickx(driver, "//div[48]/div[1]/div[1]");
 		}
 	
 	/// Objetivo: Preencher os Combos
@@ -170,15 +170,15 @@ public class FiltrosEmissor extends Filtros {
 	public void TestCombos6() {
 		// Preencher primeiros combos
 		clickx(driver, "//div[contains(@class,'entity_TokenTransaction')]");
-		clickx(driver, "//div[48]/div[1]/div[1]");
+		clickx(driver, "//div[49]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_QrCode')]");
 		clickx(driver, "//div[contains(@class,'entity_QrCode')]");
-		clickx(driver, "//div[49]/div[1]/div[1]");
+		clickx(driver, "//div[50]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_Wallet')]");
 		clickx(driver, "//div[contains(@class,'entity_Wallet')]");
-		clickx(driver, "//div[50]/div[1]/div[1]");
+		clickx(driver, "//div[51]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
 		clickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
-		clickx(driver, "//div[51]/div[1]/div[1]");
+		clickx(driver, "//div[52]/div[1]/div[1]");
 		}
 }
