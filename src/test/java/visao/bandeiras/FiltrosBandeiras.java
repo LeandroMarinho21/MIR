@@ -8,6 +8,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import filtros.metodos.Filtros;
@@ -23,11 +24,20 @@ public class FiltrosBandeiras extends Filtros {
 		driver = new ChromeDriver();
 		List<ViewBTDTO> links = getViews();
 		/// Login
-		login2(driver, links.get(0).getUrl());
+		login(driver, links.get(0).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
+		// Preencher Período
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		WebElement PeriodoIni = driver.findElement(By.xpath("//input[contains(@id,'dt_transaction_ini_input')]"));
+		sendKeys("080920201100", PeriodoIni);
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		WebElement PeriodoFin = driver.findElement(By.xpath("//input[contains(@id,'dt_transaction_fin_component_input')]"));
+		sendKeys("080920201100", PeriodoFin);
 		}
 	
 	@After
@@ -93,10 +103,6 @@ public class FiltrosBandeiras extends Filtros {
 	
 	@Test
 	public void TestNovosCampos2() {
-		// Preencher Campos
-		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		clickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		sendKeys("080920201100", driver.findElement(By.xpath("//input[contains(@id,'dt_transaction_ini_input')]")));
 		// Preencher novos campos
 		waitingtoclickx(driver, "//input[contains(@class,'entity_panWeb')]");
 		clickx(driver, "//input[contains(@class,'entity_panWeb')]");
