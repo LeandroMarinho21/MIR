@@ -101,14 +101,8 @@ public class FiltrosVoucher extends Filtros {
 		waitingtoclickx(driver, "//input[contains(@class,'entity_panWeb')]");
 		clickx(driver, "//input[contains(@class,'entity_panWeb')]");
 		writepanx(driver, "//input[contains(@class,'entity_panWeb')]");
-		waitingtoclickx(driver, "//input[contains(@class,'entity_cvv')]");
-		clickx(driver, "//input[contains(@class,'entity_cvv')]");
 		writecvvx(driver, "//input[contains(@class,'entity_cvv')]");
-		waitingtoclickx(driver, "//input[contains(@class,'entity_descriptor')]");
-		clickx(driver, "//input[contains(@class,'entity_descriptor')]");
 		writedescx(driver, "//input[contains(@class,'entity_descriptor')]");
-		waitingtoclickx(driver, "//input[contains(@class,'entity_portador')]");
-		clickx(driver, "//input[contains(@class,'entity_portador')]");
 		writeportx(driver, "//input[contains(@class,'entity_portador')]");
 		}
 	
