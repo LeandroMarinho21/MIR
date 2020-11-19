@@ -20,7 +20,7 @@ public class FiltrosVoucher extends Filtros {
 		driver = new ChromeDriver();
 		List<ViewBTDTO> links = getViews();
 		// Login
-		login2(driver, links.get(2).getUrl());
+		login(driver, links.get(2).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -94,9 +94,9 @@ public class FiltrosVoucher extends Filtros {
 		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
 		clickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
 		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		clickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher novos campos
 		waitingtoclickx(driver, "//input[contains(@class,'entity_panWeb')]");
 		clickx(driver, "//input[contains(@class,'entity_panWeb')]");
