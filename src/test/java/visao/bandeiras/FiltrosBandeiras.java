@@ -92,7 +92,7 @@ public class FiltrosBandeiras extends Filtros {
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
 	@Test
-	public void TestNovosCampos2() throws InterruptedException {
+	public void TestNovosCampos2() {
 		// Preencher Campos
 		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
 		clickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
