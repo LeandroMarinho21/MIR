@@ -101,9 +101,9 @@ public class FiltrosRedes extends Filtros {
 		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
 		clickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
 		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		clickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
+		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		// Preencher novos campos
 		waitingtoclickx(driver, "//input[contains(@class,'entity_panWeb')]");
 		clickx(driver, "//input[contains(@class,'entity_panWeb')]");
