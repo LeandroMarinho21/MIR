@@ -3,6 +3,7 @@ package filtros.metodos;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
+import java.sql.Driver;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -221,12 +222,27 @@ public class Filtros {
 
 	//// Referentes a tela
 	public void writeperiod1x(WebDriver driver, String escreverperiodo1) {
-		driver.findElement(By.xpath(escreverperiodo1)).sendKeys("080920201100");
+		driver.findElement(By.xpath(escreverperiodo1));
 	}
 
-	public void writeperiod2x(WebDriver driver, String escreverperiodo2) {
+	public void writeperiod2x(WebDriver driver, String escreverperiodo2) throws InterruptedException {
 		driver.findElement(By.xpath(escreverperiodo2)).sendKeys("080920201200");
+        Thread.sleep(1000);
 	}
+	
+	public void sendKeys(String keysToSend,WebElement element){
+        for(char c:keysToSend.toCharArray()){
+            element.sendKeys(Character.toString(c));
+            try {
+                Thread.sleep(300);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            
+        }
+    }
+	
+
 
 	public void check3x(WebDriver driver, String lista) {
 		WebElement element = driver.findElement(By.xpath(lista));

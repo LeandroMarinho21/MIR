@@ -5,6 +5,7 @@ import java.util.List;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -93,10 +94,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		// Preencher Campos
 		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
 		clickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		writeperiod1x(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		writeperiod2x(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
+		sendKeys("080920201100", driver.findElement(By.xpath("//input[contains(@id,'dt_transaction_ini_input')]")));
 		// Preencher novos campos
 		waitingtoclickx(driver, "//input[contains(@class,'entity_panWeb')]");
 		clickx(driver, "//input[contains(@class,'entity_panWeb')]");
