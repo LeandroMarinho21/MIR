@@ -110,7 +110,6 @@ public class Filtros {
 	}
 	
 	public void waitingtoclick(WebDriver driver, String id_waitingV) {
-
 		WebDriverWait wait = new WebDriverWait(driver, 180);
 		wait.until(ExpectedConditions.elementToBeClickable(By.id(id_waitingV)));
 	}
