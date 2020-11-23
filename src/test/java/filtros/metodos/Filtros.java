@@ -69,6 +69,14 @@ public class Filtros {
 		bt5.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewnet.jsf");
 		bt5.setTable("listViewBTNetDTO_data");
 		test.add(bt5);
+		ViewBTDTO bt6 = new ViewBTDTO();
+		bt6.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewbtregion.jsf");
+		bt6.setTable("listViewBTNetDTO_data");
+		test.add(bt6);
+		ViewBTDTO bt7 = new ViewBTDTO();
+		bt7.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewgraphic.jsf");
+		bt7.setTable("listViewBTNetDTO_data");
+		test.add(bt7);
 		return test;
 	}
 
