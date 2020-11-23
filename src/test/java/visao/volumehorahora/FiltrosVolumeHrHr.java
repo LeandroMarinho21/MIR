@@ -22,7 +22,7 @@ public class FiltrosVolumeHrHr extends Filtros {
 		driver = new ChromeDriver();
 		List<ViewBTDTO> links = getViews();
 		// Login
-		login(driver, links.get(6).getUrl());
+		login2(driver, links.get(6).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
