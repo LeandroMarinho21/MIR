@@ -23,8 +23,8 @@ public class FiltrosTiposDeTransacoes extends Filtros {
 		// Login
 		login2(driver, links.get(7).getUrl());
 		// Filtro
-		waitingtoclick(driver, "bntSearch");
-		click(driver, "bntSearch");
+		waitingtoclick(driver, "btnFilter");
+		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
 		// Preencher Período
 		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
@@ -40,7 +40,7 @@ public class FiltrosTiposDeTransacoes extends Filtros {
 	@After
 	public void Encerramento() {
 		// Consultar
-		click(driver, "btnSearch1");
+		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
 		waitingElementBeClickableid(driver, "listViewTypeTransactionDTO:0:alarmDesc");
