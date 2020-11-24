@@ -13,7 +13,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import filtros.metodos.Filtros;
 import filtros.metodos.ViewBTDTO;
 
-public class FiltrosTipoDeTransacoes extends Filtros {
+public class FiltrosTiposDeTransacoes extends Filtros {
 	private WebDriver driver;
 
 	@Before
