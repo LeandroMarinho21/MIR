@@ -51,32 +51,27 @@ public class Filtros {
 		List<ViewBTDTO> test = new ArrayList<>();
 		ViewBTDTO bt = new ViewBTDTO();
 		bt.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewbtbrand.jsf");
-		bt.setTable("treeViewBTBrandDTO_data");
 		test.add(bt);
 		ViewBTDTO bt2 = new ViewBTDTO();
 		bt2.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewissuer.jsf");
-		bt2.setTable("listViewBTIssuerDTO_data");
 		test.add(bt2);
 		ViewBTDTO bt3 = new ViewBTDTO();
 		bt3.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewproduct.jsf");
-		bt3.setTable("treeViewBTSubProductDTO_data");
 		test.add(bt3);
 		ViewBTDTO bt4 = new ViewBTDTO();
 		bt4.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewprivatelabel.jsf");
-		bt4.setTable("listViewBTSubProductDTO_data");
 		test.add(bt4);
 		ViewBTDTO bt5 = new ViewBTDTO();
 		bt5.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewnet.jsf");
-		bt5.setTable("listViewBTNetDTO_data");
 		test.add(bt5);
 		ViewBTDTO bt6 = new ViewBTDTO();
 		bt6.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewbtregion.jsf");
-		bt6.setTable("listViewBTNetDTO_data");
 		test.add(bt6);
 		ViewBTDTO bt7 = new ViewBTDTO();
 		bt7.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewgraphic.jsf");
-		bt7.setTable("listViewBTNetDTO_data");
-		test.add(bt7);
+		ViewBTDTO bt8 = new ViewBTDTO();
+		bt8.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewtypetransaction.jsf");
+		test.add(bt8);
 		return test;
 	}
 
