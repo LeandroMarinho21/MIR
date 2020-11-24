@@ -69,6 +69,7 @@ public class Filtros {
 		test.add(bt6);
 		ViewBTDTO bt7 = new ViewBTDTO();
 		bt7.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewgraphic.jsf");
+		test.add(bt7);
 		ViewBTDTO bt8 = new ViewBTDTO();
 		bt8.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewtypetransaction.jsf");
 		test.add(bt8);
