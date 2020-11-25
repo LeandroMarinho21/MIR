@@ -106,6 +106,7 @@ public class FiltrosTiposDeTransacoes extends Filtros {
 		clickx(driver, "//div[39]/div[1]/div[1]");
 		}
 	
+	
 	/// Objetivo: Preencher os Combos
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		
@@ -115,9 +116,25 @@ public class FiltrosTiposDeTransacoes extends Filtros {
 		waitingtoclickx(driver, "//div[contains(@class,'entity_CompanyCodePurchasing')]");
 		clickx(driver, "//div[contains(@class,'entity_CompanyCodePurchasing')]");
 		clickx(driver, "//div[40]/div[1]/div[1]");
+		}
+	
+	/// Objetivo: Preencher os Combos
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+		
+	@Test
+	public void TestCombos5() {
+		// Preencher primeiros combos
 		waitingtoclickx(driver, "//div[contains(@class,'entity_ReasonCodeExternalNetwork')]");
 		clickx(driver, "//div[contains(@class,'entity_ReasonCodeExternalNetwork')]");
 		clickx(driver, "//div[41]/div[1]/div[1]");
+		}
+	/// Objetivo: Preencher os Combos
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+		
+	@Test
+	public void TestCombos6() {
+		// Preencher primeiros combos
+
 		waitingtoclickx(driver, "//div[contains(@class,'entity_Switch')]");
 		clickx(driver, "//div[contains(@class,'entity_Switch')]");
 		clickx(driver, "//div[42]/div[1]/div[1]");
@@ -128,7 +145,7 @@ public class FiltrosTiposDeTransacoes extends Filtros {
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		
 	@Test
-	public void TestCombos5() {
+	public void TestCombos7() {
 		// Preencher primeiros combos
 		waitingtoclickx(driver, "//div[contains(@class,'entity_Frontend')]");
 		clickx(driver, "//div[contains(@class,'entity_Frontend')]");
