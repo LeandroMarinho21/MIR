@@ -45,7 +45,7 @@ public class FiltrosEmissor extends Filtros {
 		// Verificar se possui dados
 		waitingElementBeClickableid(driver, "listViewBTIssuerDTO:0:tbody_desc");
 		// Verificar se ocorre erro
-//		erroDesc(driver, "ui-growl-message");
+		erroDesc(driver, "ui-growl-message");
 		System.out.println("Sucess");
 		driver.quit();
 	}

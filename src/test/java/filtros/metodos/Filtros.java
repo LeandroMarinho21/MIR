@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
-
+import org.junit.internal.runners.statements.Fail;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.TimeoutException;
@@ -224,14 +224,24 @@ public class Filtros {
 			throw t;
 		}	
 	}
-	
+
 	public void erroDesc (WebDriver driver, String erro) {
-		if (driver.findElement(By.className(erro)).isDisplayed()) {
-			fail();	 
-			System.out.println("Sucess");
-			driver.quit();
+	
+		try
+		{
+		 if(driver.findElement(By.className(erro)).isDisplayed() )      
+			{ 
+			 fail();
 			}
 		}
+		 catch (Exception e) 
+			{
+			driver.quit();
+		 	}
+		
+		 
+}
+	
 	
 	
 	public void notequalscss(WebDriver driver, String notrue) {
