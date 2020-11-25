@@ -126,7 +126,8 @@ public class FiltrosTiposDeTransacoes extends Filtros {
 		// Preencher primeiros combos
 		waitingtoclickx(driver, "//div[contains(@class,'entity_ReasonCodeExternalNetwork')]");
 		clickx(driver, "//div[contains(@class,'entity_ReasonCodeExternalNetwork')]");
-		clickx(driver, "//div[41]/div[1]/div[1]");
+		clickx(driver, "//div[79]/div[2]/ul/li[1]/div/div[2]]");
+		clickx(driver, "//div[79]/div[2]/ul/li[2]/div/div[2]]");
 		}
 	/// Objetivo: Preencher os Combos
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
@@ -137,8 +138,7 @@ public class FiltrosTiposDeTransacoes extends Filtros {
 
 		waitingtoclickx(driver, "//div[contains(@class,'entity_Switch')]");
 		clickx(driver, "//div[contains(@class,'entity_Switch')]");
-		clickx(driver, "//div[79]/div[2]/ul/li[1]/div/div[2]]");
-		clickx(driver, "//div[79]/div[2]/ul/li[2]/div/div[2]]");
+		clickx(driver, "//div[42]/div[1]/div[1]");
 		}
 	
 	
