@@ -61,7 +61,7 @@ public class FiltrosPainelEC extends Filtros {
 		clickx(driver, "//div[contains(@class,'entity_Issuer')]");
 		clickx(driver, "//div[19]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_Brand')]");
-		clickx(driver, "//div[contains(@class,'entity_Brand)]");
+		clickx(driver, "//div[contains(@class,'entity_Brand')]");
 		clickx(driver, "//div[20]/div[1]/div[1]");
 		}
 	
@@ -74,10 +74,10 @@ public class FiltrosPainelEC extends Filtros {
 		clickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
 		clickx(driver, "//div[21]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_GroupEstablishmentKomerci')]");
-		clickx(driver, "//div[contains(@class,'entity_GroupEstablishmentKomerci)]");
+		clickx(driver, "//div[contains(@class,'entity_GroupEstablishmentKomerci')]");
 		clickx(driver, "//div[22]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
-		clickx(driver, "//div[contains(@class,'entity_BrandGroup)]");
+		clickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
 		clickx(driver, "//div[23]/div[1]/div[1]");
 		}
 
