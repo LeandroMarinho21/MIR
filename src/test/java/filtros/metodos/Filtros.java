@@ -213,10 +213,16 @@ public class Filtros {
 		Assert.assertNotEquals("Ocorreu um erro desconhecido, consulte o administrador.", textoElement);
 	}
 	public void erroDesc (WebDriver driver, String erro) {
-		if (driver.findElement(By.xpath(erro)).isDisplayed()) {
-			new AssertionError("Ocorreu um erro desconhecido.");
-		}
-		}
+		try {
+		String textoElement = driver.findElement(By.className(erro)).getText();
+		Assert.assertNotEquals("Ocorreu um erro desconhecido, consulte o administrador.", textoElement);
+		} 
+		catch (TimeoutException t) {
+			System.out.println(t.getMessage());
+			driver.quit();
+			throw t;
+		}	
+	}
 	
 	public void notequalscss(WebDriver driver, String notrue) {
 		String textoElement = driver.findElement(By.cssSelector(notrue)).getText();

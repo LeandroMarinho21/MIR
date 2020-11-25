@@ -21,7 +21,7 @@ public class FiltrosTiposDeTransacoes extends Filtros {
 		driver = new ChromeDriver();
 		List<ViewBTDTO> links = getViews();
 		// Login
-		login2(driver, links.get(7).getUrl());
+		login(driver, links.get(7).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -45,7 +45,10 @@ public class FiltrosTiposDeTransacoes extends Filtros {
 		// Verificar se possui dados
 		waitingElementBeClickableid(driver, "listViewTypeTransactionDTO:0:alarmDesc");
 		// Verificar se ocorre erro
-		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		erroDesc(driver, "ui-growl-message");
+//		ui-growl-title
+//		ui-growl-image ui-growl-image-error
+//		ui-growl-message
 		System.out.println("Sucess");
 		driver.quit();
 		}
@@ -126,8 +129,8 @@ public class FiltrosTiposDeTransacoes extends Filtros {
 		// Preencher primeiros combos
 		waitingtoclickx(driver, "//div[contains(@class,'entity_ReasonCodeExternalNetwork')]");
 		clickx(driver, "//div[contains(@class,'entity_ReasonCodeExternalNetwork')]");
-		clickx(driver, "/html/body/div[40]/div[2]/ul/li[1]/div/div[2]");
-		clickx(driver, "/html/body/div[40]/div[2]/ul/li[2]/div/div[2]");
+		clickx(driver, "/html/body/div[41]/div[2]/ul/li[1]/div/div[2]");
+		clickx(driver, "/html/body/div[41]/div[2]/ul/li[2]/div/div[2]");
 		}
 	/// Objetivo: Preencher os Combos
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.

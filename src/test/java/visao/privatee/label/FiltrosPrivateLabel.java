@@ -46,7 +46,7 @@ public class FiltrosPrivateLabel extends Filtros {
 		// Verificar se possui dados
 		waitingElementBeClickableid(driver, "listViewBTSubProductDTO:0:viewPrivateDesc");
 		// Verificar se ocorre erro
-		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		erroDesc(driver, "ui-growl-message");
 		System.out.println("Sucess");
 		driver.quit();
 		}

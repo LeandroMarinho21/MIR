@@ -48,7 +48,7 @@ public class FiltrosBandeiras extends Filtros {
 		// Verificar se possui dados
 		waitingElementBeClickableid(driver, "treeViewBTBrandDTO_node_0");
 		// Verificar se ocorre erro
-		erroDesc(driver, "/html/body/div[8]/div/div/div[2]/span");
+		erroDesc(driver, "ui-growl-message");
 		System.out.println("Sucess");
 		driver.quit();
 		}
