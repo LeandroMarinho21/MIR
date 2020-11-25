@@ -121,6 +121,15 @@ public class FiltrosTiposDeTransacoes extends Filtros {
 		waitingtoclickx(driver, "//div[contains(@class,'entity_Switch')]");
 		clickx(driver, "//div[contains(@class,'entity_Switch')]");
 		clickx(driver, "//div[42]/div[1]/div[1]");
+		}
+	
+	
+	/// Objetivo: Preencher os Combos
+	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+		
+	@Test
+	public void TestCombos5() {
+		// Preencher primeiros combos
 		waitingtoclickx(driver, "//div[contains(@class,'entity_Frontend')]");
 		clickx(driver, "//div[contains(@class,'entity_Frontend')]");
 		clickx(driver, "//div[43]/div[1]/div[1]");
