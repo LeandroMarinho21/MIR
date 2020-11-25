@@ -1,5 +1,7 @@
 package visao.tipos.de.transacoes;
 
+import static org.junit.Assert.fail;
+
 import java.util.List;
 
 import org.junit.After;
@@ -22,7 +24,7 @@ public class FiltrosTiposDeTransacoes extends Filtros {
 		driver = new ChromeDriver();
 		List<ViewBTDTO> links = getViews();
 		// Login
-		login2(driver, links.get(7).getUrl());
+		login(driver, links.get(7).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		click(driver, "btnFilter");
@@ -46,7 +48,7 @@ public class FiltrosTiposDeTransacoes extends Filtros {
 		// Verificar se possui dados
 		waitingElementBeClickableid(driver, "listViewTypeTransactionDTO:0:alarmDesc");
 		// Verificar se ocorre erro
-		erroDesc(driver, "ui-growl-message");
+//		erroDesc(driver, "ui-growl-message");
 //		ui-growl-title
 //		ui-growl-image ui-growl-image-error
 //		ui-growl-message
@@ -125,7 +127,7 @@ public class FiltrosTiposDeTransacoes extends Filtros {
 	/// Objetivo: Preencher os Combos
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		
-	@Ignore
+	@Test
 	public void TestCombos5() {
 		// Preencher primeiros combos
 		waitingtoclickx(driver, "//div[contains(@class,'entity_ReasonCodeExternalNetwork')]");

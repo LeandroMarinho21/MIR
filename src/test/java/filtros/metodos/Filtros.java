@@ -2,6 +2,7 @@ package filtros.metodos;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.fail;
 
 import java.sql.Driver;
 import java.util.ArrayList;
@@ -212,7 +213,7 @@ public class Filtros {
 		String textoElement = driver.findElement(By.xpath(notrue)).getText();
 		Assert.assertNotEquals("Ocorreu um erro desconhecido, consulte o administrador.", textoElement);
 	}
-	public void erroDesc (WebDriver driver, String erro) {
+	public void erroDesc2 (WebDriver driver, String erro) {
 		try {
 		String textoElement = driver.findElement(By.className(erro)).getText();
 		Assert.assertNotEquals("Ocorreu um erro desconhecido, consulte o administrador.", textoElement);
@@ -223,6 +224,15 @@ public class Filtros {
 			throw t;
 		}	
 	}
+	
+	public void erroDesc (WebDriver driver, String erro) {
+		if (driver.findElement(By.className(erro)).isDisplayed()) {
+			fail();	 
+			System.out.println("Sucess");
+			driver.quit();
+			}
+		}
+	
 	
 	public void notequalscss(WebDriver driver, String notrue) {
 		String textoElement = driver.findElement(By.cssSelector(notrue)).getText();
