@@ -73,6 +73,9 @@ public class Filtros {
 		ViewBTDTO bt8 = new ViewBTDTO();
 		bt8.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewtypetransaction.jsf");
 		test.add(bt8);
+		ViewBTDTO bt9 = new ViewBTDTO();
+		bt9.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewkomercitransaction.jsf");
+		test.add(bt9);
 		return test;
 	}
 
@@ -118,9 +121,9 @@ public class Filtros {
 		wait.until(ExpectedConditions.elementToBeClickable(By.id(id_waitingV)));
 	}
 
-	public void waitingtoclickx(WebDriver driver, String id_waitingclick) {
+	public void waitingtoclickx(WebDriver driver, String xpath) {
 		WebDriverWait wait = new WebDriverWait(driver, 180);
-		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(id_waitingclick)));
+		wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpath)));
 	}
 	public void waitingtoclickcss(WebDriver driver, String css_waitingclick) {
 
