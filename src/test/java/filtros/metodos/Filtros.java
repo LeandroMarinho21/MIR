@@ -77,12 +77,36 @@ public class Filtros {
 		ViewBTDTO bt9 = new ViewBTDTO();
 		bt9.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewkomercitransaction.jsf");
 		test.add(bt9);
+		ViewBTDTO bt10 = new ViewBTDTO();
+		bt10.setUrl("https://192.168.80.18:8081/mir.console/pages/view/slaMilestone.jsf");
+		test.add(bt10);
 		return test;
 	}
 
 	
+	public void write(WebDriver driver, String id_campo, String texto) {
+		driver.findElement(By.id(id_campo)).sendKeys(texto);
+		}
+	public void writex(WebDriver driver, String id_campo, String texto) {
+		driver.findElement(By.xpath(id_campo)).sendKeys(texto);
+		}
+	
+	public String obteinValue(WebDriver driver, String id_campo) {
+		 return driver.findElement(By.id(id_campo)).getAttribute("value");
+		}
+	public String obteinValuex(WebDriver driver, String id_campo) {
+		 return driver.findElement(By.xpath(id_campo)).getAttribute("value");
+		}
+	
 	public void click(WebDriver driver, String clicar) {
 		driver.findElement(By.id(clicar)).click();
+	}
+	
+	public void clear(WebDriver driver, String clicar) {
+		driver.findElement(By.id(clicar)).clear();
+	}
+	public void clearx(WebDriver driver, String clicar) {
+		driver.findElement(By.xpath(clicar)).clear();
 	}
 	
 	public void clickx(WebDriver driver, String clicar) {
@@ -178,6 +202,18 @@ public class Filtros {
 		}	
 	}
 	
+	public void waitingelementxpath(WebDriver driver, String ElementoVisivel) {
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		try {
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(ElementoVisivel)));
+		} 
+		catch (TimeoutException t) {
+			System.out.println(t.getMessage());
+			driver.quit();
+			throw t;
+		}	
+	}
+	
 	public void verificarelementox(WebDriver driver, String notrue) {
 		String textoElement = driver.findElement(By.xpath(notrue)).getText();
 		Assert.assertNotSame("Nenhum registro encontrado.", "Nenhum registro encontrado.", textoElement);
@@ -217,7 +253,7 @@ public class Filtros {
 	public void erroDesc (WebDriver driver, String erro) {
 		try
 		{
-		 if(driver.findElement(By.className(erro)).isDisplayed() )      
+		 if(driver.findElement(By.xpath(erro)).isDisplayed() )      
 			{ 
 			 fail();
 			}

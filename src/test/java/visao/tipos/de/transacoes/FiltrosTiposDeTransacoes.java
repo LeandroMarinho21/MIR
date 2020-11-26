@@ -17,6 +17,7 @@ import filtros.metodos.Filtros;
 import filtros.metodos.ViewBTDTO;
 
 public class FiltrosTiposDeTransacoes extends Filtros {
+	
 	private WebDriver driver;
 
 	@Before
@@ -48,7 +49,7 @@ public class FiltrosTiposDeTransacoes extends Filtros {
 		// Verificar se possui dados
 		waitingElementBeClickableid(driver, "listViewTypeTransactionDTO:0:alarmDesc");
 		// Verificar se ocorre erro
-		erroDesc(driver, "ui-growl-message");
+		erroDesc(driver, "//span[text()='Ocorreu um erro desconhecido, consulte o administrador.']");
 //		ui-growl-title
 //		ui-growl-image ui-growl-image-error
 //		ui-growl-message

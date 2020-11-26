@@ -46,7 +46,7 @@ public class FiltrosVoucher extends Filtros {
 		// Verificar se possui dados
 		waitingElementBeClickableid(driver, "treeViewBTSubProductDTO_node_0");
 		// Verificar se ocorre erro
-		erroDesc(driver, "ui-growl-message");
+		erroDesc(driver, "//span[text()='Ocorreu um erro desconhecido, consulte o administrador.']");
 		System.out.println("Sucess");
 		driver.quit();
 		}

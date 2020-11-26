@@ -46,7 +46,7 @@ public class FiltrosRedes extends Filtros {
 		// Verificar se possui dados
 		waitingElementBeClickableid(driver, "listViewBTNetDTO:0:viewNetDesc");
 		// Verificar se ocorre erro
-		erroDesc(driver, "ui-growl-message");
+		erroDesc(driver, "//span[text()='Ocorreu um erro desconhecido, consulte o administrador.']");
 		System.out.println("Sucess");
 		driver.quit();
 		}

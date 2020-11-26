@@ -46,7 +46,7 @@ public class FiltrosRegioes extends Filtros {
 		// Verificar se possui dados
 		waitingElementBeClickableid(driver, "listViewBTRegionDTO:0:regionDesc");
 		// Verificar se ocorre erro
-		erroDesc(driver, "ui-growl-message");
+		erroDesc(driver, "//span[text()='Ocorreu um erro desconhecido, consulte o administrador.']");
 		driver.quit();
 		}
 	

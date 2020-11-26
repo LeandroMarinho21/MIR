@@ -46,7 +46,7 @@ public class FiltrosPainelEC extends Filtros {
 		// Verificar se possui dados
 		waitingElementBeClickableid(driver, "listViewBTTransactionDTO:0:viewKomerciDesc");
 		// Verificar se ocorre erro
-		erroDesc(driver, "ui-growl-message");
+		erroDesc(driver, "//span[text()='Ocorreu um erro desconhecido, consulte o administrador.']");
 		System.out.println("Sucess");
 		driver.quit();
 		}
