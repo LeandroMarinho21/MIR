@@ -126,14 +126,14 @@ public class FiltrosTiposDeTransacoes extends Filtros {
 	/// Objetivo: Preencher os Combos
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		
-	@Ignore
+	@Test
 	public void TestCombos5() {
 		// Preencher primeiros combos
 		waitingtoclickx(driver, "//div[contains(@class,'entity_ReasonCodeExternalNetwork')]");
 		clickx(driver, "//div[contains(@class,'entity_ReasonCodeExternalNetwork')]");
-		clickx(driver, "/html/body/div[41]/div[2]/ul/li[1]/div/div[2]");
-		clickx(driver, "/html/body/div[41]/div[2]/ul/li[2]/div/div[2]");
+		clickx(driver, "//div[41]/div[1]/div[1]");
 		}
+	
 	/// Objetivo: Preencher os Combos
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 		

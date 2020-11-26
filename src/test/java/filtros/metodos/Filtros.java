@@ -213,20 +213,8 @@ public class Filtros {
 		String textoElement = driver.findElement(By.xpath(notrue)).getText();
 		Assert.assertNotEquals("Ocorreu um erro desconhecido, consulte o administrador.", textoElement);
 	}
-	public void erroDesc2 (WebDriver driver, String erro) {
-		try {
-		String textoElement = driver.findElement(By.className(erro)).getText();
-		Assert.assertNotEquals("Ocorreu um erro desconhecido, consulte o administrador.", textoElement);
-		} 
-		catch (TimeoutException t) {
-			System.out.println(t.getMessage());
-			driver.quit();
-			throw t;
-		}	
-	}
 
 	public void erroDesc (WebDriver driver, String erro) {
-	
 		try
 		{
 		 if(driver.findElement(By.className(erro)).isDisplayed() )      
@@ -237,12 +225,8 @@ public class Filtros {
 		 catch (Exception e) 
 			{
 			driver.quit();
-		 	}
-		
-		 
-}
-	
-	
+		 	}		 
+	}
 	
 	public void notequalscss(WebDriver driver, String notrue) {
 		String textoElement = driver.findElement(By.cssSelector(notrue)).getText();
