@@ -87,33 +87,53 @@ public class Filtros {
 	public void write(WebDriver driver, String id_campo, String texto) {
 		driver.findElement(By.id(id_campo)).sendKeys(texto);
 		}
+	
+	public void writeclass(WebDriver driver, String id_campo, String texto) {
+		driver.findElement(By.className(id_campo)).sendKeys(texto);
+		}
+	
 	public void writex(WebDriver driver, String id_campo, String texto) {
 		driver.findElement(By.xpath(id_campo)).sendKeys(texto);
 		}
 	
+	public void writecss(WebDriver driver, String id_campo, String texto) {
+		driver.findElement(By.cssSelector(id_campo)).sendKeys(texto);
+		}
+	
+	
 	public String obteinValue(WebDriver driver, String id_campo) {
 		 return driver.findElement(By.id(id_campo)).getAttribute("value");
 		}
+	
 	public String obteinValuex(WebDriver driver, String id_campo) {
 		 return driver.findElement(By.xpath(id_campo)).getAttribute("value");
 		}
 	
 	public void click(WebDriver driver, String clicar) {
 		driver.findElement(By.id(clicar)).click();
-	}
+		}
 	
 	public void clear(WebDriver driver, String clicar) {
 		driver.findElement(By.id(clicar)).clear();
-	}
+		}
+	
 	public void clearx(WebDriver driver, String clicar) {
 		driver.findElement(By.xpath(clicar)).clear();
-	}
+		}
+	
+	public void clearcss(WebDriver driver, String clicar) {
+		driver.findElement(By.cssSelector(clicar)).clear();
+		}
 	
 	public void clickx(WebDriver driver, String clicar) {
 		driver.findElement(By.xpath(clicar)).click();
 	}
 	public void clickcss(WebDriver driver, String clicar) {
 		driver.findElement(By.cssSelector(clicar)).click();
+	}
+	
+	public void clickclass(WebDriver driver, String clicar) {
+		driver.findElement(By.className(clicar)).click();
 	}
 
 	public void escreverlogin(WebDriver driver, String escrever) {
@@ -219,7 +239,7 @@ public class Filtros {
 		Assert.assertNotSame("Nenhum registro encontrado.", "Nenhum registro encontrado.", textoElement);
 	}
 	
-	public void wait3(WebDriver driver, String espera3) {
+	public void wait3(WebDriver driver) {
 	driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 	}
 	

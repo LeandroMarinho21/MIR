@@ -5,9 +5,7 @@ import java.util.List;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import filtros.metodos.Filtros;
@@ -16,6 +14,7 @@ import filtros.metodos.ViewBTDTO;
 public class SLACrud extends Filtros {
 	
 	private WebDriver driver;
+
 
 	@Before
 	public void Inicializar() {
@@ -29,8 +28,9 @@ public class SLACrud extends Filtros {
 
 	@After
 	public void Encerramento() {
-		driver.quit();
 		erroDesc(driver, "//span[text()='Ocorreu um erro desconhecido, consulte o administrador.']");
+		System.out.println("Sucess");
+		driver.quit();
 		}
 
 
@@ -43,8 +43,32 @@ public class SLACrud extends Filtros {
 	clear(driver, "frmCadastro:j_idt79");
 	write(driver, "frmCadastro:j_idt79", "Teste Auto");
 	obteinValue(driver, "frmCadastro:j_idt79");
+	// Atualizar
 	click(driver , "frmCadastro:btnUpdate");
 	waiting(driver, "dialogLoadbar");
+	// Verificar se exibe mensagem
 	waitingelementxpath(driver, "//span[text()='SLA alterado com sucesso']");
+	}
+	
+	@Test
+	public void SalvarRegras() {
+	// Clicar no elemento
+	click(driver, "frmCadastro:j_idt79");
+	write(driver, "frmCadastro:j_idt79", "Teste");
+	obteinValue(driver, "frmCadastro:j_idt79");
+	// Salvar
+	click(driver, "frmCadastro:btnSave");
+	waiting(driver, "dialogLoadbar");
+	// Verificar se exibe mensagem
+	waitingelementxpath(driver, "//span[text()='O campo Prioridade é obrigatório.']");
+	click(driver, "frmCadastro:j_idt84");
+	write(driver, "frmCadastro:j_idt84", "4");
+	obteinValue(driver, "frmCadastro:j_idt84");
+	click(driver, "frmCadastro:j_idt89");
+	// Salvar
+	click(driver, "frmCadastro:btnSave");
+	waiting(driver, "dialogLoadbar");
+	// Verificar se exibe mensagem
+	waitingelementxpath(driver, "//span[text()='O campo Cor é obrigatório.']");
 	}
 }
