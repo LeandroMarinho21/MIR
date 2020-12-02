@@ -21,7 +21,7 @@ public class SLACrud extends Filtros {
 		driver = new ChromeDriver();
 		List<ViewBTDTO> links = getViews();
 		// Login
-		login(driver, links.get(9).getUrl());
+		login2(driver, links.get(9).getUrl());
 		// Entrar na tela
 		waitingtoclick(driver, "frmList:dataTableSlaMilestone:0:deleteButton");
 		}
