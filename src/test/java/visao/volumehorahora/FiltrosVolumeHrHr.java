@@ -44,7 +44,7 @@ public class FiltrosVolumeHrHr extends Filtros {
 		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
-		waitingElementBeClickableid(driver, "container_bar");
+		waitingElementBeClickableid(driver, "ChartBar");
 		// Verificar se ocorre erro
 		erroDesc(driver, "//span[text()='Ocorreu um erro desconhecido, consulte o administrador.']");
 		System.out.println("Sucess");
