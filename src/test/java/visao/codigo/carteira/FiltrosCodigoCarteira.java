@@ -22,7 +22,7 @@ public class FiltrosCodigoCarteira extends Filtros {
 			driver = new ChromeDriver();
 			List<ViewBTDTO> links = getViews();
 			// Login
-			login(driver, links.get(10).getUrl());
+			login2(driver, links.get(10).getUrl());
 			// Filtro
 			waitingtoclick(driver, "btnFilter");
 			click(driver, "btnFilter");
