@@ -80,6 +80,9 @@ public class Filtros {
 		ViewBTDTO bt10 = new ViewBTDTO();
 		bt10.setUrl("https://192.168.80.18:8081/mir.console/pages/view/slaMilestone.jsf");
 		test.add(bt10);
+		ViewBTDTO bt11 = new ViewBTDTO();
+		bt11.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewWallet.jsf");
+		test.add(bt11);
 		return test;
 	}
 
