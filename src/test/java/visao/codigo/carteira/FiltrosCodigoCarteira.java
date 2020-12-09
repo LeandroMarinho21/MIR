@@ -85,9 +85,6 @@ public class FiltrosCodigoCarteira extends Filtros {
 			waitingtoclickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
 			clickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
 			clickx(driver, "//div[39]/div[1]/div[1]");
-			waitingtoclickx(driver, "//div[contains(@class,'entity_Brand')]");
-			clickx(driver, "//div[contains(@class,'entity_Brand')]");
-			clickx(driver, "//div[40]/div[1]/div[1]");
 			}
 		
 		/// Objetivo: Preencher os Combos
@@ -96,6 +93,9 @@ public class FiltrosCodigoCarteira extends Filtros {
 		@Test
 		public void TestCombos3() {
 			// Preencher primeiros combos
+			clickx(driver, "//div[@class='ui-selectcheckboxmenu ui-widget ui-state-default ui-corner-all custom-sel-checkbox entity_Brand']");
+			clickx(driver, "//div[40]/div[1]/div[1]/div[2]");
+			waitingtoclickx(driver, "//div[contains(@class,'entity_SaleType')]");
 			clickx(driver, "//div[contains(@class,'entity_SaleType')]");
 			clickx(driver, "//div[41]/div[1]/div[1]");
 			waitingtoclickx(driver, "//div[contains(@class,'entity_DeviceCapture')]");
