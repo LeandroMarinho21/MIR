@@ -25,6 +25,8 @@ public class FiltrosRegioes extends Filtros {
 		login2(driver, links.get(5).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
+		//Verificar Errro ao entrar
+		erroDesc(driver, "//span[text()='Ocorreu um erro desconhecido, consulte o administrador']");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
 		// Preencher Período

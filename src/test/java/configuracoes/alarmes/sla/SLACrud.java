@@ -24,6 +24,8 @@ public class SLACrud extends Filtros {
 		login2(driver, links.get(9).getUrl());
 		// Entrar na tela
 		waitingtoclick(driver, "frmList:dataTableSlaMilestone:0:deleteButton");
+		//Verificar Errro ao entrar
+		erroDesc(driver, "//span[text()='Ocorreu um erro desconhecido, consulte o administrador.']");
 		}
 
 	@After

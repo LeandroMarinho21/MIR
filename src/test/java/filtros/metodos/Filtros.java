@@ -284,10 +284,7 @@ public class Filtros {
 			 fail();
 			}
 		}
-		 catch (Exception e) 
-			{
-			driver.quit();
-		 	}		 
+		 catch (Exception e) {}		 
 	}
 	
 	public void notequalscss(WebDriver driver, String notrue) {

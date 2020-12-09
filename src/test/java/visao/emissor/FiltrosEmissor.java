@@ -23,6 +23,8 @@ public class FiltrosEmissor extends Filtros {
 		login2(driver, links.get(1).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
+		//Verificar Errro ao entrar
+		erroDesc(driver, "//span[text()='Ocorreu um erro desconhecido, consulte o administrador']");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
 		clickx(driver, "//div[4]//span[@class='ui-chkbox-icon ui-c ui-chkbox-icon ui-icon ui-icon-check ui-c']");
