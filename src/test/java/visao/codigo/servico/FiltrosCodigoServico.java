@@ -102,7 +102,7 @@ public class FiltrosCodigoServico extends Filtros {
 			clickx(driver, "//div[38]/div[1]/div[1]");
 			waitingtoclickx(driver, "//div[contains(@class,'entity_Brand')]");
 			clickx(driver, "//div[contains(@class,'entity_Brand')]");
-			clickx(driver, "//div[49]/div[1]/div[1]");
+			clickx(driver, "//div[39]/div[1]/div[1]");
 			waitingtoclickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
 			clickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
 			clickx(driver, "//div[40]/div[1]/div[1]");
@@ -140,7 +140,7 @@ public class FiltrosCodigoServico extends Filtros {
 		public void TestCombos6() {
 			// Preencher primeiros combos
 			clickx(driver, "//div[contains(@class,'entity_TokenTransaction')]");
-			clickx(driver, "//div{48]/div[1]/div[1]");
+			clickx(driver, "//div[48]/div[1]/div[1]");
 			waitingtoclickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
 			clickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
 			clickx(driver, "//div[49]/div[1]/div[1]");
