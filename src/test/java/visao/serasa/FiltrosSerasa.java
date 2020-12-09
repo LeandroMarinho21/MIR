@@ -49,9 +49,6 @@ public class FiltrosSerasa extends Filtros {
 			waitingElementBeClickableid(driver, "listViewBTBrandDTO:0:btSerasaDesc");
 			// Verificar se ocorre erro
 			erroDesc(driver, "//span[text()='Ocorreu um erro desconhecido, consulte o administrador.']");
-//			ui-growl-title
-//			ui-growl-image ui-growl-image-error
-//			ui-growl-message
 			driver.quit();
 			}
 		
