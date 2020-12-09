@@ -22,7 +22,7 @@ public class FiltrosSerasa extends Filtros {
 			driver = new ChromeDriver();
 			List<ViewBTDTO> links = getViews();
 			// Login
-			login(driver, links.get(12).getUrl());
+			login2(driver, links.get(12).getUrl());
 			// Filtro
 			waitingtoclick(driver, "bntSearch");
 			//Verificar Errro ao entrar
