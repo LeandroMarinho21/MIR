@@ -24,10 +24,10 @@ public class FiltrosSerasa extends Filtros {
 			// Login
 			login2(driver, links.get(12).getUrl());
 			// Filtro
-			waitingtoclick(driver, "bntFilter");
+			waitingtoclick(driver, "btnFilter");
 			//Verificar Errro ao entrar
 			erroDesc(driver, "//span[text()='Ocorreu um erro desconhecido, consulte o administrador']");
-			click(driver, "bntFilter");
+			click(driver, "btnFilter");
 			waiting(driver, "dialogLoadbar");
 			// Preencher Período
 			waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
