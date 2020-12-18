@@ -57,11 +57,9 @@ public class FiltrosPiloto extends Filtros {
 		// Preencher primeiros combos
 		clickx(driver, "//div[contains(@class,'entity_Issuer')]");
 		clickx(driver, "//div[22]/div[1]/div[1]");
-		clickx(driver, "//div[contains(@class,'entity_Issuer')]");
+		waitingtoclickx(driver, "//div[contains(@class,'entity_Product')]");
+		clickx(driver, "//div[contains(@class,'entity_Product')]");
 		clickx(driver, "//div[23]/div[1]/div[1]");
-		waitingtoclickx(driver, "//div[contains(@class,'entity_SubProduct')]");
-		clickx(driver, "//div[contains(@class,'entity_SubProduct')]");
-		clickx(driver, "//div[24]/div[1]/div[1]");
 		}
 	
 	/// Objetivo: Preencher o Campos dos 4 campos
