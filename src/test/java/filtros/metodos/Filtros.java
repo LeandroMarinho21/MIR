@@ -98,6 +98,9 @@ public class Filtros {
 		ViewBTDTO bt16 = new ViewBTDTO();
 		bt16.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewpiloto.jsf");
 		test.add(bt16);
+		ViewBTDTO bt17 = new ViewBTDTO();
+		bt17.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewpiloto.jsf");
+		test.add(bt17);
 		return test;
 	}
 
