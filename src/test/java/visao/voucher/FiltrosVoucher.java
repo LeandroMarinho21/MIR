@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -56,7 +57,7 @@ public class FiltrosVoucher extends Filtros {
 	/// Objetivo: Preencher os Combos
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
-	@Test
+	@Ignore
 	public void TestCombos1() {
 		// Preencher primeiros combos
 		clickx(driver, "//div[contains(@class,'entity_Issuer')]");
