@@ -110,6 +110,9 @@ public class Filtros {
 		ViewBTDTO bt20 = new ViewBTDTO();
 		bt20.setUrl("https://192.168.80.18:8081/mir.console/dashboard/service/typePartner.jsf");
 		test.add(bt20);
+		ViewBTDTO bt21 = new ViewBTDTO();
+		bt21.setUrl("https://192.168.80.18:8081/mir.console/dashboard/service/groupEstablishmentDashbord.jsf");
+		test.add(bt21);
 		return test;
 	}
 
