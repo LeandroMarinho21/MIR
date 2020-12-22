@@ -24,10 +24,10 @@ public class FiltrosPiloto extends Filtros {
 		// Login
 		login2(driver, links.get(15).getUrl());
 		// Filtro
-		waitingtoclick(driver, "btnSearch");
+		waitingtoclick(driver, "btnFilter");
 		//Verificar Errro ao entrar
 		erroDesc(driver, "//span[text()='Ocorreu um erro desconhecido, consulte o administrador']");
-		click(driver, "btnSearch");
+		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
 		// Preencher Período
 		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_component_input')]");
@@ -39,7 +39,7 @@ public class FiltrosPiloto extends Filtros {
 	@After
 	public void Encerramento() {
 		// Consultar
-		click(driver, "btnSearch1");
+		click(driver, "btnConsult");
 		waiting(driver, "dialogLoadbar");
 		// Verificar se possui dados
 		waitingElementBeClickableid(driver, "listViewBTPilotoDTO:0:viewPiloto");
