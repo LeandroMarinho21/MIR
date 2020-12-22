@@ -61,13 +61,13 @@ public class FiltrosPOSRemodeladas extends Filtros {
 	public void TestCombos1() {
 		// Preencher primeiros combos
 		clickx(driver, "//div[contains(@class,'entity_Issuer')]");
-		clickx(driver, "//div[17]/div[1]/div[1]");
+		clickx(driver, "//div[18]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_Product')]");
 		clickx(driver, "//div[contains(@class,'entity_Product')]");
-		clickx(driver, "//div[18]/div[1]/div[1]");
+		clickx(driver, "//div[19]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_SubProduct')]");
 		clickx(driver, "//div[contains(@class,'entity_SubProduct')]");
-		clickx(driver, "//div[19]/div[1]/div[1]");
+		clickx(driver, "//div[20]/div[1]/div[1]");
 		}
 		
 	
@@ -111,10 +111,10 @@ public class FiltrosPOSRemodeladas extends Filtros {
 	public void TestCombos2() {
 		// Preencher primeiros combos
 		clickx(driver, "//div[contains(@class,'entity_SaleType')]");
-		clickx(driver, "//div[20]/div[1]/div[1]");
+		clickx(driver, "//div[21]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
 		clickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
-		clickx(driver, "//div[21]/div[1]/div[1]");
+		clickx(driver, "//div[22]/div[1]/div[1]");
 		}
 
 	
@@ -125,10 +125,10 @@ public class FiltrosPOSRemodeladas extends Filtros {
 	public void TestCombos3() {
 		// Preencher primeiros combos
 		clickx(driver, "//div[contains(@class,'entity_Brand')]");
-		clickx(driver, "//div[22]/div[1]/div[1]");
+		clickx(driver, "//div[23]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
-///		clickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
-///		clickx(driver, "//div[23]/div[1]/div[1]");
+		clickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
+		clickx(driver, "//div[24]/div[1]/div[1]");
 		}
 	
 	/// Objetivo: Preencher os Combos
@@ -138,10 +138,10 @@ public class FiltrosPOSRemodeladas extends Filtros {
 	public void TestCombos4() {
 		// Preencher primeiros combos
 		clickx(driver, "//div[contains(@class,'entity_PrincipalBusiness')]");
-		clickx(driver, "//div[23]/div[1]/div[1]");
+		clickx(driver, "//div[25]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_IssuerType')]");
 		clickx(driver, "//div[contains(@class,'entity_IssuerType')]");
-		clickx(driver, "//div[24]/div[1]/div[1]");
+		clickx(driver, "//div[26]/div[1]/div[1]");
 		}
 	
 	/// Objetivo: Preencher os Combos
