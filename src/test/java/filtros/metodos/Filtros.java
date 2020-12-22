@@ -101,6 +101,9 @@ public class Filtros {
 		ViewBTDTO bt17 = new ViewBTDTO();
 		bt17.setUrl("https://192.168.80.18:8081/mir.console/pages/view/viewServiceGraphic.jsf");
 		test.add(bt17);
+		ViewBTDTO bt18 = new ViewBTDTO();
+		bt18.setUrl("https://192.168.80.18:8081/mir.console/dashboard/service/deviceCapture.jsf");
+		test.add(bt18);
 		return test;
 	}
 
