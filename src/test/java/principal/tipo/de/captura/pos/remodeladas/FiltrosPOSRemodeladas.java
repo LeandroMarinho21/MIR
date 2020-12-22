@@ -127,8 +127,8 @@ public class FiltrosPOSRemodeladas extends Filtros {
 		clickx(driver, "//div[contains(@class,'entity_Brand')]");
 		clickx(driver, "//div[22]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
-		clickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
-		clickx(driver, "//div[23]/div[1]/div[1]");
+///		clickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
+///		clickx(driver, "//div[23]/div[1]/div[1]");
 		}
 	
 	/// Objetivo: Preencher os Combos
@@ -138,10 +138,10 @@ public class FiltrosPOSRemodeladas extends Filtros {
 	public void TestCombos4() {
 		// Preencher primeiros combos
 		clickx(driver, "//div[contains(@class,'entity_PrincipalBusiness')]");
-		clickx(driver, "//div[24]/div[1]/div[1]");
+		clickx(driver, "//div[23]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_IssuerType')]");
 		clickx(driver, "//div[contains(@class,'entity_IssuerType')]");
-		clickx(driver, "//div[25]/div[1]/div[1]");
+		clickx(driver, "//div[24]/div[1]/div[1]");
 		}
 	
 	/// Objetivo: Preencher os Combos
