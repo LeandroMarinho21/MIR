@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.junit.After;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -51,14 +52,12 @@ public class FiltrosPlataformaEstabelecimento extends Filtros {
 	/// Objetivo: Preencher os Combos
 	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
 	
-	@Test
+	@Ignore
 	public void TestCombos1() {
 		// Preencher primeiros combos
-		clickx(driver, "//div[contains(@class,'entity_TypePartner')]");
-		clickx(driver, "//div[16]/div[1]/div[1]");
-		waitingtoclickx(driver, "//div[contains(@class,'entity_TypeService')]");
-		clickx(driver, "//div[contains(@class,'entity_TypeService')]");
-		clickx(driver, "//div[17]/div[1]/div[1]");
+	///	waitingtoclickx(driver, "//div[contains(@class,'entity_TypeService')]");
+	///	clickx(driver, "//div[contains(@class,'entity_TypeService')]");
+	///	clickx(driver, "//div[17]/div[1]/div[1]");
 		}
 	
 	/// Objetivo: Preencher o Campos dos 4 campos
@@ -67,9 +66,8 @@ public class FiltrosPlataformaEstabelecimento extends Filtros {
 	@Test
 	public void TestCombos2() {
 		// Preencher primeiros combos
-		waitingtoclickx(driver, "//div[contains(@class,'entity_EnterModeService')]");
-		clickx(driver, "//div[contains(@class,'entity_EnterModeService')]");
-		clickx(driver, "//div[18]/div[1]/div[1]");
+		clickx(driver, "//div[contains(@class,'entity_TypePartner')]");
+		clickx(driver, "//div[16]/div[1]/div[1]");
 		waitingtoclickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
 		clickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
 		clickx(driver, "//div[19]/div[1]/div[1]");
