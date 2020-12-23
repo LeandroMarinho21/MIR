@@ -9,8 +9,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import filtros.metodos.Filtros;
-import filtros.metodos.ViewBTDTO;
+import metodos.mir.Filtros;
+import metodos.mir.ViewBTDTO;
 
 public class FiltrosCodigoServico extends Filtros {
 

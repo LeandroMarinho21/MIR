@@ -1,4 +1,4 @@
-package filtros.metodos;
+package metodos.mir;
 
 public class ViewBTDTO {
 	private String url;

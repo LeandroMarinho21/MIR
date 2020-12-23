@@ -1,4 +1,4 @@
-package filtros.metodos;
+package metodos.mir;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
