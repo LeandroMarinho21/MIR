@@ -33,7 +33,7 @@ public class FiltrosPlataformaRegioes extends Filtros {
 		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_component_input')]");
 		clickx(driver, "//input[contains(@id,'dt_transaction_component_input')]");
 		WebElement PeriodoIni = driver.findElement(By.xpath("//input[contains(@id,'dt_transaction_component_input')]"));
-		sendKeys("08092020", PeriodoIni);
+		sendKeys("08122020", PeriodoIni);
 		}
 
 	@After
