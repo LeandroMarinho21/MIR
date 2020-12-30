@@ -100,9 +100,9 @@ public class FiltrosDistribuicaoGeografica extends Filtros {
 			waitingtoclickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
 			clickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
 			clickx(driver, "//div[37]/div[1]/div[1]");
-			waitingtoclickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
+			waitingtoclickx(driver, "//div[contains(@class,'entity_Piloto')]");
 			clickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
-			clickx(driver, "//div[39]/div[1]/div[1]");
+			clickx(driver, "//div[38]/div[1]/div[1]");
 			waitingtoclickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
 			clickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
 			clickx(driver, "//div[39]/div[1]/div[1]");
