@@ -37,6 +37,7 @@ public class Filtros {
 		waitingtoclick(driver, "formLogin:txtUsuario");
 		click(driver, "formLogin:txtUsuario");
 		escreverlogin(driver, "formLogin:txtUsuario");
+		waitingtoclick(driver, "formLogin:txtPassword");
 		escreversenhaenter(driver, "formLogin:txtPassword");
 	}
 		
@@ -45,6 +46,7 @@ public class Filtros {
 		waitingtoclick(driver, "formLogin:txtUsuario");
 		click(driver, "formLogin:txtUsuario");
 		escreverlogin(driver, "formLogin:txtUsuario");
+		waitingtoclick(driver, "formLogin:txtPassword");
 		escreversenhaenter(driver, "formLogin:txtPassword");
 	}
 
