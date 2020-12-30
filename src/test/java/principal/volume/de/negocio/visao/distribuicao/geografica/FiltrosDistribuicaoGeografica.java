@@ -23,7 +23,7 @@ public class FiltrosDistribuicaoGeografica extends Filtros {
 			driver = new ChromeDriver();
 			List<ViewBTDTO> links = getViews();
 			// Login
-			login2(driver, links.get(21).getUrl());
+			login(driver, links.get(21).getUrl());
 			// Filtro
 			waitingtoclick(driver, "btnFilter");
 			//Verificar Errro ao entrar
@@ -101,7 +101,7 @@ public class FiltrosDistribuicaoGeografica extends Filtros {
 			clickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
 			clickx(driver, "//div[37]/div[1]/div[1]");
 			waitingtoclickx(driver, "//div[contains(@class,'entity_Piloto')]");
-			clickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
+			clickx(driver, "//div[contains(@class,'entity_Piloto')]");
 			clickx(driver, "//div[38]/div[1]/div[1]");
 			waitingtoclickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
 			clickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
