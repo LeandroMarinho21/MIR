@@ -71,14 +71,6 @@ public class FiltrosPlataformaEstabelecimento extends Filtros {
 		waitingtoclickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
 		clickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
 		clickx(driver, "//div[19]/div[1]/div[1]");
-		}
-	
-	/// Objetivo: Preencher os Combos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
-	
-	@Test
-	public void TestCombos3() {
-		// Preencher primeiros combos
 		waitingtoclickx(driver, "//div[contains(@class,'entity_TransactionStatus')]");
 		clickx(driver, "//div[contains(@class,'entity_TransactionStatus')]");
 		clickx(driver, "//div[20]/div[1]/div[1]");
