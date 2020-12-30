@@ -23,7 +23,7 @@ public class FiltrosDistribuicaoGeografica extends Filtros {
 			driver = new ChromeDriver();
 			List<ViewBTDTO> links = getViews();
 			// Login
-			login(driver, links.get(21).getUrl());
+			login2(driver, links.get(21).getUrl());
 			// Filtro
 			waitingtoclick(driver, "btnFilter");
 			//Verificar Errro ao entrar
