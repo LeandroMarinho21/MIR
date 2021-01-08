@@ -150,10 +150,10 @@ public class FiltrosPOSRemodeladas extends Filtros {
 	@Test
 	public void TestCidades5() {
 		// Preencher primeiros combos
-		click(driver, "j_idt127");
-		click(driver, "j_idt127_filter");
-		write(driver, "j_idt127_filter", "Sao Paulo");
-		clickx(driver, "//*[@id=\"j_idt127_panel\"]/div[2]/ul/li[27]");
+		clickx(driver, "/html/body/center/div[4]/form[1]/div[3]/div[2]/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[1]/table/tbody/tr[4]/td/div");
+		clickx(driver, "/html/body/div[28]/div[1]/input");
+		writex(driver, "/html/body/div[28]/div[1]/input", "Sao Paulo");
+		clickx(driver, "/html/body/div[28]/div[2]/ul/li[27]");
 		waiting(driver, "dialogLoadbar");
 		click(driver, "cmbNewAll");
 		waiting(driver, "dialogLoadbar");
