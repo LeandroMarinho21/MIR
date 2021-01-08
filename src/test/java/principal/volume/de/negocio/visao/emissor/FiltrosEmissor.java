@@ -28,7 +28,7 @@ public class FiltrosEmissor extends Filtros {
 		erroDesc(driver, "//span[text()='Ocorreu um erro desconhecido, consulte o administrador']");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
-		clickx(driver, "//div[4]//span[@class='ui-chkbox-icon ui-c ui-chkbox-icon ui-icon ui-icon-check ui-c']");
+		clickx(driver, "//div[4]//span[@class='entity_groupByBrand']");
 		// Preencher Período
 		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
 		clickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
