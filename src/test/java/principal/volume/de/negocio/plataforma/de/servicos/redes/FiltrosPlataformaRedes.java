@@ -29,11 +29,6 @@ public class FiltrosPlataformaRedes extends Filtros {
 		erroDesc(driver, "//span[text()='Ocorreu um erro desconhecido, consulte o administrador']");
 		click(driver, "btnFilter");
 		waiting(driver, "dialogLoadbar");
-		// Preencher Período
-		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_component_input')]");
-		clickx(driver, "//input[contains(@id,'dt_transaction_component_input')]");
-		WebElement PeriodoIni = driver.findElement(By.xpath("//input[contains(@id,'dt_transaction_component_input')]"));
-		sendKeys("08122020", PeriodoIni);
 		}
 
 	@After
