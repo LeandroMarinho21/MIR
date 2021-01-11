@@ -32,11 +32,11 @@ public class FiltrosRedes extends Filtros {
 		// Preencher Período
 		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
 		clickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		WebElement PeriodoIni = driver.findElement(By.xpath("//input[contains(@id,'dt_transaction_ini_input')]"));
+		WebElement PeriodoIni = findElement(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
 		sendKeys("080920201100", PeriodoIni);
 		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		WebElement PeriodoFin = driver.findElement(By.xpath("//input[contains(@id,'dt_transaction_fin_component_input')]"));
+		WebElement PeriodoFin = findElement(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		sendKeys("080920202000", PeriodoFin);
 		}
 

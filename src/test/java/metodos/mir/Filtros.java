@@ -121,6 +121,9 @@ public class Filtros {
 		return test;
 	}
 
+	public WebElement findElement(WebDriver driver, String element) {
+		return driver.findElement(By.xpath(element));
+	}
 	
 	public void write(WebDriver driver, String id_campo, String texto) {
 		driver.findElement(By.id(id_campo)).sendKeys(texto);

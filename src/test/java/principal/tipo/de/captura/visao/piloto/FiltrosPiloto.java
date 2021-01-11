@@ -32,7 +32,7 @@ public class FiltrosPiloto extends Filtros {
 		// Preencher Período
 		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_component_input')]");
 		clickx(driver, "//input[contains(@id,'dt_transaction_component_input')]");
-		WebElement PeriodoIni = driver.findElement(By.xpath("//input[contains(@id,'dt_transaction_component_input')]"));
+		WebElement PeriodoIni = findElement(driver, "//input[contains(@id,'dt_transaction_component_input')]");
 		sendKeys("08092020", PeriodoIni);
 		}
 

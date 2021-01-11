@@ -12,18 +12,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import metodos.mir.Filtros;
+import metodos.mir.FiltrosPage;
 import metodos.mir.ViewBTDTO;
 
 public class FiltrosPOSRemodeladas extends Filtros {
 	
 	private WebDriver driver;
+	private FiltrosPage filtros;
 
 	@Before
 	public void Inicializar() {
 		driver = new ChromeDriver();
 		List<ViewBTDTO> links = getViews();
+		filtros = new FiltrosPage(driver);
 		// Login
-		login2(driver, links.get(14).getUrl());
+		login(driver, links.get(14).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		//Verificar Errro ao entrar
@@ -33,11 +36,11 @@ public class FiltrosPOSRemodeladas extends Filtros {
 		// Preencher Período
 		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
 		clickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		WebElement PeriodoIni = driver.findElement(By.xpath("//input[contains(@id,'dt_transaction_ini_input')]"));
+		WebElement PeriodoIni = findElement(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
 		sendKeys("080920201100", PeriodoIni);
 		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		WebElement PeriodoFin = driver.findElement(By.xpath("//input[contains(@id,'dt_transaction_fin_component_input')]"));
+		WebElement PeriodoFin = findElement(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
 		sendKeys("080920202000", PeriodoFin);
 		}
 
