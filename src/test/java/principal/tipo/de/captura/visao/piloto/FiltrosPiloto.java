@@ -8,43 +8,46 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import metodos.mir.Filtros;
+import metodos.mir.FiltrosPage;
 
 public class FiltrosPiloto {
 
 	private WebDriver driver;
 	private Filtros filtros;
+	private FiltrosPage f;
 
 	@Before
 	public void Inicializar() {
 		driver = new ChromeDriver();
 		filtros = new Filtros(driver);
-		driver.get("https://192.168.80.18:8081/mir.console/pages/view/viewpiloto.jsf");
+		f = new FiltrosPage(driver);
+		f.getUrl("https://192.168.80.18:8081/mir.console/pages/view/viewpiloto.jsf");
 		// Login
-		filtros.login2();
+		f.loginPrivate();
 		// Filtro
-		filtros.waitingtoclick("btnFilter");
-		//Verificar Errro ao entrar
-		filtros.erroDesc("//span[text()='Ocorreu um erro desconhecido, consulte o administrador']");
-		filtros.click("btnFilter");
-		filtros.waiting("dialogLoadbar");
+		f.waitToClickFilter();
+		// Verificar Errro ao entrar
+		f.verifyError();
+		f.clickFilter();
+		f.loading();
 		// Preencher Período
-		filtros.waitingtoclickx("//input[contains(@id,'dt_transaction_component_input')]");
-		filtros.clickx("//input[contains(@id,'dt_transaction_component_input')]");
-		WebElement PeriodoIni = filtros.findElement("//input[contains(@id,'dt_transaction_component_input')]");
-		filtros.sendKeys("08092020", PeriodoIni);
+		f.waitToClickDate();
+		f.clickDate();
+		WebElement PeriodoIni = f.findDate();
+		f.writeDate("08092020", PeriodoIni);
 		}
 
 	@After
 	public void Encerramento() {
 		// Consultar
-		filtros.click("btnConsult");
-		filtros.waiting("dialogLoadbar");
+		f.clickConsult();
+		f.loading();
 		// Verificar se possui dados
-		filtros.waitingElementBeClickableid("listViewBTPilotoDTO:0:viewPiloto");
+		f.verifyElementTable("listViewBTPilotoDTO:0:viewPiloto");
 		// Verificar se ocorre erro
-		filtros.erroDesc("//span[text()='Ocorreu um erro desconhecido, consulte o administrador.']");
+		f.verifyError();
 		System.out.println("Sucess");
-		driver.quit();
+		f.finish();
 		}
 	
 	/// Objetivo: Preencher os Combos

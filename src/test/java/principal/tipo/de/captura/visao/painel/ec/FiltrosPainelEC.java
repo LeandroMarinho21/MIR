@@ -8,77 +8,79 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import metodos.mir.Filtros;
+import metodos.mir.FiltrosPage;
 
 public class FiltrosPainelEC {
 	
 	private WebDriver driver;
-	private Filtros filtros;
+	private FiltrosPage f;
 
 	@Before
 	public void Inicializar() {
 		driver = new ChromeDriver();
-		filtros = new Filtros(driver);
-		driver.get("https://192.168.80.18:8081/mir.console/pages/view/viewkomercitransaction.jsf");
+		new Filtros(driver);
+		f = new FiltrosPage(driver);
+		f.getUrl("https://192.168.80.18:8081/mir.console/pages/view/viewkomercitransaction.jsf");
 		// Login
-		filtros.login2();
+		f.loginPrivate();
 		// Filtro
-		filtros.waitingtoclick("btnFilter");
-		//Verificar Errro ao entrar
-		filtros.erroDesc("//span[text()='Ocorreu um erro desconhecido, consulte o administrador']");
-		filtros.click("btnFilter");
-		filtros.waiting("dialogLoadbar");
+		f.waitToClickFilter();
+		// Verificar Errro ao entrar
+		f.verifyError();
+		f.clickFilter();
+		f.loading();
 		// Preencher Período
-		filtros.waitingtoclickx("//input[contains(@id,'dt_transaction_ini_input')]");
-		filtros.clickx("//input[contains(@id,'dt_transaction_ini_input')]");
-		WebElement PeriodoIni = filtros.findElement("//input[contains(@id,'dt_transaction_ini_input')]");
-		filtros.sendKeys("080920201100", PeriodoIni);
-		filtros.waitingtoclickx("//input[contains(@id,'dt_transaction_fin_component_input')]");
-		filtros.clickx("//input[contains(@id,'dt_transaction_fin_component_input')]");
-		WebElement PeriodoFin = filtros.findElement("//input[contains(@id,'dt_transaction_fin_component_input')]");
-		filtros.sendKeys("080920202000", PeriodoFin);
+		f.waitToClickPeriodIni();
+		WebElement PeriodoIni = f.findPeriodIni();
+		f.clickPeriodIni();
+		f.writePeriodIni("080920201100", PeriodoIni);
+		f.clickPeriodoFin();
+		f.waitToClickPeriodFin();
+		WebElement PeriodoFin = f.findPeriodFin();
+		f.writePeriodFin("080920202000", PeriodoFin);
 		}
 
 	@After
 	public void Encerramento() {
 		// Consultar
-		filtros.click("btnConsult");
-		filtros.waiting("dialogLoadbar");
+		f.clickConsult();
+		f.loading();
 		// Verificar se possui dados
-		filtros.waitingElementBeClickableid("listViewBTTransactionDTO:0:viewKomerciDesc");
+		f.verifyElementTable("listViewBTTransactionDTO:0:viewKomerciDesc");
 		// Verificar se ocorre erro
-		filtros.erroDesc("//span[text()='Ocorreu um erro desconhecido, consulte o administrador.']");
+		f.verifyError();
 		System.out.println("Sucess");
-		driver.quit();
+		f.finish();
 		}
 	
-	/// Objetivo: Preencher os Combos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Selecionar todas as opções dos Combos ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 	
 	@Test
 	public void TestCombos1() {
 		// Preencher primeiros combos
-		filtros.waitingtoclickx("//div[contains(@class,'entity_Issuer')]");
-		filtros.clickx("//div[contains(@class,'entity_Issuer')]");
-		filtros.clickx("//div[19]/div[1]/div[1]");
-		filtros.waitingtoclickx("//div[contains(@class,'entity_Brand')]");
-		filtros.clickx("//div[contains(@class,'entity_Brand')]");
-		filtros.clickx("//div[20]/div[1]/div[1]");
+		f.waitToClickComboEmissor();
+		f.filterComboEmissor();
+		f.selectAll("//div[19]/div[1]/div[1]");
+		f.waitToClickComboBandeiras();
+		f.filterComboBandeiras();
+		f.selectAll("//div[20]/div[1]/div[1]");
 		}
 	
-	/// Objetivo: Preencher os Combos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Selecionar todas as opções dos Combos ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 		
 	@Test
 	public void TestCombos2() {
-		filtros.waitingtoclickx("//div[contains(@class,'entity_WebSourceTransaction')]");
-		filtros.clickx("//div[contains(@class,'entity_WebSourceTransaction')]");
-		filtros.clickx("//div[21]/div[1]/div[1]");
-		filtros.waitingtoclickx("//div[contains(@class,'entity_GroupEstablishmentKomerci')]");
-		filtros.clickx("//div[contains(@class,'entity_GroupEstablishmentKomerci')]");
-		filtros.clickx("//div[22]/div[1]/div[1]");
-		filtros.waitingtoclickx("//div[contains(@class,'entity_BrandGroup')]");
-		filtros.clickx("//div[contains(@class,'entity_BrandGroup')]");
-		filtros.clickx("//div[23]/div[1]/div[1]");
+		f.waitToClickComboOrigemTransacoesWeb();
+		f.filterComboOrigemTransacoesWeb();
+		f.selectAll("//div[21]/div[1]/div[1]");
+		f.waitToClickComboGrupoEstabelecimento();
+		f.filterComboGrupoEstabelecimento();
+		f.selectAll("//div[22]/div[1]/div[1]");
+		f.waitToClickComboGrupoBandeira();
+		f.filterComboGrupoBandeira();
+		f.selectAll("//div[23]/div[1]/div[1]");
 		}
 
 }

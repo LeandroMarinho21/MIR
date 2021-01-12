@@ -7,79 +7,81 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import metodos.mir.Filtros;
+import metodos.mir.FiltrosPage;
 
 public class FiltrosPlataformaParceiros {
 	
 	private WebDriver driver;
-	private Filtros filtros;
-
+	private FiltrosPage f;
+	
 	@Before
 	public void Inicializar() {
 		driver = new ChromeDriver();
-		filtros = new Filtros(driver);
-		driver.get("https://192.168.80.18:8081/mir.console/dashboard/service/typePartner.jsf");
+		new Filtros(driver);
+		f = new FiltrosPage(driver);
+		f.getUrl("https://192.168.80.18:8081/mir.console/dashboard/service/typePartner.jsf");
 		// Login
-		filtros.login2();
+		f.loginPrivate();
 		// Filtro
-		filtros.waitingtoclick("btnFilter");
-		//Verificar Errro ao entrar
-		filtros.erroDesc("//span[text()='Ocorreu um erro desconhecido, consulte o administrador']");
-		filtros.click("btnFilter");
-		filtros.waiting("dialogLoadbar");
+		f.waitToClickFilter();
+		// Verificar Errro ao entrar
+		f.verifyError();
+		f.clickFilter();
+		f.loading();
 		}
 
 	@After
 	public void Encerramento() {
 		// Consultar
-		filtros.click("btnConsult");
-		filtros.waiting("dialogLoadbar");
+		f.clickConsult();
+		f.loading();
 		// Verificar se possui dados
-		filtros.waitingElementBeClickableid("listViewDTO:0:dtoName");
+		f.verifyElementTable("listViewDTO:0:dtoName");
 		// Verificar se ocorre erro
-		filtros.erroDesc("//span[text()='Ocorreu um erro desconhecido, consulte o administrador.']");
+		f.verifyError();
 		System.out.println("Sucess");
-		driver.quit();
+		f.finish();
 		}
 	
-	/// Objetivo: Preencher os Combos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Selecionar todas as opções dos Combos ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 	
 	@Test
 	public void TestCombos1() {
 		// Preencher primeiros combos
-		filtros.clickx("//div[contains(@class,'entity_TypePartner')]");
-		filtros.clickx("//div[16]/div[1]/div[1]");
-		filtros.waitingtoclickx("//div[contains(@class,'entity_TypeService')]");
-		filtros.clickx("//div[contains(@class,'entity_TypeService')]");
-		filtros.clickx("//div[17]/div[1]/div[1]");
+		f.filterComboTipoParceiro();
+		f.selectAll("//div[16]/div[1]/div[1]");
+		f.waitToClickComboTipoServico();
+		f.filterComboTipoServico();
+		f.selectAll("//div[17]/div[1]/div[1]");
 		}
 	
-	/// Objetivo: Preencher o Campos dos 4 campos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Selecionar todas as opções dos Combos ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 	
 	@Test
 	public void TestCombos2() {
 		// Preencher primeiros combos
-		filtros.waitingtoclickx("//div[contains(@class,'entity_EnterModeService')]");
-		filtros.clickx("//div[contains(@class,'entity_EnterModeService')]");
-		filtros.clickx("//div[18]/div[1]/div[1]");
-		filtros.waitingtoclickx("//div[contains(@class,'entity_TypeTransaction')]");
-		filtros.clickx("//div[contains(@class,'entity_TypeTransaction')]");
-		filtros.clickx("//div[19]/div[1]/div[1]");
+		f.waitToClickComboModoDeCaptura();
+		f.filterComboModoDeCaptura();
+		f.selectAll("//div[18]/div[1]/div[1]");
+		f.waitToClickComboTipoTransacao();
+		f.filterComboTipoTransacao();
+		f.selectAll("//div[19]/div[1]/div[1]");
 		}
 	
-	/// Objetivo: Preencher os Combos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Selecionar todas as opções dos Combos ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 	
 	@Test
 	public void TestCombos3() {
 		// Preencher primeiros combos
-		filtros.waitingtoclickx("//div[contains(@class,'entity_TransactionStatus')]");
-		filtros.clickx("//div[contains(@class,'entity_TransactionStatus')]");
-		filtros.clickx("//div[20]/div[1]/div[1]");
-		filtros.waitingtoclickx("//div[contains(@class,'entity_DeviceCapture')]");
-		filtros.clickx("//div[contains(@class,'entity_DeviceCapture')]");
-		filtros.clickx("//div[21]/div[1]/div[1]");
+		f.waitToClickComboStatusTransacao();
+		f.filterComboStatusTransacao();
+		f.selectAll("//div[20]/div[1]/div[1]");
+		f.waitToClickComboMeioDeCaptura();
+		f.filterComboMeioDeCaptura();
+		f.selectAll("//div[21]/div[1]/div[1]");
 		}
 
 }

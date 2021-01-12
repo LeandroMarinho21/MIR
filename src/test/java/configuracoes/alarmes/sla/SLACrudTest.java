@@ -9,14 +9,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class SLACrudTest {
 	
 	
-	private MetodosSLA metodos;
 	private WebDriver driver;
 	private SLACrudPage sla;
 	
 	@Before
 	public void Inicializar() {
 		driver = new ChromeDriver();
-		metodos = new MetodosSLA(driver);
+		new MetodosSLA(driver);
 		sla = new SLACrudPage(driver);
 		sla.acessarUrl();
 		// Login
