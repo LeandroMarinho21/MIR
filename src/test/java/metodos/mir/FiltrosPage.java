@@ -7,7 +7,7 @@ public class FiltrosPage extends Filtros {
 	public FiltrosPage(WebDriver driver) {
 	}
 
-	public void botaoFiltro(WebDriver driver) {
+	public void aguardarBotaoFiltro(WebDriver driver) {
 		waitingtoclick(driver, "btnFilter");
 	}
 	
