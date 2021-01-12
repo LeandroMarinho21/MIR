@@ -149,6 +149,22 @@ public class FiltrosPage {
 		filtros.waitingtoclickx("//div[contains(@class,'entity_Brand')]");
 	}
 	
+	public void filterComboProduto() {
+		filtros.clickx("//div[contains(@class,'entity_Product')]");
+	}
+	
+	public void waitToClickComboProduto() {
+		filtros.waitingtoclickx("//div[contains(@class,'entity_Product')]");
+	}
+	
+	public void filterComboTipoDeVenda() {
+		filtros.clickx("//div[contains(@class,'entity_SaleType')]");
+	}
+	
+	public void waitToClickComboTipoDeVenda() {
+		filtros.waitingtoclickx("//div[contains(@class,'entity_SaleType')]");
+	}
+	
 	public void filterComboOrigemTransacoesWeb() {
 		filtros.clickx("//div[contains(@class,'entity_WebSourceTransaction')]");
 	}
@@ -195,6 +211,38 @@ public class FiltrosPage {
 	
 	public void waitToClickComboModoDeCaptura() {
 		filtros.waitingtoclickx("//div[contains(@class,'entity_EnterModeService')]");
+	}
+	
+	public void filterComboModoDeEntrada() {
+		filtros.clickx("//div[contains(@class,'entity_EnterMode')]");
+	}
+	
+	public void waitToClickComboModoDeEntrada() {
+		filtros.waitingtoclickx("//div[contains(@class,'entity_EnterMode')]");
+	}
+	
+	public void filterComboGrupoRamoAtividade() {
+		filtros.clickx("//div[contains(@class,'entity_PrincipalBusiness')]");
+	}
+	
+	public void waitToClickComboGrupoRamoAtividade() {
+		filtros.waitingtoclickx("//div[contains(@class,'entity_PrincipalBusiness')]");
+	}
+	
+	public void filterComboTipoDeEmissor() {
+		filtros.clickx("//div[contains(@class,'entity_IssuerType')]");
+	}
+	
+	public void waitToClickComboTipoDeEmissor() {
+		filtros.waitingtoclickx("//div[contains(@class,'entity_IssuerType')]");
+	}
+	
+	public void filterComboPiloto() {
+		filtros.clickx("//div[contains(@class,'entity_Piloto')]");
+	}
+	
+	public void waitToClickComboPiloto() {
+		filtros.waitingtoclickx("//div[contains(@class,'entity_Piloto')]");
 	}
 	
 	public void filterComboTipoTransacao() {
