@@ -26,7 +26,7 @@ public class FiltrosPOSRemodeladas extends Filtros {
 		List<ViewBTDTO> links = getViews();
 		filtros = new FiltrosPage(driver);
 		// Login
-		login(driver, links.get(14).getUrl());
+		login2(driver, links.get(14).getUrl());
 		// Filtro
 		waitingtoclick(driver, "btnFilter");
 		//Verificar Errro ao entrar
