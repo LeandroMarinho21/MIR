@@ -2,13 +2,16 @@ package metodos.mir;
 
 import org.openqa.selenium.WebDriver;
 
-public class FiltrosPage extends Filtros {
+
+
+public class FiltrosPage {
+	private Filtros filtros;
 	
 	public FiltrosPage(WebDriver driver) {
 	}
 
 	public void aguardarBotaoFiltro(WebDriver driver) {
-		waitingtoclick(driver, "btnFilter");
+		filtros.waitingtoclick("btnFilter");
 	}
 	
 }

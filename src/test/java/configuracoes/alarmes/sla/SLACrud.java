@@ -1,7 +1,5 @@
 package configuracoes.alarmes.sla;
 
-import java.util.List;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -9,28 +7,30 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import metodos.mir.Filtros;
-import metodos.mir.ViewBTDTO;
 
-public class SLACrud extends Filtros {
+
+public class SLACrud {
 	
+	private Filtros filtros;
 	private WebDriver driver;
 
 
 	@Before
 	public void Inicializar() {
 		driver = new ChromeDriver();
-		List<ViewBTDTO> links = getViews();
+		filtros = new Filtros(driver);
+		driver.get("https://192.168.80.18:8081/mir.console/pages/view/slaMilestone.jsf");
 		// Login
-		login2(driver, links.get(9).getUrl());
+		filtros.login2();
 		// Entrar na tela
-		waitingtoclick(driver, "frmList:dataTableSlaMilestone:0:deleteButton");
+		filtros.waitingtoclick("frmList:dataTableSlaMilestone:0:deleteButton");
 		//Verificar Errro ao entrar
-		erroDesc(driver, "//span[text()='Ocorreu um erro desconhecido, consulte o administrador.']");
+		filtros.erroDesc("//span[text()='Ocorreu um erro desconhecido, consulte o administrador.']");
 		}
 
 	@After
 	public void Encerramento() {
-		erroDesc(driver, "//span[text()='Ocorreu um erro desconhecido, consulte o administrador.']");
+		filtros.erroDesc("//span[text()='Ocorreu um erro desconhecido, consulte o administrador.']");
 		System.out.println("Sucess");
 		driver.quit();
 		}
@@ -39,38 +39,38 @@ public class SLACrud extends Filtros {
 	@Test
 	public void Atualizar() {
 	// Clicar no elemento
-	clickx(driver, "//*[@id=\"frmList:dataTableSlaMilestone_data\"]/tr[1]/td[1]");
-	waiting(driver, "dialogLoadbar");
-	click(driver, "frmCadastro:j_idt79");
-	clear(driver, "frmCadastro:j_idt79");
-	write(driver, "frmCadastro:j_idt79", "Teste Auto");
-	obteinValue(driver, "frmCadastro:j_idt79");
+	filtros.clickx("//*[@id=\"frmList:dataTableSlaMilestone_data\"]/tr[1]/td[1]");
+	filtros.waiting("dialogLoadbar");
+	filtros.click("frmCadastro:j_idt79");
+	filtros.clear("frmCadastro:j_idt79");
+	filtros.write("frmCadastro:j_idt79", "Teste Auto");
+	filtros.obteinValue("frmCadastro:j_idt79");
 	// Atualizar
-	click(driver , "frmCadastro:btnUpdate");
-	waiting(driver, "dialogLoadbar");
+	filtros.click("frmCadastro:btnUpdate");
+	filtros.waiting("dialogLoadbar");
 	// Verificar se exibe mensagem
-	waitingelementxpath(driver, "//span[text()='SLA alterado com sucesso']");
+	filtros.waitingelementxpath("//span[text()='SLA alterado com sucesso']");
 	}
 	
 	@Test
 	public void SalvarRegras() {
 	// Clicar no elemento
-	click(driver, "frmCadastro:j_idt79");
-	write(driver, "frmCadastro:j_idt79", "Teste");
-	obteinValue(driver, "frmCadastro:j_idt79");
+	filtros.click("frmCadastro:j_idt79");
+	filtros.write("frmCadastro:j_idt79", "Teste");
+	filtros.obteinValue("frmCadastro:j_idt79");
 	// Salvar
-	click(driver, "frmCadastro:btnSave");
-	waiting(driver, "dialogLoadbar");
+	filtros.click("frmCadastro:btnSave");
+	filtros.waiting("dialogLoadbar");
 	// Verificar se exibe mensagem
-	waitingelementxpath(driver, "//span[text()='O campo Prioridade é obrigatório.']");
-	click(driver, "frmCadastro:j_idt84");
-	write(driver, "frmCadastro:j_idt84", "4");
-	obteinValue(driver, "frmCadastro:j_idt84");
-	click(driver, "frmCadastro:j_idt89");
+	filtros.waitingelementxpath("//span[text()='O campo Prioridade é obrigatório.']");
+	filtros.click("frmCadastro:j_idt84");
+	filtros.write("frmCadastro:j_idt84", "4");
+	filtros.obteinValue("frmCadastro:j_idt84");
+	filtros.click("frmCadastro:j_idt89");
 	// Salvar
-	click(driver, "frmCadastro:btnSave");
-	waiting(driver, "dialogLoadbar");
+	filtros.click("frmCadastro:btnSave");
+	filtros.waiting("dialogLoadbar");
 	// Verificar se exibe mensagem
-	waitingelementxpath(driver, "//span[text()='O campo Cor é obrigatório.']");
+	filtros.waitingelementxpath("//span[text()='O campo Cor é obrigatório.']");
 	}
 }

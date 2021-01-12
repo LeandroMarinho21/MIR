@@ -1,54 +1,52 @@
 package principal.tipo.de.captura.visao.painel.ec;
 
-import java.util.List;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import metodos.mir.Filtros;
-import metodos.mir.ViewBTDTO;
 
-public class FiltrosPainelEC extends Filtros {
+public class FiltrosPainelEC {
 	
 	private WebDriver driver;
+	private Filtros filtros;
 
 	@Before
 	public void Inicializar() {
 		driver = new ChromeDriver();
-		List<ViewBTDTO> links = getViews();
+		filtros = new Filtros(driver);
+		driver.get("https://192.168.80.18:8081/mir.console/pages/view/viewkomercitransaction.jsf");
 		// Login
-		login2(driver, links.get(8).getUrl());
+		filtros.login2();
 		// Filtro
-		waitingtoclick(driver, "btnFilter");
+		filtros.waitingtoclick("btnFilter");
 		//Verificar Errro ao entrar
-		erroDesc(driver, "//span[text()='Ocorreu um erro desconhecido, consulte o administrador']");
-		click(driver, "btnFilter");
-		waiting(driver, "dialogLoadbar");
+		filtros.erroDesc("//span[text()='Ocorreu um erro desconhecido, consulte o administrador']");
+		filtros.click("btnFilter");
+		filtros.waiting("dialogLoadbar");
 		// Preencher Período
-		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		clickx(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		WebElement PeriodoIni = findElement(driver, "//input[contains(@id,'dt_transaction_ini_input')]");
-		sendKeys("080920201100", PeriodoIni);
-		waitingtoclickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		clickx(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		WebElement PeriodoFin = findElement(driver, "//input[contains(@id,'dt_transaction_fin_component_input')]");
-		sendKeys("080920202000", PeriodoFin);
+		filtros.waitingtoclickx("//input[contains(@id,'dt_transaction_ini_input')]");
+		filtros.clickx("//input[contains(@id,'dt_transaction_ini_input')]");
+		WebElement PeriodoIni = filtros.findElement("//input[contains(@id,'dt_transaction_ini_input')]");
+		filtros.sendKeys("080920201100", PeriodoIni);
+		filtros.waitingtoclickx("//input[contains(@id,'dt_transaction_fin_component_input')]");
+		filtros.clickx("//input[contains(@id,'dt_transaction_fin_component_input')]");
+		WebElement PeriodoFin = filtros.findElement("//input[contains(@id,'dt_transaction_fin_component_input')]");
+		filtros.sendKeys("080920202000", PeriodoFin);
 		}
 
 	@After
 	public void Encerramento() {
 		// Consultar
-		click(driver, "btnConsult");
-		waiting(driver, "dialogLoadbar");
+		filtros.click("btnConsult");
+		filtros.waiting("dialogLoadbar");
 		// Verificar se possui dados
-		waitingElementBeClickableid(driver, "listViewBTTransactionDTO:0:viewKomerciDesc");
+		filtros.waitingElementBeClickableid("listViewBTTransactionDTO:0:viewKomerciDesc");
 		// Verificar se ocorre erro
-		erroDesc(driver, "//span[text()='Ocorreu um erro desconhecido, consulte o administrador.']");
+		filtros.erroDesc("//span[text()='Ocorreu um erro desconhecido, consulte o administrador.']");
 		System.out.println("Sucess");
 		driver.quit();
 		}
@@ -59,12 +57,12 @@ public class FiltrosPainelEC extends Filtros {
 	@Test
 	public void TestCombos1() {
 		// Preencher primeiros combos
-		waitingtoclickx(driver, "//div[contains(@class,'entity_Issuer')]");
-		clickx(driver, "//div[contains(@class,'entity_Issuer')]");
-		clickx(driver, "//div[19]/div[1]/div[1]");
-		waitingtoclickx(driver, "//div[contains(@class,'entity_Brand')]");
-		clickx(driver, "//div[contains(@class,'entity_Brand')]");
-		clickx(driver, "//div[20]/div[1]/div[1]");
+		filtros.waitingtoclickx("//div[contains(@class,'entity_Issuer')]");
+		filtros.clickx("//div[contains(@class,'entity_Issuer')]");
+		filtros.clickx("//div[19]/div[1]/div[1]");
+		filtros.waitingtoclickx("//div[contains(@class,'entity_Brand')]");
+		filtros.clickx("//div[contains(@class,'entity_Brand')]");
+		filtros.clickx("//div[20]/div[1]/div[1]");
 		}
 	
 	/// Objetivo: Preencher os Combos
@@ -72,15 +70,15 @@ public class FiltrosPainelEC extends Filtros {
 		
 	@Test
 	public void TestCombos2() {
-		waitingtoclickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
-		clickx(driver, "//div[contains(@class,'entity_WebSourceTransaction')]");
-		clickx(driver, "//div[21]/div[1]/div[1]");
-		waitingtoclickx(driver, "//div[contains(@class,'entity_GroupEstablishmentKomerci')]");
-		clickx(driver, "//div[contains(@class,'entity_GroupEstablishmentKomerci')]");
-		clickx(driver, "//div[22]/div[1]/div[1]");
-		waitingtoclickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
-		clickx(driver, "//div[contains(@class,'entity_BrandGroup')]");
-		clickx(driver, "//div[23]/div[1]/div[1]");
+		filtros.waitingtoclickx("//div[contains(@class,'entity_WebSourceTransaction')]");
+		filtros.clickx("//div[contains(@class,'entity_WebSourceTransaction')]");
+		filtros.clickx("//div[21]/div[1]/div[1]");
+		filtros.waitingtoclickx("//div[contains(@class,'entity_GroupEstablishmentKomerci')]");
+		filtros.clickx("//div[contains(@class,'entity_GroupEstablishmentKomerci')]");
+		filtros.clickx("//div[22]/div[1]/div[1]");
+		filtros.waitingtoclickx("//div[contains(@class,'entity_BrandGroup')]");
+		filtros.clickx("//div[contains(@class,'entity_BrandGroup')]");
+		filtros.clickx("//div[23]/div[1]/div[1]");
 		}
 
 }

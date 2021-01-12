@@ -1,45 +1,43 @@
 package principal.volume.de.negocio.plataforma.de.servicos.estabelecimento;
 
-import java.util.List;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import metodos.mir.Filtros;
-import metodos.mir.ViewBTDTO;
 
-public class FiltrosPlataformaEstabelecimento extends Filtros {
+public class FiltrosPlataformaEstabelecimento {
+	
 	private WebDriver driver;
+	private Filtros filtros;
 
 	@Before
 	public void Inicializar() {
 		driver = new ChromeDriver();
-		List<ViewBTDTO> links = getViews();
+		filtros = new Filtros(driver);
+		driver.get("https://192.168.80.18:8081/mir.console/dashboard/service/groupEstablishmentDashbord.jsf");
 		// Login
-		login2(driver, links.get(20).getUrl());
+		filtros.login2();
 		// Filtro
-		waitingtoclick(driver, "btnFilter");
+		filtros.waitingtoclick("btnFilter");
 		//Verificar Errro ao entrar
-		erroDesc(driver, "//span[text()='Ocorreu um erro desconhecido, consulte o administrador']");
-		click(driver, "btnFilter");
-		waiting(driver, "dialogLoadbar");
+		filtros.erroDesc("//span[text()='Ocorreu um erro desconhecido, consulte o administrador']");
+		filtros.click("btnFilter");
+		filtros.waiting("dialogLoadbar");
 		}
 
 	@After
 	public void Encerramento() {
 		// Consultar
-		click(driver, "btnConsult");
-		waiting(driver, "dialogLoadbar");
+		filtros.click("btnConsult");
+		filtros.waiting("dialogLoadbar");
 		// Verificar se possui dados
-		waitingElementBeClickableid(driver, "listViewDTO:0:dtoDesc");
+		filtros.waitingElementBeClickableid("listViewDTO:0:dtoDesc");
 		// Verificar se ocorre erro
-		erroDesc(driver, "//span[text()='Ocorreu um erro desconhecido, consulte o administrador.']");
+		filtros.erroDesc("//span[text()='Ocorreu um erro desconhecido, consulte o administrador.']");
 		System.out.println("Sucess");
 		driver.quit();
 		}
@@ -50,9 +48,9 @@ public class FiltrosPlataformaEstabelecimento extends Filtros {
 	@Ignore
 	public void TestCombos1() {
 		// Preencher primeiros combos
-	///	waitingtoclickx(driver, "//div[contains(@class,'entity_TypeService')]");
-	///	clickx(driver, "//div[contains(@class,'entity_TypeService')]");
-	///	clickx(driver, "//div[17]/div[1]/div[1]");
+	///	waitingtoclickx("//div[contains(@class,'entity_TypeService')]");
+	///	clickx("//div[contains(@class,'entity_TypeService')]");
+	///	clickx("//div[17]/div[1]/div[1]");
 		}
 	
 	/// Objetivo: Preencher o Campos dos 4 campos
@@ -61,17 +59,17 @@ public class FiltrosPlataformaEstabelecimento extends Filtros {
 	@Test
 	public void TestCombos2() {
 		// Preencher primeiros combos
-		clickx(driver, "//div[contains(@class,'entity_TypePartner')]");
-		clickx(driver, "//div[16]/div[1]/div[1]");
-		waitingtoclickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
-		clickx(driver, "//div[contains(@class,'entity_TypeTransaction')]");
-		clickx(driver, "//div[19]/div[1]/div[1]");
-		waitingtoclickx(driver, "//div[contains(@class,'entity_TransactionStatus')]");
-		clickx(driver, "//div[contains(@class,'entity_TransactionStatus')]");
-		clickx(driver, "//div[20]/div[1]/div[1]");
-		waitingtoclickx(driver, "//div[contains(@class,'entity_DeviceCapture')]");
-		clickx(driver, "//div[contains(@class,'entity_DeviceCapture')]");
-		clickx(driver, "//div[21]/div[1]/div[1]");
+		filtros.clickx("//div[contains(@class,'entity_TypePartner')]");
+		filtros.clickx("//div[16]/div[1]/div[1]");
+		filtros.waitingtoclickx("//div[contains(@class,'entity_TypeTransaction')]");
+		filtros.clickx("//div[contains(@class,'entity_TypeTransaction')]");
+		filtros.clickx("//div[19]/div[1]/div[1]");
+		filtros.waitingtoclickx("//div[contains(@class,'entity_TransactionStatus')]");
+		filtros.clickx("//div[contains(@class,'entity_TransactionStatus')]");
+		filtros.clickx("//div[20]/div[1]/div[1]");
+		filtros.waitingtoclickx("//div[contains(@class,'entity_DeviceCapture')]");
+		filtros.clickx("//div[contains(@class,'entity_DeviceCapture')]");
+		filtros.clickx("//div[21]/div[1]/div[1]");
 		}
 
 
