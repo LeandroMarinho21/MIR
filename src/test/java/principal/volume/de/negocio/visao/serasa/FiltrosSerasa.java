@@ -53,8 +53,8 @@ public class FiltrosSerasa {
 			f.finish();
 			}
 		
-		/// Objetivo: Preencher os Combos
-		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+		/********* Objetivo: Selecionar todas as opções dos Combos ************/
+		/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 		
 		@Test
 		public void TestCombos1() {
@@ -69,8 +69,8 @@ public class FiltrosSerasa {
 			f.selectAll("//div[31]/div[1]/div[1]");
 			}
 		
-		/// Objetivo: Preencher o Campos dos 4 campos
-		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+		/********* Objetivo: Selecionar todas as opções dos Combos ************/
+		/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 		
 		@Test
 		public void TestCombos2() {
@@ -88,8 +88,8 @@ public class FiltrosSerasa {
 			f.selectAll("//div[35]/div[1]/div[1]");
 			}
 		
-		/// Objetivo: Preencher os Combos
-		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+		/********* Objetivo: Selecionar todas as opções dos Combos ************/
+		/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 		
 		@Test
 		public void TestCombos3() {
@@ -108,8 +108,8 @@ public class FiltrosSerasa {
 			}
 		
 		
-		/// Objetivo: Preencher os Combos
-		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+		/********* Objetivo: Selecionar todas as opções dos Combos ************/
+		/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 			
 		@Test
 		public void TestCombos4() {

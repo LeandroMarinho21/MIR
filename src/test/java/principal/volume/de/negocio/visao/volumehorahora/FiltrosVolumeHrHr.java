@@ -53,8 +53,8 @@ public class FiltrosVolumeHrHr {
 		f.finish();
 		}
 	
-	/// Objetivo: Preencher os Combos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Selecionar todas as opções dos Combos ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 	
 	@Test
 	public void TestCombos1() {
@@ -67,8 +67,8 @@ public class FiltrosVolumeHrHr {
 		}
 		
 	
-	/// Objetivo: Preencher o Campos dos 11 campos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Preencher os 11 campos por like ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 	
 	@Test
 	public void TestNovosCampos1() {
@@ -86,8 +86,8 @@ public class FiltrosVolumeHrHr {
 		f.filterInputVersionCA();
 		}
 	
-	/// Objetivo: Preencher o Campos dos 4 campos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Preencher os 4 campos por like ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 	
 	@Test
 	public void TestNovosCampos2() {
@@ -99,8 +99,8 @@ public class FiltrosVolumeHrHr {
 		f.filterInputPort();
 		}
 	
-	/// Objetivo: Preencher o Campos dos 4 campos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Selecionar todas as opções dos Combos ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 	
 	@Test
 	public void TestCombos2() {
@@ -118,8 +118,8 @@ public class FiltrosVolumeHrHr {
 		f.selectAll("//div[35]/div[1]/div[1]");
 		}
 	
-	/// Objetivo: Preencher os Combos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Selecionar todas as opções dos Combos ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 	
 	@Test
 	public void TestCombos3() {
@@ -143,8 +143,8 @@ public class FiltrosVolumeHrHr {
 		f.selectAll("//div[41]/div[1]/div[1]");
 		}
 	
-	/// Objetivo: Preencher os Combos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Selecionar todas as opções dos Combos ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 		
 	@Test
 	public void TestCombos4() {
@@ -165,8 +165,8 @@ public class FiltrosVolumeHrHr {
 		f.selectAll("//div[46]/div[1]/div[1]");
 		}
 	
-	/// Objetivo: Preencher os Combos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Selecionar todas as opções dos Combos ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 	
 	@Test
 	public void TestCombos5() {

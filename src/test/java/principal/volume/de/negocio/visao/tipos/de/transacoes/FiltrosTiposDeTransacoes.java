@@ -53,8 +53,8 @@ public class FiltrosTiposDeTransacoes {
 		f.finish();
 		}
 	
-	/// Objetivo: Preencher os Combos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Selecionar todas as opções dos Combos ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 	
 	@Test
 	public void TestCombos1() {
@@ -69,8 +69,8 @@ public class FiltrosTiposDeTransacoes {
 		f.selectAll("//div[30]/div[1]/div[1]");
 		}
 	
-	/// Objetivo: Preencher o Campos dos 4 campos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Selecionar todas as opções dos Combos ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 	
 	@Test
 	public void TestCombos2() {
@@ -88,8 +88,8 @@ public class FiltrosTiposDeTransacoes {
 		f.selectAll("//div[34]/div[1]/div[1]");
 		}
 	
-	/// Objetivo: Preencher os Combos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Selecionar todas as opções dos Combos ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 	
 	@Test
 	public void TestCombos3() {
@@ -108,8 +108,8 @@ public class FiltrosTiposDeTransacoes {
 		}
 	
 	
-	/// Objetivo: Preencher os Combos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Selecionar todas as opções dos Combos ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 		
 	@Test
 	public void TestCombos4() {
@@ -118,8 +118,8 @@ public class FiltrosTiposDeTransacoes {
 		f.selectAll("//div[40]/div[1]/div[1]");
 		}
 	
-	/// Objetivo: Preencher os Combos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Selecionar todas as opções dos Combos ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 		
 	@Test
 	public void TestCombos5() {
@@ -128,8 +128,8 @@ public class FiltrosTiposDeTransacoes {
 		f.selectAll("//div[41]/div[1]/div[1]");
 		}
 	
-	/// Objetivo: Preencher os Combos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Selecionar todas as opções dos Combos ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 		
 	@Test
 	public void TestCombos6() {
@@ -138,9 +138,8 @@ public class FiltrosTiposDeTransacoes {
 		f.selectAll("//div[42]/div[1]/div[1]");
 		}
 	
-	
-	/// Objetivo: Preencher os Combos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Selecionar todas as opções dos Combos ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 		
 	@Test
 	public void TestCombos7() {

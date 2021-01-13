@@ -53,8 +53,8 @@ public class FiltrosRedes {
 		f.finish();
 		}
 	
-	/// Objetivo: Preencher os Combos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Selecionar todas as opções dos Combos ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 	
 	@Test
 	public void TestCombos1() {
@@ -69,8 +69,8 @@ public class FiltrosRedes {
 		f.selectAll("//div[36]/div[1]/div[1]");
 		}
 		
-		/// Objetivo: Preencher os Combos
-		/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Selecionar todas as opções dos Combos ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 		
 	@Test
 	public void TestCombos2() {
@@ -85,8 +85,8 @@ public class FiltrosRedes {
 		f.selectAll("//div[39]/div[1]/div[1]");
 		}
 	
-	/// Objetivo: Preencher o Campos dos 11 campos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Preencher os 11 campos por like ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 	
 	@Test
 	public void TestNovosCampos1() {
@@ -104,8 +104,8 @@ public class FiltrosRedes {
 		f.filterInputVersionCA();
 		}
 	
-	/// Objetivo: Preencher o Campos dos 4 campos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Preencher os 4 campos por like ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 	
 	@Test
 	public void TestNovosCampos2() {
@@ -117,8 +117,8 @@ public class FiltrosRedes {
 		f.filterInputPort();
 		}
 	
-	/// Objetivo: Preencher o Campos dos 4 campos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Selecionar todas as opções dos Combos ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 	
 	@Test
 	public void TestCombos3() {
@@ -136,8 +136,8 @@ public class FiltrosRedes {
 		f.selectAll("//div[43]/div[1]/div[1]");
 		}
 	
-	/// Objetivo: Preencher os Combos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Selecionar todas as opções dos Combos ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 	
 	@Test
 	public void TestCombos4() {
@@ -155,8 +155,8 @@ public class FiltrosRedes {
 		f.selectAll("//div[48]/div[1]/div[1]");
 		}
 	
-	/// Objetivo: Preencher os Combos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Selecionar todas as opções dos Combos ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 		
 	@Test
 	public void TestCombos5() {
@@ -177,8 +177,8 @@ public class FiltrosRedes {
 		f.selectAll("//div[53]/div[1]/div[1]");
 		}
 	
-	/// Objetivo: Preencher os Combos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Selecionar todas as opções dos Combos ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 	
 	@Test
 	public void TestCombos6() {
