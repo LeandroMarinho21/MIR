@@ -22,7 +22,7 @@ public class FiltrosEmissor {
 		f = new FiltrosPage(driver);
 		f.getUrl("https://192.168.80.18:8081/mir.console/pages/view/viewissuer.jsf");
 		// Login
-		f.loginLocal();
+		f.loginPrivate();
 		// Filtro
 		f.waitToClickFilter();
 		// Verificar Errro ao entrar
