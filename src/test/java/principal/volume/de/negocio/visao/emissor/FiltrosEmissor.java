@@ -22,13 +22,14 @@ public class FiltrosEmissor {
 		f = new FiltrosPage(driver);
 		f.getUrl("https://192.168.80.18:8081/mir.console/pages/view/viewissuer.jsf");
 		// Login
-		f.loginPrivate();
+		f.loginLocal();
 		// Filtro
 		f.waitToClickFilter();
 		// Verificar Errro ao entrar
 		f.verifyError();
 		f.clickFilter();
 		f.loading();
+		f.clickDesagruparPorBandeira();
 		// Preencher Período
 		f.waitToClickPeriodIni();
 		WebElement PeriodoIni = f.findPeriodIni();

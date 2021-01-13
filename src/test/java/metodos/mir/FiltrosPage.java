@@ -45,6 +45,10 @@ public class FiltrosPage {
 		filtros.click("btnAlarmConsult");
 	}
 	
+	public void clickDesagruparPorBandeira() {
+		filtros.clickx("//div[contains(@class,'entity_groupByBrand')]");
+	}
+	
 	public void clickDate() {
 		filtros.clickx("//input[contains(@id,'dt_transaction_component_input')]");
 	}
