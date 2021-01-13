@@ -22,7 +22,7 @@ public class FiltrosPiloto {
 		f = new FiltrosPage(driver);
 		f.getUrl("https://192.168.80.18:8081/mir.console/pages/view/viewpiloto.jsf");
 		// Login
-		f.loginLocal();
+		f.loginPrivate();
 		// Filtro
 		f.waitToClickFilter();
 		// Verificar Errro ao entrar
@@ -49,8 +49,8 @@ public class FiltrosPiloto {
 		f.finish();
 		}
 	
-	/// Objetivo: Preencher os Combos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Selecionar todas as opções dos Combos ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 	
 	@Test
 	public void TestCombos1() {
@@ -62,8 +62,8 @@ public class FiltrosPiloto {
 		f.selectAll("//div[23]/div[1]/div[1]");
 		}
 	
-	/// Objetivo: Preencher o Campos dos 4 campos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Selecionar todas as opções dos Combos ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 	
 	@Test
 	public void TestCombos2() {
@@ -82,8 +82,8 @@ public class FiltrosPiloto {
 		f.selectAll("//div[28]/div[1]/div[1]");
 		}
 	
-	/// Objetivo: Preencher os Combos
-	/// Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo.
+	/********* Objetivo: Selecionar todas as opções dos Combos ************/
+	/********* Resultado Esperado: Verificar se esta retornando dados e nao ocorreu nenhum erro administrativo. ************/
 	
 	@Test
 	public void TestCombos3() {

@@ -73,6 +73,28 @@ public class FiltrosPage {
 		filtros.clickx(Todos);
 	}
 	
+	/********* POS Remodeladas Cidades ************/
+	
+	public void clickComboEstado() {
+		filtros.clickx("/html/body/center/div[4]/form[1]/div[3]/div[2]/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[1]/table/tbody/tr[4]/td/div");
+	}
+	
+	public void clickInputEstado() {
+		filtros.clickx("/html/body/div[28]/div[1]/input");
+	}
+	
+	public void writeInputEstado() {
+		filtros.writex("/html/body/div[28]/div[1]/input", "Sao Paulo");
+	}
+	
+	public void SelectEstado() {
+		filtros.clickx("/html/body/div[28]/div[2]/ul/li[27]");
+	}
+	
+	public void SelectAllCities() {
+		filtros.click("cmbNewAll");
+	}
+	
 	/********* Verificacoes ************/
 	
 	public void verifyError() {
@@ -155,6 +177,94 @@ public class FiltrosPage {
 	
 	public void waitToClickComboProduto() {
 		filtros.waitingtoclickx("//div[contains(@class,'entity_Product')]");
+	}
+	
+	public void filterComboSubProduto() {
+		filtros.clickx("//div[contains(@class,'entity_SubProduct')]");
+	}
+	
+	public void waitToClickComboSubProduto() {
+		filtros.waitingtoclickx("//div[contains(@class,'entity_SubProduct')]");
+	}
+	
+	public void filterComboParcelas() {
+		filtros.clickx("//div[contains(@class,'entity_Plot')]");
+	}
+	
+	public void waitToClickComboParcelas() {
+		filtros.waitingtoclickx("//div[contains(@class,'entity_Plot')]");
+	}
+	
+	public void filterComboOperadoras() {
+		filtros.clickx("//div[contains(@class,'entity_CellphoneOperator')]");
+	}
+	
+	public void waitToClickComboOperadoras() {
+		filtros.waitingtoclickx("//div[contains(@class,'entity_CellphoneOperator')]");
+	}
+	
+	public void filterInputImei() {
+		filtros.writeimei("//input[contains(@class,'entity_imei')]");
+	}
+	
+	public void filterInputSimCard() {
+		filtros.writesimcard("//input[contains(@class,'entity_simCard')]");
+	}
+	
+	public void filterInputOperadora() {
+		filtros.writeoperadora("//input[contains(@class,'entity_nmOpe')]");
+	}
+	
+	public void filterInputMacAdress() {
+		filtros.writemacaddress("//input[contains(@class,'entity_macAdr')]");
+	}
+	
+	public void filterInputIpTerminal() {
+		filtros.writeipterminal("//input[contains(@class,'entity_ipTerm')]");
+	}
+	
+	public void filterInputCodPais() {
+		filtros.writecodpais("//input[contains(@class,'entity_cgiMcc')]");
+	}
+	
+	public void filterInputCodRede() {
+		filtros.writecodrede("//input[contains(@class,'entity_cgiMnc')]");
+	}
+	
+	public void filterInputCodArea() {
+		filtros.writecodarea("//input[contains(@class,'entity_cgiLac')]");
+	}
+	
+	public void filterInputIdCel() {
+		filtros.writeidtcel("//input[contains(@class,'entity_cgiCI')]");
+	}
+	
+	public void filterInputVersionPlat() {
+		filtros.writeversionplat("//input[contains(@class,'entity_vrsPlat')]");
+	}
+	
+	public void filterInputVersionCA() {
+		filtros.writeversionca("//input[contains(@class,'entity_vrsCA')]");
+	}
+	
+	public void filterInputPanWeb() {
+		filtros.writepanx("//input[contains(@class,'entity_panWeb')]");
+	}
+	
+	public void waitToClickInputPanWeb() {
+		filtros.waitingtoclickx("//input[contains(@class,'entity_panWeb')]");
+	}
+	
+	public void filterInputCVV() {
+		filtros.writecvvx("//input[contains(@class,'entity_cvv')]");
+	}
+	
+	public void filterInputDesc() {
+		filtros.writedescx("//input[contains(@class,'entity_descriptor')]");
+	}
+	
+	public void filterInputPort() {
+		filtros.writeportx("//input[contains(@class,'entity_portador')]");
 	}
 	
 	public void filterComboTipoDeVenda() {
@@ -268,4 +378,89 @@ public class FiltrosPage {
 	public void waitToClickComboMeioDeCaptura() {
 		filtros.waitingtoclickx("//div[contains(@class,'entity_DeviceCapture')]");
 	}
+	
+	public void filterComboCodEmpresaAdquirente() {
+		filtros.clickx("//div[contains(@class,'entity_CompanyCodePurchasing')]");
+	}
+	
+	public void waitToClickComboCodEmpresaAdquirente() {
+		filtros.waitingtoclickx("//div[contains(@class,'entity_CompanyCodePurchasing')]");
+	}
+	
+	public void filterComboCodMotivoRedeExterna() {
+		filtros.clickx("//div[contains(@class,'entity_ReasonCodeExternalNetwork')]");
+	}
+	
+	public void waitToClickComboCodMotivoRedeExterna() {
+		filtros.waitingtoclickx("//div[contains(@class,'entity_ReasonCodeExternalNetwork')]");
+	}
+	
+	public void filterComboSwitch() {
+		filtros.clickx("//div[contains(@class,'entity_Switch')]");
+	}
+	
+	public void waitToClickComboSwitch() {
+		filtros.waitingtoclickx("//div[contains(@class,'entity_Switch')]");
+	}
+	
+	public void filterComboFrontEnd() {
+		filtros.clickx("//div[contains(@class,'entity_Frontend')]");
+	}
+	
+	public void waitToClickComboFrontEnd() {
+		filtros.waitingtoclickx("//div[contains(@class,'entity_Frontend')]");
+	}
+	
+	public void filterComboCodServico() {
+		filtros.clickx("//div[contains(@class,'entity_ServiceCode')]");
+	}
+	
+	public void waitToClickComboCodServico() {
+		filtros.waitingtoclickx("//div[contains(@class,'entity_ServiceCode')]");
+	}
+	
+	public void filterComboTransacoesTokenizadas() {
+		filtros.clickx("//div[contains(@class,'entity_TokenTransaction')]");
+	}
+	
+	public void waitToClickComboTransacoesTokenizadas() {
+		filtros.waitingtoclickx("//div[contains(@class,'entity_TokenTransaction')]");
+	}
+	
+	public void filterComboQrCode() {
+		filtros.clickx("//div[contains(@class,'entity_QrCode')]");
+	}
+	
+	public void waitToClickComboQrCode() {
+		filtros.waitingtoclickx("//div[contains(@class,'entity_QrCode')]");
+	}
+	
+	public void filterComboCodigoCarteira() {
+		filtros.clickx("//div[contains(@class,'entity_Wallet')]");
+	}
+	
+	public void waitToClickComboCodigoCarteira() {
+		filtros.waitingtoclickx("//div[contains(@class,'entity_Wallet')]");
+	}
+	
+	public void filterComboSubModalidade() {
+		filtros.clickx("//div[contains(@class,'entity_SubModality')]");
+	}
+	
+	public void waitToClickComboSubModalidade() {
+		filtros.waitingtoclickx("//div[contains(@class,'entity_SubModality')]");
+	}
+	
+	public void filterComboRegiao() {
+		filtros.clickx("//div[contains(@class,'entity_Region')]");
+	}
+	
+	public void waitToClickComboRegiao() {
+		filtros.waitingtoclickx("//div[contains(@class,'entity_Region')]");
+	}
+	
+	public void filterComboBandeira2() {
+		filtros.clickx("//div[@class='ui-selectcheckboxmenu ui-widget ui-state-default ui-corner-all custom-sel-checkbox entity_Brand']");
+	}
+	
 }
