@@ -63,7 +63,7 @@ public class FiltrosPiloto {
 		f.selectAll("//div[10]/div[1]/div[1]");
 		f.waitToClickComboProduto();
 		f.filterComboProduto();
-		f.selectAll("//div[12]/div[1]/div[1]");
+		f.selectAll("//div[11]/div[1]/div[1]");
 		}
 	
 	/********* Objetivo: Selecionar todas as opções dos Combos ************/
