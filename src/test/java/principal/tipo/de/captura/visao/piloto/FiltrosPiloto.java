@@ -60,10 +60,10 @@ public class FiltrosPiloto {
 	public void TestCombos1() {
 		// Preencher primeiros combos
 		f.filterComboEmissor();
-		f.selectAll("//div[22]/div[1]/div[1]");
+		f.selectAll("//div[10]/div[1]/div[1]");
 		f.waitToClickComboProduto();
 		f.filterComboProduto();
-		f.selectAll("//div[23]/div[1]/div[1]");
+		f.selectAll("//div[12]/div[1]/div[1]");
 		}
 	
 	/********* Objetivo: Selecionar todas as opções dos Combos ************/
@@ -74,16 +74,16 @@ public class FiltrosPiloto {
 		// Preencher primeiros combos
 		f.waitToClickComboTipoDeVenda();
 		f.filterComboTipoDeVenda();
-		f.selectAll("//div[25]/div[1]/div[1]");
+		f.selectAll("//div[13]/div[1]/div[1]");
 		f.waitToClickComboMeioDeCaptura();
 		f.filterComboMeioDeCaptura();
-		f.selectAll("//div[26]/div[1]/div[1]");
+		f.selectAll("//div[14]/div[1]/div[1]");
 		f.waitToClickComboModoDeEntrada();
 		f.filterComboModoDeEntrada();
-		f.selectAll("//div[27]/div[1]/div[1]");
+		f.selectAll("//div[15]/div[1]/div[1]");
 		f.waitToClickComboGrupoRamoAtividade();
 		f.filterComboGrupoRamoAtividade();
-		f.selectAll("//div[28]/div[1]/div[1]");
+		f.selectAll("//div[16]/div[1]/div[1]");
 		}
 	
 	/********* Objetivo: Selecionar todas as opções dos Combos ************/
@@ -94,19 +94,19 @@ public class FiltrosPiloto {
 		// Preencher primeiros combos
 		f.waitToClickComboTipoDeEmissor();
 		f.filterComboTipoDeEmissor();
-		f.selectAll("//div[29]/div[1]/div[1]");
+		f.selectAll("//div[17]/div[1]/div[1]");
 		f.waitToClickComboBandeiras();
 		f.filterComboBandeiras();
-		f.selectAll("//div[30]/div[1]/div[1]");
+		f.selectAll("//div[18]/div[1]/div[1]");
 		f.waitToClickComboGrupoBandeira();
 		f.filterComboGrupoBandeira();
-		f.selectAll("//div[31]/div[1]/div[1]");
+		f.selectAll("//div[19]/div[1]/div[1]");
 		f.waitToClickComboTipoTransacao();
 		f.filterComboTipoTransacao();
-		f.selectAll("//div[32]/div[1]/div[1]");
+		f.selectAll("//div[20]/div[1]/div[1]");
 		f.waitToClickComboPiloto();
 		f.filterComboPiloto();
-		f.selectAll("//div[33]/div[1]/div[1]");
+		f.selectAll("//div[21]/div[1]/div[1]");
 		}
 
 }
