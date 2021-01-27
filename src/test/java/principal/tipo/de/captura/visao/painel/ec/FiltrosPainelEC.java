@@ -61,10 +61,10 @@ public class FiltrosPainelEC {
 		// Preencher primeiros combos
 		f.waitToClickComboEmissor();
 		f.filterComboEmissor();
-		f.selectAll("//div[19]/div[1]/div[1]");
+		f.selectAll("//div[14]/div[1]/div[1]");
 		f.waitToClickComboBandeiras();
 		f.filterComboBandeiras();
-		f.selectAll("//div[20]/div[1]/div[1]");
+		f.selectAll("//div[15]/div[1]/div[1]");
 		}
 	
 	/********* Objetivo: Selecionar todas as opções dos Combos ************/
@@ -74,13 +74,13 @@ public class FiltrosPainelEC {
 	public void TestCombos2() {
 		f.waitToClickComboOrigemTransacoesWeb();
 		f.filterComboOrigemTransacoesWeb();
-		f.selectAll("//div[21]/div[1]/div[1]");
+		f.selectAll("//div[16]/div[1]/div[1]");
 		f.waitToClickComboGrupoEstabelecimento();
 		f.filterComboGrupoEstabelecimento();
-		f.selectAll("//div[22]/div[1]/div[1]");
+		f.selectAll("//div[17]/div[1]/div[1]");
 		f.waitToClickComboGrupoBandeira();
 		f.filterComboGrupoBandeira();
-		f.selectAll("//div[23]/div[1]/div[1]");
+		f.selectAll("//div[18]/div[1]/div[1]");
 		}
 
 }
