@@ -80,19 +80,19 @@ public class FiltrosPage {
 	/********* POS Remodeladas Cidades ************/
 	
 	public void clickComboEstado() {
-		filtros.clickx("/html/body/center/div[4]/form[1]/div[3]/div[2]/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[1]/table/tbody/tr[4]/td/div");
+		filtros.clickx("/html/body/center/div[4]/form[1]/div[3]/div[2]/div[1]/div/div[2]/div[2]/div[2]/table/tbody/tr/td[1]/table/tbody/tr[4]/td/div/label");
 	}
 	
 	public void clickInputEstado() {
-		filtros.clickx("/html/body/div[28]/div[1]/input");
+		filtros.clickx("/html/body/div[19]/div[1]/input");
 	}
 	
 	public void writeInputEstado() {
-		filtros.writex("/html/body/div[28]/div[1]/input", "Sao Paulo");
+		filtros.writex("/html/body/div[19]/div[1]/input", "Sao Paulo");
 	}
 	
 	public void SelectEstado() {
-		filtros.clickx("/html/body/div[28]/div[2]/ul/li[27]");
+		filtros.clickx("/html/body/div[19]/div[2]/ul/li[27]");
 	}
 	
 	public void SelectAllCities() {
