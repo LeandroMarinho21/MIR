@@ -62,13 +62,13 @@ public class FiltrosPOSRemodeladas {
 	public void TestCombos1() {
 		// Preencher primeiros combos
 		f.filterComboEmissor();
-		f.selectAll("//div[18]/div[1]/div[1]");
+		f.selectAll("//div[9]/div[1]/div[1]");
 		f.waitToClickComboProduto();
 		f.filterComboProduto();
-		f.selectAll("//div[19]/div[1]/div[1]");
+		f.selectAll("//div[10]/div[1]/div[1]");
 		f.waitToClickComboSubProduto();
 		f.filterComboSubProduto();
-		f.selectAll("//div[20]/div[1]/div[1]");
+		f.selectAll("//div[11]/div[1]/div[1]");
 		}
 		
 	
@@ -111,10 +111,10 @@ public class FiltrosPOSRemodeladas {
 	public void TestCombos2() {
 		// Preencher primeiros combos
 		f.filterComboTipoDeVenda();
-		f.selectAll("//div[21]/div[1]/div[1]");
+		f.selectAll("//div[12]/div[1]/div[1]");
 		f.waitToClickComboTipoTransacao();
 		f.filterComboTipoTransacao();
-		f.selectAll("//div[22]/div[1]/div[1]");
+		f.selectAll("//div[23]/div[1]/div[1]");
 		}
 
 	
@@ -125,10 +125,10 @@ public class FiltrosPOSRemodeladas {
 	public void TestCombos3() {
 		// Preencher primeiros combos
 		f.filterComboBandeiras();
-		f.selectAll("//div[23]/div[1]/div[1]");
+		f.selectAll("//div[14]/div[1]/div[1]");
 		f.waitToClickComboGrupoBandeira();
 		f.filterComboGrupoBandeira();
-		f.selectAll("//div[24]/div[1]/div[1]");
+		f.selectAll("//div[15]/div[1]/div[1]");
 		}
 	
 	/********* Objetivo: Selecionar todas as opções dos Combos ************/
@@ -138,10 +138,10 @@ public class FiltrosPOSRemodeladas {
 	public void TestCombos4() {
 		// Preencher primeiros combos
 		f.filterComboGrupoRamoAtividade();
-		f.selectAll("//div[25]/div[1]/div[1]");
+		f.selectAll("//div[16]/div[1]/div[1]");
 		f.waitToClickComboTipoDeEmissor();
 		f.filterComboTipoDeEmissor();
-		f.selectAll("//div[26]/div[1]/div[1]");
+		f.selectAll("//div[17]/div[1]/div[1]");
 		}
 	
 	/********* Objetivo: Selecionar todas as opções dos Combos ************/
