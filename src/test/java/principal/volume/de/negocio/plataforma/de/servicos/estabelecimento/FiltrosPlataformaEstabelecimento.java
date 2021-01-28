@@ -56,13 +56,13 @@ public class FiltrosPlataformaEstabelecimento {
 		f.selectAll("//div[11]/div[1]/div[1]");
 		f.waitToClickComboTipoTransacao();
 		f.filterComboTipoTransacao();
-		f.selectAll("//div[12]/div[1]/div[1]");
+		f.selectAll("//div[13]/div[1]/div[1]");
 		f.waitToClickComboStatusTransacao();
 		f.filterComboStatusTransacao();
-		f.selectAll("//div[13]/div[1]/div[1]");
+		f.selectAll("//div[14]/div[1]/div[1]");
 		f.waitToClickComboMeioDeCaptura();
 		f.filterComboMeioDeCaptura();
-		f.selectAll("//div[14]/div[1]/div[1]");
+		f.selectAll("//div[15]/div[1]/div[1]");
 		}
 
 
