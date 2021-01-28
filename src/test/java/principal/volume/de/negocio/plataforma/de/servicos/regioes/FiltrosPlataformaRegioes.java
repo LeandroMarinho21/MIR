@@ -23,17 +23,17 @@ public class FiltrosPlataformaRegioes {
 		// Login
 		f.loginPrivate();
 		// Filtro
-		f.waitToClickFilter();
+		f.waitToClickFilter2();
 		//Verificar Errro ao entrar
 		f.verifyError();
-		f.clickFilter();
+		f.clickFilter2();
 		f.loading();
 		}
 
 	@After
 	public void Encerramento() {
 		// Consultar
-		f.clickConsult();
+		f.clickConsult2();
 		f.loading();
 		// Verificar se possui dados
 		f.verifyElementTable("listRegion:0:regionDesc");
