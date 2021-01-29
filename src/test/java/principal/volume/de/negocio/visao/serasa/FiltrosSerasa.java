@@ -59,8 +59,11 @@ public class FiltrosSerasa {
 		@Test
 		public void TestCombos1() {
 			// Preencher primeiros combos
-			f.filterComboProduto();
+			f.filterComboEmissor();
 			f.selectAll("//div[10]/div[1]/div[1]");
+			f.waitToClickComboProduto();
+			f.filterComboProduto();
+			f.selectAll("//div[11]/div[1]/div[1]");
 			f.waitToClickComboSubProduto();
 			f.filterComboSubProduto();
 			f.selectAll("//div[12]/div[1]/div[1]");
@@ -99,9 +102,6 @@ public class FiltrosSerasa {
 			f.waitToClickComboBandeiras();
 			f.filterComboBandeiras();
 			f.selectAll("//div[19]/div[1]/div[1]");
-			f.waitToClickComboGrupoBandeira();
-			f.filterComboGrupoBandeira();
-			f.selectAll("//div[20]/div[1]/div[1]");
 			f.waitToClickComboTransacoesTokenizadas();
 			f.filterComboTransacoesTokenizadas();
 			f.selectAll("//div[21]/div[1]/div[1]");
