@@ -33,11 +33,11 @@ public class FiltrosDistribuicaoGeografica {
 			f.waitToClickPeriodIni();
 			WebElement PeriodoIni = f.findPeriodIni();
 			f.clickPeriodIni();
-			f.writePeriodIni("080920201100", PeriodoIni);
+			f.writePeriodIni("080920200000", PeriodoIni);
 			f.clickPeriodoFin();
 			f.waitToClickPeriodFin();
 			WebElement PeriodoFin = f.findPeriodFin();
-			f.writePeriodFin("080920202000", PeriodoFin);
+			f.writePeriodFin("080920202300", PeriodoFin);
 			}
 
 		@After
