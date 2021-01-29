@@ -140,7 +140,7 @@ public class FiltrosVolumeHrHr {
 		f.selectAll("//div[19]/div[1]/div[1]");
 		f.waitToClickComboOrigemTransacoesWeb();
 		f.filterComboOrigemTransacoesWeb();
-		f.selectAll("//div[21]/div[1]/div[1]");
+		f.selectAll("//div[20]/div[1]/div[1]");
 		}
 	
 	/********* Objetivo: Selecionar todas as opções dos Combos ************/
@@ -150,19 +150,19 @@ public class FiltrosVolumeHrHr {
 	public void TestCombos4() {
 		// Preencher primeiros combos
 		f.filterComboCodEmpresaAdquirente();
-		f.selectAll("//div[22]/div[1]/div[1]");
+		f.selectAll("//div[21]/div[1]/div[1]");
 		f.waitToClickComboCodMotivoRedeExterna();
 		f.filterComboCodMotivoRedeExterna();
-		f.selectAll("//div[23]/div[1]/div[1]");
+		f.selectAll("//div[22]/div[1]/div[1]");
 		f.waitToClickComboSwitch();
 		f.filterComboSwitch();
-		f.selectAll("//div[24]/div[1]/div[1]");
+		f.selectAll("//div[23]/div[1]/div[1]");
 		f.waitToClickComboFrontEnd();
 		f.filterComboFrontEnd();
-		f.selectAll("//div[25]/div[1]/div[1]");
+		f.selectAll("//div[24]/div[1]/div[1]");
 		f.waitToClickComboCodServico();
 		f.filterComboCodServico();
-		f.selectAll("//div[26]/div[1]/div[1]");
+		f.selectAll("//div[25]/div[1]/div[1]");
 		}
 	
 	/********* Objetivo: Selecionar todas as opções dos Combos ************/
@@ -172,16 +172,16 @@ public class FiltrosVolumeHrHr {
 	public void TestCombos5() {
 		// Preencher primeiros combos
 		f.filterComboTransacoesTokenizadas();
-		f.selectAll("//div[27]/div[1]/div[1]");
+		f.selectAll("//div[26]/div[1]/div[1]");
 		f.waitToClickComboCodigoCarteira();
 		f.filterComboCodigoCarteira();
-		f.selectAll("//div[28]/div[1]/div[1]");
+		f.selectAll("//div[27]/div[1]/div[1]");
 		f.waitToClickComboQrCode();
 		f.filterComboQrCode();
-		f.selectAll("//div[29]/div[1]/div[1]");
+		f.selectAll("//div[28]/div[1]/div[1]");
 		f.waitToClickComboGrupoBandeira();
 		f.filterComboGrupoBandeira();
-		f.selectAll("//div[30]/div[1]/div[1]");
+		f.selectAll("//div[29]/div[1]/div[1]");
 		}
 
 }
