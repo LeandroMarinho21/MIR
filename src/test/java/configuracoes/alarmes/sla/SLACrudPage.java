@@ -16,6 +16,10 @@ public class SLACrudPage {
 		metodos.login();
 	}
 	
+	public void logar2() {
+		metodos.login2();
+	}
+	
 	public void aguardarParaClicar() {
 		metodos.waitingtoclick("frmList:dataTableSlaMilestone:0:deleteButton");
 	}

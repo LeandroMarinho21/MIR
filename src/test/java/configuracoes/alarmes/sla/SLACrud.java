@@ -19,7 +19,7 @@ public class SLACrud {
 		sla = new SLACrudPage(driver);
 		sla.acessarUrl();
 		// Login
-		sla.logar();
+		sla.logar2();
 		// Entrar na tela
 		sla.aguardarParaClicar();
 		//Verificar Errro ao entrar
