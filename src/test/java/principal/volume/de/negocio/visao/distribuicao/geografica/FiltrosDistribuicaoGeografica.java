@@ -30,10 +30,14 @@ public class FiltrosDistribuicaoGeografica {
 			f.clickFilter();
 			f.loading();
 			// Preencher Período
-			f.waitToClickDate();
-			f.clickDate();
-			WebElement PeriodoIni = f.findDate();
-			f.writeDate("08092020", PeriodoIni);
+			f.waitToClickPeriodIni();
+			WebElement PeriodoIni = f.findPeriodIni();
+			f.clickPeriodIni();
+			f.writePeriodIni("080920201100", PeriodoIni);
+			f.clickPeriodoFin();
+			f.waitToClickPeriodFin();
+			WebElement PeriodoFin = f.findPeriodFin();
+			f.writePeriodFin("080920202000", PeriodoFin);
 			}
 
 		@After
